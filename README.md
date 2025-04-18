@@ -42,3 +42,6 @@ https://arxiv.org/abs/2302.11520
 
 # chain of density (CoD) 
 ## combining above approaches for large summarizations
+
+# TODO
+create dataset with DD design requirements -> generate tests from those
