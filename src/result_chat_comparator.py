@@ -387,12 +387,12 @@ if __name__ == "__main__":
     # Get the directory of the current script
     script_dir = Path(__file__).parent
     # Define the file path relative to the script's directory
-    json_path = script_dir / "results_chat_prompt0_zero.json"          # [1, 4, 69, 90, 71, 74, 75, 11, 46, 18, 87, 56, 62, 58, 91, 28, 29, 94]
-    #json_path = script_dir / "results_chat_prompt1_persona.json"       # [6, 7, 9, 10, 25, 29, 44, 45, 46, 47, 49, 55, 57, 58, 64, 69, 71, 72, 75, 76, 77, 78, 79, 82, 87, 91, 96]
-    #json_path = script_dir / "results_chat_prompt2_tot.json"           # [9, 10, 11, 29, 42, 44, 46, 56, 57, 58, 61, 71, 78, 82, 87, 89, 90, 91, 95, 96]
-    #json_path = script_dir / "results_chat_prompt3_context_simple.json"# [96, 33, 67, 58, 35, 3, 71, 40, 41, 74, 43, 44, 77, 46, 14, 48, 90, 91]
-    #json_path = script_dir / "results_chat_prompt4_preparsing_and_tot.json"# 
-    #json_path = script_dir / "results_chat_prompt4_preparsing_and_tot_reqfirst.json"# [71, 8, 44, 45, 46, 82, 88, 58, 91, 92, 29]
+    json_path = script_dir / "results/results_chat_prompt0_zero.json"          # [1, 4, 69, 90, 71, 74, 75, 11, 46, 18, 87, 56, 62, 58, 91, 28, 29, 94]
+    #json_path = script_dir / "results/results_chat_prompt1_persona.json"       # [6, 7, 9, 10, 25, 29, 44, 45, 46, 47, 49, 55, 57, 58, 64, 69, 71, 72, 75, 76, 77, 78, 79, 82, 87, 91, 96]
+    #json_path = script_dir / "results/results_chat_prompt2_tot.json"           # [9, 10, 11, 29, 42, 44, 46, 56, 57, 58, 61, 71, 78, 82, 87, 89, 90, 91, 95, 96]
+    #json_path = script_dir / "results/results_chat_prompt3_context_simple.json"# [96, 33, 67, 58, 35, 3, 71, 40, 41, 74, 43, 44, 77, 46, 14, 48, 90, 91]
+    #json_path = script_dir / "results/results_chat_prompt4_preparsing_and_tot.json"# 
+    #json_path = script_dir / "results/results_chat_prompt4_preparsing_and_tot_reqfirst.json"# [71, 8, 44, 45, 46, 82, 88, 58, 91, 92, 29]
     
     df = pd.read_csv(DATA_PATH)
     requirements = df['RequirementText']
