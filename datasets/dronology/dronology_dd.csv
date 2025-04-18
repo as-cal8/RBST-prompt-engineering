@@ -1,0 +1,212 @@
+RequirementText,issueid
+Each movement command shall specify one of the following command types: {{SET_MONITORING_FREQUENCY  SET_STATE_FREQUENCY}},DD-768
+The _RouteCreationUI_ shall provide capabilities to modify existing routes.,DD-767
+The _UIMiddleware_ accepts resend waypoint commands associated with a unique {{UAV_ID}} and forwards to Dronology,DD-764
+UAV State messages shall be formatted as JSON objects and contain the {{UAV_ID}} and the {{MODE}},DD-763
+If a user attempts to create a route without providing a name then the system shall not save the route.,DD-762
+The display of active flight plans shall include time in flight  traveled distance  remaining distance  completed and total waypoints.,DD-761
+The active flight plan shall be displayed at the top of the list of pending flight plans.,DD-760
+The properties that the _GCS_ sends to the _GCSMiddleware_ shall be defined in JSON,DD-757
+The _GCS_ shall send the UAV's current properties to the _GCSMiddleware_ when they are received from the UAV.,DD-756
+The _GCS_ requests the UAV's properties every {{UAV_MESSAGE_MONITORING_FREQUENCY}} seconds.,DD-755
+The _GCS_ shall send the UAV's current coordinates to the _GCSMiddleware_ when they are received from the UAV.,DD-753
+The _GCS_ requests the UAV's current coordinates every {{UAV_MESSAGE_STATE_FREQUENCY}} seconds.,DD-752
+After {{UAV_RECONNECT_TIMEOUT}} has been reached  if connection to the UAV can not be reestablished  the _GCS_ shall send a UAV Timeout message containing the {{UAV_ID}} to the _GCSMiddleware_.,DD-750
+If the connection to an UAV is lost and the _GCS_ fails to reconnect  the _GCS_ shall notify the _GCSMiddleware_.,DD-749
+If the _GCS_ receives notification that the UAV is incorrectly registered then the _GCS_ closes the connection with the UAV.,DD-748
+The _GCS_ shall send the home location  a time stamp  and the {{UAV_ID}} to the _GCSMiddleware_.,DD-747
+When the _GCS_ receives a set frequency command from the _GCSMiddleware_ it shall adjust its messange frequency accordingly.,DD-745
+Message frequency shall be defined in units of seconds.,DD-744
+The default message frequency for UAV state messages shall be {{UAV_MESSAGE_STATE_FREQUENCY}},DD-743
+The default message frequency for UAV monitoring messages shall be {{UAV_MESSAGE_MON_FREQUENCY}},DD-742
+The _GCS_ shall transform commands into a vehicle specific format.,DD-740
+When a socket error or time-out occurs  all UAVs associated with the _GCS_ shall be deactivated.,DD-737
+The {{TAKEOFF}} command shall specify the target altitude,DD-735
+The {{SET_VELOCITY}} shall specify a velocity vector specified using NED (North  East  Down) directions.,DD-734
+The {{SET_GROUNDSPEED}} command shall specify ground speed in meters per second.,DD-733
+The {{GOTO_WAYPOINT}} command shall include a target latitude  longitude  and altitude coordinate,DD-732
+Each movement command shall specify one of the following command types: {{GOTO_WAYPOINT  SET_GROUNDSPEED  SET_VELOCITY  TAKEOFF  LAND  HOVER}},DD-731
+Each command shall include a unique {{UAV_ID}},DD-730
+The _GCSMiddleware_ shall be able to handle and send a setStateFrequency command to the respective _GCS_ containing the desired Frequency in ms.,DD-728
+The _GCSMiddleware_ shall be able to handle and send a setMonitoringFrequency command to the respective _GCS_ containing the desired Frequency in ms.,DD-727
+UAV State messages shall be formatted as JSON objects and contain both mandatory and optional elements.,DD-724
+UAV Monitoring messages shall be formatted as JSON objects and contain arbitrary information regarding a single UAV.,DD-723
+When the activation request is denied  the _GCSMiddleware_ shall send a predefined activation denied message to the _GCS_.,DD-721
+When the activation request is approved  the _GCSMiddleware_ shall send a predefined activation confirmation message to the _GCS_.,DD-720
+The _GCS_ shall be informed of the result of the activation request.,DD-719
+The _GCSMiddleware_ shall call the _UAVActivationManager_ to request UAV activation.,DD-718
+In step three  the _GCS_ announces its current set of recognized UAVs to the _GCSMiddleware_.,DD-716
+In step two  the _GCSMiddleware_ accepts the connection and sends a handshake message.,DD-715
+Each _GCS_ connecting to the  _GCSMiddleware_ shall be identified through a unique {{GROUNDSTATION_ID}}.,DD-713
+The _GCSMiddleware_ shall only accept one connection for each _GCS_.,DD-712
+The _GCSMiddleware_ shall accept connections with multiple _GCS_ ,DD-711
+The _GCSMiddleware_ shall specify a predefined {{GCS_PORT}} where _GCS_ can connect.,DD-710
+A monitoring message shall contain a (hierarchical) identifier describing the topic  a message type  a timestamp  and arbitrary serializeable data attached to the message,DD-707
+The _DronologyRuntimeMonitor_ shall provide means to define wildcards i.e.  a client receives messages from all topics associated with the wildcard,DD-705
+Topics shall be organized in a hierarchical manner meaning that clients can subscribe to all messages  messages from certain GCS  UAVS  and properties,DD-704
+Clients shall be able to subscribe to any number of topics,DD-703
+When the UAV's battery level drops below a predefined threshold  then the UAV health indicator is activated.,DD-699
+"""When """"UI follow mode"""" is active  the map should continually zoom and pan so that all selected UAVs are centered and their active routes constitutes 60% of the view.""",DD-697
+"""When """"UI follow mode"""" is initiated  the map shall automatically zoom and pan so that all selected UAVs are centered and their active routes constitutes 60% of the view.""",DD-696
+When requested by the user  the UI shall apply the requested emergency action to all selected UAVs; if no UAV is selected  the UI shall apply the emergency action to all UAVs by default.,DD-694
+Operations shall include RTL  takeoff  hover-in-place  and resend command.,DD-692
+The UI shall differentiate between completed  current  and not yet traversed flight segments.,DD-690
+The UI shall periodically request current locations of all registered UAVs from the _UIMiddleware_ and update their locations on the map.,DD-688
+For each activated UAV  the UI shall display information about that UAV (i.e. longitude  latitude  altitude  groud speed  battery level  etc.) ,DD-687
+Different types of UAVs shall have different icons.,DD-686
+When the map is loaded and the all active UAVs list is obtained the _UIRealTimeFlightView_ shall display an icon on the map for each registered UAV based on its current location.,DD-685
+When the _RealTimeFlightUI_ is loaded  a map shall be displayed with the default zoom level and center coordinates specified in a configuration file.,DD-684
+The UI shall periodically request the list of all activated UAVs from the _UIMiddleware_ and updates the display of currently activated UAVs,DD-683
+Upon loading  the UI shall request information about all activated UAVs from the _UIMiddleware_ . Once the _UIMiddleware_ respond to the request  the UI shall display a list of all currently activated UAVs.,DD-682
+When the user presses the route delete button  a confirmation message shall be displayed and if confirmed by the user then the route shall be deleted.,DD-678
+When selected by the user  multiple routes shall be displayed simultaneously on the map.,DD-676
+Consecutive waypoints in a route on a map shall be connected by lines.,DD-675
+"""The _RouteCreationUI_ shall support route creation and modification in visual mode allowing the user to click on a location in order to create  modify  or delete a waypoint.  """,DD-674
+The _RouteCreationUI_ shall support route creation and modification in tabular mode by displaying a editable table showing each waypoint and the velocity of the UAV approaching the waypoint.,DD-673
+The route information shall be represented using the Standard Route XML format and transmitted to the _UIMiddleware_,DD-671
+The UI shall provide respective fields for displaying and modifying the ID  textual description  waypoints  and other route information.,DD-669
+The altitude and speed values shall not exceed the current maximum {{UAV_MAX_ALTITUDE}}. {{UAV_MAX_GROUND_SPEED}} set in the system.,DD-667
+Waypoint colors shall be updated as the flight route is edited (e.g.  when a new first or last waypoint is added.) If current edits are canceled  the colors shall be reset to reflect current waypoints.,DD-665
+When the user presses the cancel pending flight plan button a request is sent to the _UI_Middleware_ to cancel the flight.,DD-661
+Each UAV shall have a cancel pending flight plan button associated with it.,DD-660
+Flight plans assigned to an UAV that have not yet been executed may be deleted by selecting the route and clicking the deselect button.,DD-658
+Flight plans assigned to an UAV that have not yet been executed may be reordered by dragging a route within the list of assigned routes to a new position.,DD-657
+When the user requests to view flight plans assigned to a UAV  the UI requests the pending flight plans from the UAV_FlightInfo object and displays them.,DD-654
+When detailed information is requested by the user for a UAV  the UI shall request the UAV_Data object from the _UIMiddleware_.,DD-652
+When route assignments are removed from a UAV  a request shall be sent to the _UIMiddleware_ to remove the assignment in Dronology.,DD-650
+A route shall be assigned to a selected UAV using the mouse to drag and drop or double clicking on the route.,DD-648
+The user shall select a UAV and then assign routes to it from an available route list.,DD-647
+Before issuing commands to an UAV the _VaadinUI_ shall request control via the _UIMiddleware_.,DD-644
+The _UIMiddleware_ shall forward a mission plan request to dronology.,DD-640
+The _UIMiddleware_ shall assign the list of waypoints from a route to an active UAV in order to create a flight plan.,DD-638
+When requested by a UI client  the _UIMiddleware_ shall support the modification of an existing flight route with an given ID.,DD-636
+When requested by a UI client  the _UIMiddleware_ shall create a new flight route with a unique ID.,DD-635
+The _UIMiddleware_  accepts return to home commands associated with a unique UAV ID and forwards to Dronology,DD-633
+The _UIMiddleware_ accepts takeoff commands associated with a unique {{UAV_ID}} and forwards to Dronology,DD-632
+The _UIMiddleware_ accepts hover in place commands associated with a unique {{UAV_ID}} and forwards to Dronology,DD-631
+The _UIMiddleware_ retrieves and returns a list of previously saved flight routes,DD-629
+The _UIMiddleware_ returns a list of UAV proxy objects containing information about all active UAVs including location  battery level  ground speed  and health status.,DD-627
+If the heartbeat fails for a client holding one or more control locks after  {{CLIENT_HEARTBEAT_TIME}}   then the _UIMiddleware_ shall release all of its control locks.,DD-625
+The _UIMiddleware_ shall monitor liveness of clients holding control locks on individual UAVs.,DD-624
+The UI middleware shall forward control requests from UI clients to release a control lock on a UAV.,DD-623
+The _UIMiddleware_ shall forward control requests from UI clients to hold a control lock on a UAV.,DD-622
+A client shall register to the _UIMiddleware_ using a unique id,DD-621
+While the log level {{HW_TRACE}} is active each state and monitoring message shall be logged.,DD-619
+Each connection request  handshake and mode change message shall be logged,DD-618
+Each command sent to a _GCS_ via the _GCS_Middleware_ shall be logged,DD-617
+"""The timestamp and the type of action shall be logged into the mission log for each flight plan related event.   This includes (1) time of scheduling  (2) time of execution  (3) time of completing plan  (4) reordering plan  (5) canceling plan""",DD-615
+When a UAV reaches a waypoint while executing a flight plan  a log event shall be created that includes the coordinates of the waypoint  the UAV the flight plan is assigned to  the flight plan ID  and the timestamp.,DD-614
+When a flight plan is executed a log event shall be created that includes the name of the route  the UAV it is assigned to  and the execution time stamp.,DD-613
+When a flight plan is initiated a log event shall be created that includes the name of the route  the UAV it is assigned to  and the initiation time stamp.,DD-612
+When a simulated UAV is in flight  the _NVECSimulator_ shall reduce the battery every second by {{SIMULATOR_BATTERY_DRAIN_VOLTS}}.,DD-609
+When given a land command the _NVECSimulator_ shall immediately change the UAV's current altitude to the ground altitude.,DD-608
+While responding to a goto command  the _NVECSimulator_ shall continue moving in steps towards the target coordinates until the target has been reached.,DD-607
+When given a goto command the _NVECSimulator_ shall compute the next coordinate based upon the normal vector and altitude of the current position and the normal vector and altitude of the destination. The simulator shall move the UAV with infinite acceleration and use numerical methods to hone in on the next coordinate which will be {{SIMULATION_STEP_SIZE}} meters from the current position along the travel path.,DD-606
+When given a takeoff command the _NVECSimulator_ shall move with infinite acceleration the UAV to the takeoff altitude corresponding to its current longitude and latitude.,DD-605
+When a simulated UAV is in flight  the _InternalSimulator_ shall reduce the battery every second by {{SIMULATOR_BATTERY_DRAIN_VOLTS}}.,DD-603
+When given a land command the _InternalSimulator_ shall immediately change the UAV's current altitude to the ground altitude.,DD-602
+While responding to a goto command  the _InternalSimulator_ shall continue moving in steps towards the target coordinates until the target has been reached.,DD-601
+When given a goto command the _InternalSimulator_ shall compute the next coordinate based upon the angle of travel and the step-size.,DD-600
+When given a takeoff command the _InternalSimulator_ shall move with infinite acceleration the UAV to the takeoff altitude corresponding to its current longitude and latitude.,DD-599
+The maximum number of activated UAVS shall be defined as {{MAX_UAV}},DD-590
+When a UAV is deactivated all scheduled flight plans shall be removed from the UAV's flightplan pool.,DD-588
+If the presented {{UAV_ID}} represents a currently registered UAV  then the _UAVActivationManager_ shall activate the UAV.,DD-586
+If the presented {{UAV_ID}} does not represent a currently registered UAV  then the _UAVActivationManager_ will reject the activation and notify the _GCS_Middleware_,DD-585
+When receiving a new activation request from the _GCS_Middleware_  the _UAVActivationManager_ shall check that the presented {{UAV_ID}} represents a currently registered and non-activated UAV.,DD-584
+If the presented {{UAV_ID}} represents a currently activated UAV  then the _GCS_Middleware_ will be notified and no additional activation will be performed.,DD-583
+When a UAV is in {{LANDING}} state and reaches zero altitude it transitions to {{ON_GROUND}},DD-580
+When a UAV is in {{IN_AIR}} state and receives a command to land it transitions to {{LANDING}} state,DD-579
+When a UAV is {{IN_AIR}} state and is assigned a flight plan to execute it transitions to {{FLYING}},DD-578
+The system shall support internally simulated UAVs,DD-577
+The _VehicleCore_ shall support UAVs capable of receiving and responding to commands sent via the ground control station,DD-575
+An internally simulated UAV is instantiated with an ID that is unique from the IDs of all other currently activated UAVs.,DD-573
+An activation request for a UAV that is received from the _GCS_Middleware_ is only accepted if the UAV provides an ID unique from all other currently activated UAVs.,DD-572
+Each Virtual and Physical drone is associated with a predefined {{UAV_TYPE}} defining its basic attributes.,DD-571
+If an obstacle is detected within a distance of {{MIN_STOPPING_DISTANCE}} the _ObjectAvoidance_ system shall issue a 'hover in place' command,DD-569
+The ObjectAvoidance system shall compute pair-wise distances between UAVs,DD-568
+The _ObjectAvoidance_ system shall maintain a list of UAV states,DD-567
+The _ObjectAvoidance_ system shall retrieve the state of the UAVs onboard ObjectAvoidance status.,DD-566
+The _ObjectAvoidance_ system shall retrieve UAV properties and shall check all directives against them.,DD-565
+When a UAV which has been receiving evasive directives is no longer in close proximity to an object  the _ObjectAvoidance_ system shall stop sending directives and the UAV will continue towards its destination.,DD-564
+When the flight plan is aborted the UAV switches to hover in place mode,DD-561
+An aborted flight plan shall not be reassigned to any UAV,DD-560
+When the flight plan is aborted it shall be removed from the associated UAV.,DD-559
+Each UAV can only store one currently executing flight plan ID.,DD-557
+The currently executing flight plan ID is associated with the UAV executing it.,DD-556
+If the flight plan queue is not empty when the UAV reaches the final waypoint of its current flight plan  then the next flight plan is removed from the queue and set as the currently executed flight plan.,DD-554
+When a UAV is issued a return-to-home command during a flight then the current flight plan is aborted and all scheduled flight plans are removed from its flight plan queue.,DD-553
+If a flight plan is not assigned to a specific UAV the flight plan scheduler shall automatically assign it to the next available UAV.,DD-552
+When a flight plan is assigned to a specific UAV it shall be placed in the UAV's execution queue.,DD-550
+When a flight route is scheduled for execution  its waypoints  takeoff altitude  and identifier shall be used to instantiate a new flight plan,DD-548
+When requested by the user  a currently executing mission plan shall be cancelled by removing all pending flight plans and removing all synchronization points.,DD-546
+The FlightPattern for synchronized landing shall direct each UAV to synchronize at the final waypoint of the preceding route  ascend or descend to a unique altitude  synchronize  fly to the longitude and latitude of the home coordinates  synchronize  and then descend to the landing altitude.,DD-544
+The FlightPattern for synchronized takeoff shall direct each UAV to takeoff to a unique altitude  synchronize with other UAVs  fly at the unique altitude to the longitude and latitude of the first waypoint of the subsequent route  synchronize with other UAVs  descend or ascend to the target waypoint  and synchronize with other UAVs to complete the flight pattern.,DD-543
+When a predefined FlightPattern is included in a MissionPlan  it shall be expanded  prior to use into a set of waypoints and synchronization points for each of the participating UAVs.,DD-542
+The MissionPlan shall be specified as a JSON file (see attached example).,DD-540
+When a UAV is executing flight plans and reaches a synchronization point  it shall wait to proceed until all other UAVs sharing the same synchronization point have also reached this point.,DD-538
+The flight plans of two or more UAVs shall be synchronized by inserting shared synchronization points between the ordered list of flight routes assigned to each participating UAV.,DD-537
+Each individual UAV that is included in a MissionPlan shall have an ordered list of one or more flight routes assigned to it.,DD-536
+If a UAV is in the air when a flight plan is assigned  the takeoff altitude in the flight plan is ignored.,DD-535
+If no takeoff altitude is prescribed in the flight plan assigned to a UAV currently on the ground  then the system-wide default altitude is used as the target takeoff altitude.,DD-534
+If a takeoff altitude is prescribed in the flight plan assigned to a UAV currently on the ground  then that altitude is used as the target takeoff altitude.,DD-533
+When the takeoff command is issued  the _FlightSchedulingAndExecution _checks for a pre-specified altitude in the flight plan.,DD-532
+When the UAV reaches a target waypoint  if additional waypoints are specified in the flight plan  then the _VehicleCore_  shall send the next waypoint to the UAV's _GCS_.,DD-530
+If the computed distance from the UAV to the target waypoint is less than {{THRESHOLD_WAYPOINT_DISTANCE}} than the waypoint shall be considered reached.,DD-529
+When the _VehicleCore_ receives the UAV's current coordinates and if the UAV has an assigned target waypoint  then the _VehicleCore_ shall compute the current distance to the target waypoint.,DD-528
+At the start of a flight plan the system shall send the first target waypoint to the UAV's _GCS_.,DD-527
+When the hover in place command is rescinded the UAV's state is reverted to its previous state.,DD-526
+If the UAV is in 'hover in place' mode then no waypoints directives for that UAV shall be sent to the _GCS_.,DD-524
+"""When the UAV is commanded to hover in place  its state is changed to """"hover in place"""" and a command is sent to the GCS.""",DD-522
+When the UAV is commanded to return to home  the current flight plan shall be removed and a new flight plan shall be created containing only a single waypoint representing its original launch coordinates.,DD-520
+Direction between two coordinates shall be specified using a velocity vector from the first coordinate.,DD-519
+Distances computed between two coordinates shall be accurate within 1 meter over a distance of 400 000 meters.,DD-518
+When requested  coordinates shall be transformed from p-vectors to the default representation.,DD-515
+When requested  coordinates shall be transformed from n-vectors to the default representation.,DD-514
+When requested  the _CoordinateSystem_ shall be transform coordinates from the default representation to p-vectors.,DD-513
+When requested  the _CoordinateSystem_ shall transform coordinates transformed from the default representation to n-vectors.,DD-512
+The default coordinate representation shall use LLA (longitude  latitude  altitude) format.,DD-511
+The flight route xml format includes an optional takeoff altitude tag,DD-509
+When the _UIMiddleware_ requests a flight route identified by its unique name  the _FlighRouteManager _shall retrieve the associated file.,DD-507
+When a flight route is uploaded to Dronology  the _FlightRouteManager_ shall  save it under a unique name as an xml file.,DD-506
+Upon receipt of a new or modified flight route from the UI middleware  the _FlightRouteManager_ shall check that it is a {{VALID_FLIGHT_ROUTE}}  i.e.  that all waypoints are valid coordinates and that the flight route contains at least one waypoint.,DD-504
+Flight routes shall be specified in the standard XML_FlightRoute format.,DD-502
+When a mode change message to {USER_CONTROLLED}} is received the Vehicle shall transition to  {USER_CONTROLLED}}.,DD-500
+When a UAV is executing flight plans and reaches a synchronization point  which is followed by a delay task  it shall wait to proceed until the delay specified in seconds is expired,DD-498
+The _MissionPlanner_ shall provide an interface to support the execution of predefined missions specified in JSON.,DD-468
+The _DronologyRuntimeMonitor_ shall allow to publish arbitrary monitoring messages and subscribe to certain message types,DD-445
+The open street map component shall support multiple map providers.,DD-439
+Waypoints in a flight route shall be colored so as to differentiate between the starting waypoint  ending waypoint  and all remaining intermediate waypoints.,DD-421
+The _MissionPlanner _shall synchronize and coordinate the flights of multiple UAVs.,DD-362
+In step one  the _GCS_ announces itself to the _GCSMiddleware_ providing its unique ID.,DD-361
+The _GCSMiddleware_ shall handle multiple _GCS_ at the same time.,DD-354
+When routes are assigned to a UAV a request shall be sent to the _UIMiddleware_ to update the assignment in Dronology.,DD-352
+The UI shall display the waypoints and their connections.,DD-229
+All commands sent to and messages received from a _CGC_ shall be logged to a dedicated GCS log file,DD-213
+Position reckoning shall utilize the WGS-84 reference system.,DD-177
+Upon loading  the UI requests all existing routes from the _UIMiddleware_. Once the _UIMiddleware_ respond to the request  the UI displays all existing routes,DD-168
+Configuration parameters  including map coordinates  scale  map style  and color scheme shall be stored in a JSON Object on the server,DD-122
+The UAV location shall be updated on the map at the currently defined {{UI_UAV_REFRESH_RATE}},DD-121
+Unless otherwise configured in the configuration parameters  the map shall be centered at White Field  University of Notre Dame  South Bend IN.,DD-119
+When loading the map  it shall be scaled as specified in the configuration.,DD-118
+If no scale information is provided in the configuration  the map shall display at a scale of {{MAP_DEFAULT_SCALE}}.,DD-117
+The name  state  battery level  speed  and current coordinates of each UAV shall be displayed.,DD-113
+All flight plans executed and waypoints reached shall be logged to a dedicated flight log file.,DD-104
+A flight plan shall be unassigned from a UAV by removing it from the UAV's flight plan queue.,DD-87
+The pending flight plans of a UAV may be reordered,DD-85
+By default  the pending flight plansof a UAV's shall be serviced in FCFS order.,DD-84
+If the flight plan queue is empty when the UAV reaches the final waypoint of its current flight plan  then its state is set to {{IN_AIR}}.,DD-81
+Flight routes shall be created externally and uploaded to Dronology via the UI middleware.,DD-75
+When a UAV is in {{FLYING}} state and has no currently executing flight plan it transitions to {{IN_AIR}},DD-33
+When a UAV in the TAKING_OFF state achieves the target altitude it transitions to FLYING state.,DD-32
+When permission is granted to UAV in the {{AWAITING_TAKEOFF_CLEARANCE}} state it transitions to {{TAKING_OFF}} state.,DD-31
+When a flight plan is assigned to a UAV in the {{ON_GROUND}} state it transitions to the {{AWAITING_TAKEOFF_CLEARANCE}} state.,DD-30
+Each UAV has zero or more pending flight plans.,DD-27
+When a UAV is initially activated on the ground it is in the {{ON_GROUND}} state,DD-26
+Altitude shall be specified in meters,DD-24
+All waypoints shall be specified using degrees longitude and latitude using Decimal Degrees format (e.g. 38.6556758  -77.7872153),DD-23
+A client may register with the _UIMiddleware_ to receive notifications whenever unexpected events occur.,DD-22
+A client shall register with the _UIMiddleware_ to receive notifications whenever UAV instances are activated or deactivated.,DD-21
+A client shall register with the _UIMiddleware_ to receive notifications whenever a new flight plan is activated or executed,DD-20
+A client shall register with the _UIMiddleware_ to receive notifications whenever a new UAV type configuration is created  modified  or deleted.,DD-19
+A client shall register with the _UIMiddleware_ to receive UAV type specification events whenever a new UAV type specification is created  modified  or deleted.,DD-18
+A client shall register with the _UIMiddleware_ to receive flight route event notifications whenever a flight route is created  modified  or deleted.,DD-11
