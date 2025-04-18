@@ -1,0 +1,2186 @@
+[
+    {
+        "Requirement": "RE-766",
+        "testObjective": "To test the functionality of the new user authentication feature introduced in version 1.2 of the application.",
+        "preconditions": [
+            "The application must be built with the new authentication library version 2.3.1",
+            "The user database schema must be updated to support the new authentication tokens",
+            "A test environment with sufficient user permissions must be provided for the test team to perform the test."
+        ],
+        "testSteps": [
+            "1. Verify that the authentication header is present in the application's response when a user logs in.",
+            "2. Log in to the application using the new authentication token.",
+            "3. Verify that the system logs a successful authentication and grants access to the protected resource.",
+            "4. Logout and verify that the authentication header is removed from the application's response.",
+            "5. Repeat steps 1-4 with different user credentials to ensure the system handles invalid credentials gracefully.",
+            "6. Ensure that the test environment's user database schema is updated with the new authentication tokens.",
+            "7. Verify that the test environment logs indicate successful authentication for all test cases.",
+            "8. Verify that the test environment logs indicate successful logout for all test cases."
+        ],
+        "expectedResult": "The system successfully authenticates users using the new authentication token, handles invalid credentials gracefully, and logs successful authentication and logout in the test environment.",
+        "testCaseID": "The MapComponent shall support different types of map layers (e.g.  terrain  satellite)",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-766"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has at least one user role defined",
+            "Database schema includes predefined permission columns"
+        ],
+        "testSteps": [
+            "1. Log in as an administrator user",
+            "2. Navigate to the User Management page",
+            "3. Click on the 'Create Role' button",
+            "4. Define the role name",
+            "5. Select or add predefined permissions",
+            "6. Save the role configuration",
+            "7. Verify that the role is created successfully"
+        ],
+        "expectedResult": "A new custom user role is successfully created with the predefined permissions assigned.",
+        "testCaseID": "The MissionPlanner shall execute flight plans for multiple UAVs concurrently.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-759"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has a user roles table with existing default roles",
+            "Database permissions are configured for role creation"
+        ],
+        "testSteps": [
+            "1. Create a new user role with predefined permissions",
+            "2. Assign the new role to an existing user",
+            "3. Verify that the user has the expected permissions",
+            "4. Log out and log back in to ensure role persistence"
+        ],
+        "expectedResult": "User successfully creates a custom role with the specified permissions and retains them upon logout and login.",
+        "testCaseID": "The GCS shall transmit the UAV's properties to the GCSMiddleware",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-754"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom widgets on the dashboard.",
+        "testObjective": "Verify that users can successfully create and manage custom widgets on the dashboard without any issues.",
+        "preconditions": [
+            "The dashboard interface is functional and accessible to all users.",
+            "Custom widgets module is available and properly configured in the system.",
+            "User has the necessary permissions to create and manage widgets."
+        ],
+        "testSteps": [
+            "1. Log in as a regular user with sufficient permissions.",
+            "2. Navigate to the dashboard and locate the widgets section.",
+            "3. Click on the 'Create Widget' button.",
+            "4. Provide a widget name and description.",
+            "5. Choose a widget type from the available options.",
+            "6. Configure widget settings as needed.",
+            "7. Save the widget.",
+            "8. Verify that the widget appears in the dashboard.",
+            "9. Attempt to edit an existing widget and confirm that changes are saved successfully.",
+            "10. Log out and log back in to ensure widget management is persistent."
+        ],
+        "expectedResult": "All custom widgets are successfully created, managed, and displayed on the dashboard. Editing and saving widgets do not result in any errors, and existing widgets are correctly updated upon editing.",
+        "testCaseID": "The GCS shall transmit the UAV's current location to the GCSMiddleware",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-751"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature that allows users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has at least XGB 3.0 installed",
+            "User has access to the system administrative panel",
+            "User has the necessary permissions to create roles"
+        ],
+        "testSteps": [
+            "1. Log in as an administrative user.",
+            "2. Navigate to the System Settings.",
+            "3. Access the User Roles section.",
+            "4. Click on the Create Role button.",
+            "5. Define the role name and permissions.",
+            "6. Save the role configuration.",
+            "7. Verify that the role is created successfully.",
+            "8. Log out and log back in to ensure role persistence."
+        ],
+        "expectedResult": "The system displays a custom role with the predefined permissions when created by an administrative user.",
+        "testCaseID": "The GCS shall report newly connected UAVs to the GCSMiddleware.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-746"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions without any issues.",
+        "preconditions": [
+            "The system has a user roles table in the database with existing predefined roles.",
+            "A new roles table will be created with predefined permissions.",
+            "The system supports creating custom user roles through the admin panel.",
+            "The permissions can be assigned to the custom roles using the role assignment table."
+        ],
+        "testSteps": [
+            "Navigate to the admin panel and select 'User Roles' from the sidebar.",
+            "Click on 'Add Role' and provide a name and description for the new role.",
+            "Select the predefined permissions for the new role from the permissions list.",
+            "Assign the new role to an existing user or create a new user with the role.",
+            "Verify that the new role is created successfully in the database.",
+            "Verify that the predefined permissions are correctly assigned to the new role.",
+            "Log out and log back in to ensure the role is preserved across sessions."
+        ],
+        "expectedResult": "The custom user roles with predefined permissions are successfully created and assigned without any errors.",
+        "testCaseID": "The GCS shall assign a message frequency for all UAVs.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-741"
+        ]
+    },
+    {
+        "Requirement": "RE-739",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "System has been updated to version 2.3.4 or higher",
+            "Database schema has been updated to the latest version"
+        ],
+        "testSteps": [
+            "Login with the new authentication method",
+            "Verify that the user is authenticated successfully",
+            "Logout and login again to ensure the feature's stability"
+        ],
+        "expectedResult": "User is authenticated successfully upon login and logged out without issues",
+        "testCaseID": "When the GCS receives a UAV command from the GCSMiddleware  the GCS shall forward the command to the respective UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-739"
+        ]
+    },
+    {
+        "Requirement": "RE-736",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System has the latest security updates"
+        ],
+        "testSteps": [
+            "Login with provided credentials",
+            "Verify the authentication status",
+            "Logout and log back in to test session stability"
+        ],
+        "expectedResult": "User is successfully authenticated and session remains stable after logout and login.",
+        "testCaseID": "When the connection to the GCS from the GCSMiddleware is lost  the GCSMiddleware shall notify Dronology and deactivate all associated UAVs.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-736"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has a user roles table in the database",
+            "The system supports JSON configuration files for role definitions"
+        ],
+        "testSteps": [
+            "1. Create a new user role configuration file",
+            "2. Add predefined permissions to the new role",
+            "3. Save the configuration file",
+            "4. Log in as a user with the new role",
+            "5. Verify that the user has the expected permissions"
+        ],
+        "expectedResult": "The system should allow users to create custom user roles with predefined permissions, and users will have the expected permissions when logging in.",
+        "testCaseID": "The GCSMiddleware shall forward commands sent from Dronology to a GCS",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-729"
+        ]
+    },
+    {
+        "Requirement": "RE-722",
+        "testObjective": "To test the functionality of the new user authentication feature introduced in version 1.2 of the application.",
+        "preconditions": [
+            "The application is built on React framework version 1.2",
+            "The database is set up with PostgreSQL",
+            "The authentication component is ready to be tested"
+        ],
+        "testSteps": [
+            "Import the authentication component",
+            "Integrate the authentication component into the main application",
+            "Set up the database with PostgreSQL",
+            "Run the authentication feature test",
+            "Verify the user authentication functionality"
+        ],
+        "expectedResult": "User authentication should work correctly with the new feature.",
+        "testCaseID": "The GCSMiddleware shall handle state messages   monitoring messages  and mode change messages  received from an GCS.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-722"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "Verify that users can successfully create and manage custom tags within their projects.",
+        "preconditions": [
+            "The system has a tagging feature enabled",
+            "Tagging feature requires user authentication"
+        ],
+        "testSteps": [
+            "1. Log in as an authenticated user with access to the tagging feature",
+            "2. Navigate to the project management interface",
+            "3. Create a new tag with a meaningful name and description",
+            "4. Save the tag",
+            "5. Verify that the tag appears in the list of available tags for the project",
+            "6. Modify an existing tag's name and description",
+            "7. Save the modified tag",
+            "8. Verify that the modified tag reflects the changes in its metadata",
+            "9. Delete a tag that no longer exists",
+            "10. Verify that the deleted tag is completely removed from the system"
+        ],
+        "expectedResult": "All tests pass, users can create, manage, and delete custom tags as expected.",
+        "testCaseID": "The GCSMiddleware  shall follow a predefined set of steps to establish a connection between a GCS and Dronology",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-714"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "The system currently supports creating standard user roles with predefined permissions.",
+            "A new feature request has been submitted for custom user roles with predefined permissions."
+        ],
+        "testSteps": [
+            "1. Log in as an admin user.",
+            "2. Navigate to the User Management section.",
+            "3. Click on the Role Management option.",
+            "4. Select 'Create Role' from the dropdown menu.",
+            "5. Fill in the Role Name field with a custom name.",
+            "6. Define the necessary permissions for the role and select them from the available options.",
+            "7. Click 'Save Role' to create the custom role.",
+            "8. Verify that the custom role has been successfully created in the system.",
+            "9. Log out and log back in to ensure the role persists.",
+            "10. Test the permissions associated with the custom role by assigning it to a user.",
+            "11. Verify that the user now has access to the expected resources.",
+            "12. Log out and log back in to ensure the role is deleted.",
+            "13. Test the deletion of the custom role and ensure it is removed from the system."
+        ],
+        "expectedResult": "The system successfully creates custom user roles with predefined permissions, and the roles are correctly associated with users and deleted as expected.",
+        "testCaseID": "The GCSMiddleware shall handle multiple GCS",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-709"
+        ]
+    },
+    {
+        "Requirement": "RE-706",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "Server is running"
+        ],
+        "testSteps": [
+            "Login with valid credentials",
+            "Check if user is authenticated successfully",
+            "Logout and login again with invalid credentials",
+            "Verify if user is not authenticated",
+            "Test edge case: login with only username"
+        ],
+        "expectedResult": [
+            "User is authenticated",
+            "User is authenticated",
+            "User is not authenticated",
+            "User is not authenticated",
+            "Login failed"
+        ],
+        "testCaseID": "The DronologyRuntimeMonitor shall be able to receive messages from any Dronology component",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-706"
+        ]
+    },
+    {
+        "Requirement": "RE-702",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System configured with new authentication settings"
+        ],
+        "testSteps": [
+            "Log in with provided credentials",
+            "Verify successful login",
+            "Navigate to test page",
+            "Logout and attempt unauthorized access",
+            "Re-log in with different credentials",
+            "Verify failed login"
+        ],
+        "expectedResult": "Successful login, successful navigation, failed login on unauthorized access, and correct login with different credentials",
+        "testCaseID": "When a new monitoring message is received the DronologyRuntimeMonitor shall forward the message to all subscribed clients",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-702"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions.",
+        "preconditions": [
+            "RE-700 has been completed",
+            "The system has a permissions management feature enabled"
+        ],
+        "testSteps": [
+            "1. Log in as an administrator user",
+            "2. Navigate to the user management page",
+            "3. Click on the 'Create Role' button",
+            "4. Fill in the role name and permissions",
+            "5. Click 'Create'",
+            "6. Verify that the role appears in the user roles list",
+            "7. Test assigning the role to a user"
+        ],
+        "expectedResult": "The custom user roles are created with the specified permissions and appear in the user roles list when created.",
+        "testCaseID": "The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-701"
+        ]
+    },
+    {
+        "Requirement": "RE-698",
+        "testObjective": "To test the functionality of the new user authentication feature introduced in version 1.2 of the application.",
+        "preconditions": [
+            "The application must be running version 1.2 or higher",
+            "A valid user account exists in the system"
+        ],
+        "testSteps": [
+            "1. Log in to the application using a valid username and password",
+            "2. Verify that the user interface correctly displays the authentication status indicator",
+            "3. Submit a failed login attempt and observe if the system displays an error message",
+            "4. Register a new user account using the registration form",
+            "5. Verify that the newly created user account is successfully displayed in the user list"
+        ],
+        "expectedResult": "The system should correctly handle user authentication and display appropriate feedback for login attempts and user creation.",
+        "testCaseID": "The RealTimeFlightUI shall notify users when an emergency occurs.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-698"
+        ]
+    },
+    {
+        "Requirement": "RE-695",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System running at least MongoDB 4.4.0"
+        ],
+        "testSteps": [
+            "1. Connect to MongoDB instance",
+            "2. Verify user credentials exist in the database",
+            "3. Attempt to authenticate user",
+            "4. Check if authentication is successful",
+            "5. Log out of the system"
+        ],
+        "expectedResult": "User authentication process is functional and successful",
+        "testCaseID": "The RealTimeFlightUI shall allow users to follow one or multiple UAVs on the map.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-695"
+        ]
+    },
+    {
+        "Requirement": "RE-693",
+        "testObjective": "To test the functionality of the new user authentication feature in the application.",
+        "preconditions": [
+            "The application has been updated to version 1.2.3",
+            "A user account exists in the system"
+        ],
+        "testSteps": [
+            "Login as a new user using the provided credentials",
+            "Verify that the user is successfully authenticated",
+            "Logout and log back in to test the session persistence"
+        ],
+        "expectedResult": "The user is authenticated successfully and logged out and back in without any issues.",
+        "testCaseID": "The RealTimeFlightUI shall allow users to perform emergency operations (e.g. hovering multiple UAVs  sending multiple UAVs to home) to a group of UAVs",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-693"
+        ]
+    },
+    {
+        "Requirement": "RE-691",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System running at least Java 8"
+        ],
+        "testSteps": [
+            "Login with valid credentials",
+            "Check if user is authenticated",
+            "Attempt login with invalid credentials",
+            "Verify if user is not authenticated",
+            "Logout and attempt login again with valid credentials",
+            "Verify successful login"
+        ],
+        "expectedResult": [
+            "User is authenticated",
+            "User is not authenticated",
+            "User is authenticated"
+        ],
+        "testCaseID": "The RealTimeFlightUI shall allow users to apply flight operations to one or more selected UAVs.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-691"
+        ]
+    },
+    {
+        "Requirement": "RE-689",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System configured with new authentication settings"
+        ],
+        "testSteps": [
+            "Log in with provided credentials",
+            "Verify that the user is authenticated successfully",
+            "Attempt to log out and check if the session is invalidated",
+            "Test the password reset functionality by resetting the user's password"
+        ],
+        "expectedResult": "User authentication functionality works as intended, with successful login, logout, and password reset processes.",
+        "testCaseID": "The RealTimeFlightUI shall display all currently active flight plans on the map.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-689"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "Verify that users can successfully create and manage custom tags within their projects.",
+        "preconditions": [
+            "The system has a tagging interface accessible via the dashboard.",
+            "Valid project creation and editing functionalities are already in place."
+        ],
+        "testSteps": [
+            "1. Navigate to the dashboard.",
+            "2. Create a new project.",
+            "3. Access the tagging interface.",
+            "4. Create a custom tag with relevant tags and descriptions.",
+            "5. Save the custom tag.",
+            "6. Verify that the custom tag appears in the project's tag list.",
+            "7. Modify an existing custom tag's name and description.",
+            "8. Save the modified tag.",
+            "9. Verify that the modified tag reflects in the project's tag list.",
+            "10. Log out and log back in to ensure tag management persists across sessions."
+        ],
+        "expectedResult": "All custom tags are created, managed, and displayed correctly within the project's tag list, and user authentication does not affect tag persistence.",
+        "testCaseID": "The RealTimeFlightUI shall display the name and status of all currently activated UAVs",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-681"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions without any issues.",
+        "preconditions": [
+            "System has at least 1GB free disk space",
+            "Database has enough capacity to store new roles",
+            "Role definitions are properly configured in the admin panel",
+            "API permissions are correctly set up"
+        ],
+        "testSteps": [
+            "1. Log in as an admin user",
+            "2. Navigate to the User Management section",
+            "3. Click on Role Assignment",
+            "4. Create a new role with predefined permissions",
+            "5. Save the new role configuration",
+            "6. Verify that the role is listed in the system's role repository"
+        ],
+        "expectedResult": "The system successfully creates a new custom role with the specified permissions and it is listed in the system's role repository.",
+        "testCaseID": "When the RouteCreationUI is loaded a list of all existing routes shall be displayed.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-679"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom themes for their personal devices.",
+        "testObjective": "To verify that users can successfully create and manage custom themes for their personal devices without any issues.",
+        "preconditions": [
+            "Device is powered on",
+            "Application is fully updated",
+            "Default theme is available for download"
+        ],
+        "testSteps": [
+            "1. Connect the device to a computer with a USB cable.",
+            "2. Open the application and select the theme creation option.",
+            "3. Design a custom theme using available tools.",
+            "4. Save the theme and apply it to the device.",
+            "5. Verify that the theme is displayed correctly on the device's interface."
+        ],
+        "expectedResult": "The user is able to create and manage custom themes seamlessly, and the themes are displayed correctly on the device.",
+        "testCaseID": "The RouteCreationUI shall allow a user to delete a route.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-677"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions and access levels.",
+        "testObjective": "Verify that the new feature for creating custom user roles with predefined permissions and access levels has been successfully implemented and functions correctly.",
+        "preconditions": [
+            "The system has a role-based access control feature already in place.",
+            "There are predefined roles available in the system.",
+            "The system has an admin interface accessible.",
+            "The system has a permissions management interface accessible.",
+            "The system has a custom role definition interface accessible."
+        ],
+        "testSteps": [
+            "Access the admin interface.",
+            "Navigate to the role management section.",
+            "Create a new custom role with predefined permissions and access levels.",
+            "Save the new role.",
+            "Verify that the new role is listed in the predefined roles.",
+            "Verify that the predefined permissions are correctly assigned to the new role.",
+            "Access the permissions management interface to review the permissions.",
+            "Access the custom role definition interface to review the custom role definition."
+        ],
+        "expectedResult": "The new feature for creating custom user roles with predefined permissions and access levels has been successfully implemented and functions correctly.",
+        "testCaseID": "The RouteCreationUI shall allow the user to create and modify a route.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-672"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has at least 2GB RAM",
+            "Server is running Apache 2.4.34 or newer",
+            "Database is running PostgreSQL 12 or higher",
+            "Web server is configured to use the new user roles feature"
+        ],
+        "testSteps": [
+            "1. Log in as admin and navigate to Users section",
+            "2. Click on 'Create Role'",
+            "3. Enter a role name and select predefined permissions from the list",
+            "4. Click 'Create Role'",
+            "5. Verify that the role appears in the Users section",
+            "6. Log out and log in as a regular user",
+            "7. Check if the regular user has access to the roles they were assigned"
+        ],
+        "expectedResult": "The system now allows users to create custom roles with the specified permissions, and users can be assigned these roles for access control.",
+        "testCaseID": "When requested  the RouteCreationUI shall send a newly created or modified route to dronology.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-670"
+        ]
+    },
+    {
+        "Requirement": "RE-668",
+        "testObjective": "To verify that the application correctly handles the scenario where a user attempts to log in with an invalid password on the first attempt.",
+        "preconditions": [
+            "The application has been configured with the correct system of user accounts with valid passwords."
+        ],
+        "testSteps": [
+            "1. Log in to the application as a registered user with a valid password.",
+            "2. Attempt to log in with the same username but an invalid password.",
+            "3. Verify that the application displays a 'Username already exists' error message.",
+            "4. Verify that the application does not store any invalid password attempts in the database.",
+            "5. Verify that the application logs a single invalid attempt without reverting to a default state.",
+            "6. Reset the application to its initial state and repeat the steps to ensure consistency."
+        ],
+        "expectedResult": "The application should display a clear 'Username already exists' error message upon invalid password attempt, without storing any invalid password attempts, and should log a single invalid attempt without reverting to a default state.",
+        "testCaseID": "Each route shall include a unique ID  a textual description  and a set of waypoints  all of which are editable in the UI.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-668"
+        ]
+    },
+    {
+        "Requirement": "RE-666",
+        "testObjective": "To verify that the application correctly handles the scenario where a user attempts to log in with an invalid password after multiple failed attempts.",
+        "preconditions": [
+            "A user has already attempted to log in with an invalid password 3 times."
+        ],
+        "testSteps": [
+            "1. Log in with an invalid password for the 4th time.",
+            "2. Verify that the system displays a 'Invalid password' error message.",
+            "3. Verify that the system logs the invalid attempt and prevents the user from logging in again for 24 hours."
+        ],
+        "expectedResult": "The system should display a clear 'Invalid password' error message, log the attempt, and prevent further login attempts for 24 hours.",
+        "testCaseID": "The RouteCreationUI shall only accept valid altitude and speed values for waypoint.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-666"
+        ]
+    },
+    {
+        "Requirement": "RE-664",
+        "testObjective": "To verify that the system correctly handles the creation of a new user account with a valid email address and password.",
+        "preconditions": [
+            "System is in a default state",
+            "Database has a minimum of 10 existing users"
+        ],
+        "testSteps": [
+            "1. Navigate to the user creation page.",
+            "2. Enter a valid email address.",
+            "3. Enter a complex password.",
+            "4. Select 'Create User' button.",
+            "5. Verify that the user account is created successfully in the database."
+        ],
+        "expectedResult": "A new user account is created with the provided email and password, and the database reflects this new entry.",
+        "testCaseID": "The RouteCreationUI shall distinguish between starting  ending  and intermediate waypoint markers.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-664"
+        ]
+    },
+    {
+        "Requirement": "RE-659",
+        "testObjective": "To verify that the application correctly handles the scenario where a user logs in with a password that contains special characters.",
+        "preconditions": [
+            "User has entered a password containing special characters"
+        ],
+        "testSteps": [
+            "1. Create a user account with a password containing special characters.",
+            "2. Attempt to log in using the created account.",
+            "3. Verify that the login is successful if the password is correct.",
+            "4. Verify that the login fails if the password is incorrect."
+        ],
+        "expectedResult": "Successful login when the password is correct and failed login when the password is incorrect.",
+        "testCaseID": "When a user  cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-659"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom widgets on the platform.",
+        "testObjective": "Verify that users can successfully create and manage custom widgets on the platform, including adding new widgets, editing existing ones, and deleting widgets.",
+        "preconditions": [
+            "The platform has a widget creation interface accessible via the dashboard.",
+            "The platform has an admin panel with editing permissions for widgets.",
+            "The widget creation interface includes fields for title, description, and type selection.",
+            "The admin panel includes a list of existing widgets.",
+            "The platform supports saving and deleting widgets."
+        ],
+        "testSteps": [
+            "1. Log in as a regular user with widget creation permissions.",
+            "2. Navigate to the dashboard and select the 'Widgets' section.",
+            "3. Click on 'Create New Widget' button.",
+            "4. Fill in the widget's title and description fields.",
+            "5. Select the widget type from the dropdown menu.",
+            "6. Click 'Save Widget' button to create the widget.",
+            "7. Verify that the widget appears in the widgets list.",
+            "8. Log in as an admin with editing permissions.",
+            "9. Navigate to the widgets list.",
+            "10. Select an existing widget to edit.",
+            "11. Update the widget's title, description, and type if desired.",
+            "12. Click 'Update Widget' button.",
+            "13. Verify that the widget's details have been updated.",
+            "14. Log out.",
+            "15. Attempt to delete a widget.",
+            "16. Verify that the widget is successfully removed from the widgets list.",
+            "17. Log out.",
+            "18. Log in as a regular user without widget creation permissions and attempt to create a widget.",
+            "19. Verify that widget creation fails due to insufficient permissions."
+        ],
+        "expectedResult": "All test steps have been followed correctly, and the custom widget creation and management functionalities work as intended.",
+        "testCaseID": "A user may reorder routes or remove flight plans assigned to a UAV as long as the flight has not started execution.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-656"
+        ]
+    },
+    {
+        "Requirement": "RE-655",
+        "testObjective": "To test the functionality of the new feature introduced in version 6.5.5 of the application",
+        "preconditions": [
+            "Ensure that the application is built with version 6.5.5",
+            "Verify that the prerequisites for the feature are met",
+            "Log in as a regular user"
+        ],
+        "testSteps": [
+            "1. Launch the application",
+            "2. Navigate to the feature's main interface",
+            "3. Perform a specific action within the feature",
+            "4. Verify that the feature's expected behavior is displayed",
+            "5. Log out and log back in to ensure session security"
+        ],
+        "expectedResult": "The feature should function correctly without any issues, and the user should see the expected behavior upon performing the action.",
+        "testCaseID": "When a UAV is selected  the RouteAssignmentUI shall display its active flight plans.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-655"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions without any issues.",
+        "preconditions": [
+            "The system must have a valid database schema with user roles table already created.",
+            "A test environment with sufficient user permissions is available for testing.",
+            "The system's configuration must include the necessary permissions for role creation."
+        ],
+        "testSteps": [
+            "1. Log in as an admin user to the system.",
+            "2. Navigate to the user roles section in the admin panel.",
+            "3. Click on the 'Create New Role' button.",
+            "4. Enter a role name and select predefined permissions from the list.",
+            "5. Provide a role description.",
+            "6. Click 'Create Role' button.",
+            "7. Verify that the new role appears in the list of user roles.",
+            "8. Log out and log back in as an admin user to refresh the permissions.",
+            "9. Test the creation of another role with different permissions to ensure consistency.",
+            "10. Log out and log back in as a regular user to ensure the permissions are correctly assigned."
+        ],
+        "expectedResult": "The system should display a list of user roles, and a new custom role with the predefined permissions should be successfully created. The user should be able to assign these permissions to regular users without any issues.",
+        "testCaseID": "When requested by the user  the RouteAssignmentUI shall display details about the selected UAV and its flight plans.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-651"
+        ]
+    },
+    {
+        "Requirement": "RE-649",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System running at least Java 8"
+        ],
+        "testSteps": [
+            "Log in as user with valid credentials",
+            "Check if user dashboard loads successfully",
+            "Attempt to access protected resource",
+            "Review dashboard for any errors or warnings",
+            "Logout user and attempt to log in again"
+        ],
+        "expectedResult": "User authentication functionality works correctly without errors",
+        "testCaseID": "When a route is assigned or removed from a UAV  the RouteAssignmentUI shall notify Dronology.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-649"
+        ]
+    },
+    {
+        "Requirement": "RE-646",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System running at least Windows 10",
+            "Admin rights"
+        ],
+        "testSteps": [
+            "Log in with provided credentials",
+            "Verify successful login",
+            "Navigate to 'Profile' section",
+            "Check profile information display",
+            "Logout and login again with different credentials",
+            "Verify successful logout and login"
+        ],
+        "expectedResult": "User authentication functionality works correctly",
+        "testCaseID": "The RouteAssignmentUI shall provide means to select an existing routes and assign them to a UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-646"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that the custom user roles with predefined permissions are created successfully and the permissions are applied correctly to the respective users.",
+        "preconditions": [
+            "The system has a user management feature already implemented",
+            "There are predefined roles with their respective permissions defined in the system"
+        ],
+        "testSteps": [
+            "Create a new user role form",
+            "Define the role name and permissions for the new role",
+            "Submit the form to create the new role",
+            "Verify that the new role is created",
+            "Assign the new role to a user",
+            "Verify that the assigned user has the predefined permissions applied"
+        ],
+        "expectedResult": "The custom user role is created successfully with the predefined permissions applied to the assigned user.",
+        "testCaseID": "When loading the map view it shall be positioned at the pre-defined location",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-643"
+        ]
+    },
+    {
+        "Requirement": "RE-642",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System running at least Windows 10",
+            "Admin rights"
+        ],
+        "testSteps": [
+            "1. Connect to the system's web interface",
+            "2. Enter the new user's login credentials",
+            "3. Verify the system's response to the login attempt",
+            "4. Submit a request for account creation",
+            "5. Check if the new account is created successfully"
+        ],
+        "expectedResult": "The new user is successfully authenticated and the account is created without any errors",
+        "testCaseID": "When the VaadinUI is activated  the VaadinUI shall be configured according to stored configuration parameters.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-642"
+        ]
+    },
+    {
+        "Requirement": "RE-639",
+        "testObjective": "To test the functionality of the new user authentication feature in the application",
+        "preconditions": [
+            "Database connection is established",
+            "User account exists with valid credentials",
+            "System is configured with the new authentication feature"
+        ],
+        "testSteps": [
+            "Log in as the new user with valid credentials",
+            "Verify that the user's profile is displayed correctly",
+            "Attempt to log out and verify the session is terminated",
+            "Check that the user's account is locked if invalid credentials are provided"
+        ],
+        "expectedResult": "All authentication attempts should be successful with the expected outcomes as described.",
+        "testCaseID": "The UIMiddleware shall accept and activate a mission plan upon request.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-639"
+        ]
+    },
+    {
+        "Requirement": "RE-637",
+        "testObjective": "To test the functionality of the new user authentication feature introduced in version 6.3.7 of the application.",
+        "preconditions": [
+            "The application is running version 6.3.7 or higher",
+            "A valid user account exists in the system",
+            "The authentication module is properly configured"
+        ],
+        "testSteps": [
+            "1. Log in using the valid user account",
+            "2. Verify that the authentication module is functioning correctly",
+            "3. Test the login form for any error messages",
+            "4. Submit the login form with valid credentials",
+            "5. Observe the system response after login",
+            "6. Reset the user account and repeat the login process"
+        ],
+        "expectedResult": "The user should successfully log in with valid credentials, and the system should respond appropriately without any errors.",
+        "testCaseID": "The UIMiddleware shall enable an existing route to be assigned to an active UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-637"
+        ]
+    },
+    {
+        "Requirement": "RE-634",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "System has been updated to version 2.3.4 or higher",
+            "Database schema has been updated to include the new authentication tables",
+            "Frontend has been configured with the new authentication API endpoints"
+        ],
+        "testSteps": [
+            "1. Access the login page",
+            "2. Enter username and password",
+            "3. Click on 'Sign in'",
+            "4. Verify that the user is redirected to the home page",
+            "5. Log out and refresh the page",
+            "6. Verify that the user is redirected to the login page"
+        ],
+        "expectedResult": "User is successfully authenticated and navigated between pages as expected",
+        "testCaseID": "The UIMiddleware shall enable the creation and modification of flight routes",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-634"
+        ]
+    },
+    {
+        "Requirement": "RE-630",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "System must be running the latest version of the application",
+            "Database schema must be updated to include new authentication tables"
+        ],
+        "testSteps": [
+            "Login as a new user with provided credentials",
+            "Verify that the user is authenticated successfully",
+            "Logout the user and login as a guest user",
+            "Verify that guest login is successful"
+        ],
+        "expectedResult": "User authentication and guest login functionality works as intended",
+        "testCaseID": "The UIMiddleware accepts commands from UIs and forwards to Dronology",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-630"
+        ]
+    },
+    {
+        "Requirement": "RE-628",
+        "testObjective": "To verify that the system correctly handles the creation of a new user account with a valid email address and password.",
+        "preconditions": [
+            "The system has a valid email address and password for the current user.",
+            "The system has a functional registration page accessible.",
+            "The system has a user authentication feature with password and email-based authentication."
+        ],
+        "testSteps": [
+            "1. Navigate to the registration page.",
+            "2. Enter a valid email address.",
+            "3. Enter a strong password.",
+            "4. Select 'Create Account' button.",
+            "5. Verify that the account creation is successful.",
+            "6. Log in to the newly created account to ensure it is active and functional."
+        ],
+        "expectedResult": "A new user account is successfully created with a valid email address and strong password, and the account is active and functional.",
+        "testCaseID": "The UIMiddleware shall provide a list of all existing routes",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-628"
+        ]
+    },
+    {
+        "Requirement": "RE-626",
+        "testObjective": "To test the functionality of the new user authentication feature introduced in version 1.2 of the application.",
+        "preconditions": [
+            "The application is built on the latest version of the backend framework (version 1.2).",
+            "A user account exists in the system with the appropriate permissions to authenticate.",
+            "The database has been populated with the test data necessary for user authentication.",
+            "The frontend has been configured to accept user authentication tokens from the backend.",
+            "The system has been restarted to ensure that all components are in a clean state for testing."
+        ],
+        "testSteps": [
+            "1. Log in as a registered user using the new authentication feature.",
+            "2. Submit a request to the backend API using the authentication token.",
+            "3. Verify that the request is processed correctly by the backend system.",
+            "4. Log out of the application using the new authentication feature.",
+            "5. Verify that the logout process is successful.",
+            "6. Test the authentication feature with different user accounts to ensure cross-user functionality.",
+            "7. Verify that the authentication feature works correctly even after multiple logins and logouts.",
+            "8. Perform a regression test to ensure that the authentication feature does not introduce any regressions in the system.",
+            "9. Verify that the authentication feature is compatible with the existing system components.",
+            "10. Document the test results in the specified test report format."
+        ],
+        "expectedResult": "The new user authentication feature should function correctly, with all authentication processes (login, logout, request submission) working as expected, and the system should not experience any issues or regressions as a result of the new feature.",
+        "testCaseID": "The UIMiddleware shall provide a list of all active UAVs",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-626"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has at least 1GB free disk space",
+            "Database has at least 10GB free space",
+            "Python development environment is installed",
+            "Test environment setup is complete"
+        ],
+        "testSteps": [
+            "1. Create a new user role with predefined permissions",
+            "2. Test that the role creation process validates user input correctly",
+            "3. Verify that the role is correctly assigned to users",
+            "4. Confirm that the predefined permissions are correctly applied to the role"
+        ],
+        "expectedResult": "Success",
+        "testCaseID": "The ActivityLogger shall log all commands sent to and messages received from a CGS.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-616"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that the custom user roles with predefined permissions are created successfully and the permissions are correctly assigned.",
+        "preconditions": [
+            "Database schema has been updated to include the new roles table structure",
+            "Application has been configured with the necessary permissions package"
+        ],
+        "testSteps": [
+            "1. Log in as an admin user and navigate to the Users section.",
+            "2. Create a new user role with the following predefined permissions: ['read', 'write', 'execute']",
+            "3. Save the role configuration.",
+            "4. Verify that the new role appears in the Users section.",
+            "5. Test the creation of a user with the new role and ensure that the user has the assigned permissions.",
+            "6. Log out and log back in to refresh the session.",
+            "7. Check that the user with the new role has the expected permissions activated.",
+            "8. Exit testing.",
+            "9. Log out.",
+            "10. Log back in."
+        ],
+        "expectedResult": "Success - The custom user roles have been created with the predefined permissions and the user with the new role has the expected permissions activated.",
+        "testCaseID": "The ActivityLogger shall log all flight plan related events.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-611"
+        ]
+    },
+    {
+        "Requirement": "RE-597",
+        "testObjective": "To test the functionality of the new user authentication feature in the application.",
+        "preconditions": [
+            "The application has been upgraded to version 2.3.0 or higher.",
+            "A valid user account exists in the system with a strong password.",
+            "The system has been configured with the necessary security settings to allow user authentication."
+        ],
+        "testSteps": [
+            "1. Log in to the application using a valid user account.",
+            "2. Verify that the authentication successfully logs in.",
+            "3. Attempt to log in with an invalid user account.",
+            "4. Verify that the authentication fails to log in.",
+            "5. Test the login form's error messages.",
+            "6. Verify that the system provides a correct error message when an invalid username or password is provided."
+        ],
+        "expectedResult": "The system correctly authenticates users and displays appropriate error messages when invalid credentials are used.",
+        "testCaseID": "The InternalSimulator shall approximate the state of the battery",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-597"
+        ]
+    },
+    {
+        "Requirement": "RE-596",
+        "testObjective": "To test the new user authentication flow with two-factor verification enabled.",
+        "preconditions": [
+            "Database: RE-596-Preconditions-DB",
+            "Browser: RE-596-Preconditions-Browser",
+            "Server: RE-596-Preconditions-Server"
+        ],
+        "testSteps": [
+            "1. Log in to the system using username and password.",
+            "2. Enable two-factor verification in the account settings.",
+            "3. Submit a login request using the new two-factor authentication method.",
+            "4. Verify that the system displays a confirmation message indicating successful authentication.",
+            "5. Log out of the system.",
+            "6. Verify that the system displays a logout confirmation message."
+        ],
+        "expectedResult": "The system successfully authenticates the user with two-factor verification enabled, and both login and logout processes complete without errors.",
+        "testCaseID": "When given a landing command the InternalSimulator shall move the UAV from to the ground altitude corresponding to its current longitude and latitude.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-596"
+        ]
+    },
+    {
+        "Requirement": "RE-595",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System configured with new authentication settings"
+        ],
+        "testSteps": [
+            "Login using provided credentials",
+            "Verify successful login",
+            "Logout and login again to test session persistence"
+        ],
+        "expectedResult": "User is successfully logged in and can remain logged in after logout without issues.",
+        "testCaseID": "When given a goto command  the InternalSimulator shall update the location of the UAV at increments of {{SIMULATIONSTEPSIZE}} meters  moving it towards the target destination until the destination is reached.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-595"
+        ]
+    },
+    {
+        "Requirement": "RE-594",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System configured with new authentication settings"
+        ],
+        "testSteps": [
+            "Log in as the new user",
+            "Verify successful login",
+            "Check availability of new authentication options",
+            "Logout and log in again"
+        ],
+        "expectedResult": "User is successfully authenticated with the new settings, and logout works correctly.",
+        "testCaseID": "When given a takeoff command the InternalSimulator shall move the UAV to the takeoff altitude corresponding to its current longitude and latitude.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-594"
+        ]
+    },
+    {
+        "Requirement": "RE-593",
+        "testObjective": "To test the functionality of the new user authentication feature in the application.",
+        "preconditions": [
+            "Database connection is established",
+            "User account with appropriate permissions is created",
+            "Application is fully configured"
+        ],
+        "testSteps": [
+            "Login with the created user account",
+            "Verify that the user is successfully authenticated",
+            "Logout the user",
+            "Logout and login as another user with different permissions"
+        ],
+        "expectedResult": "User authentication and logout functionality works as expected, with proper verification of user permissions.",
+        "testCaseID": "The InternalSimulator shall approximate the behavior of a UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-593"
+        ]
+    },
+    {
+        "Requirement": "RE-592",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System configured with new authentication settings"
+        ],
+        "testSteps": [
+            "Log in with provided credentials",
+            "Verify that the user is authenticated successfully",
+            "Check that the authentication message displays correctly",
+            "Logout and log in with different credentials to test security"
+        ],
+        "expectedResult": "User authentication works as expected with the new settings",
+        "testCaseID": "The UAVRegistrationManager shall store UAV meta-data information  such as the UAV's technical characteristics",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-592"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature that allows users to create and manage a personal fitness plan with real-time tracking of their exercise and diet data, including a daily summary report.",
+        "testObjective": "Verify that the new fitness plan feature is functioning correctly by ensuring that users can create a plan, add exercises and food items, and generate a daily summary report.",
+        "preconditions": [
+            "System has a user with valid login credentials",
+            "Database has sufficient exercise and diet tracking records",
+            "Frontend is ready with the interface for creating fitness plans",
+            "Backend has the necessary logic to store and manage exercise and diet data"
+        ],
+        "testSteps": [
+            "1. Log in as the user with valid credentials",
+            "2. Navigate to the Fitness Planning section",
+            "3. Create a new fitness plan with at least 3 exercises and 2 food items",
+            "4. Save the plan",
+            "5. Generate a daily summary report",
+            "6. Verify that the summary report is generated and displayed correctly",
+            "7. Log out of the system"
+        ],
+        "expectedResult": "The daily summary report is generated correctly, showing all exercises and food items, and the report is displayed without any errors.",
+        "testCaseID": "When the maximum numbers of allowed activated UAVs has been reached  the UAVActivationManager shall reject any further activation requests.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-589"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom themes for their personal devices.",
+        "testObjective": "To verify that users can successfully create and manage custom themes for their personal devices without any issues.",
+        "preconditions": [
+            "Device is enrolled in the system",
+            "Default theme is already available",
+            "System and app permissions are sufficient for theme creation"
+        ],
+        "testSteps": [
+            "1. Log in as admin user",
+            "2. Navigate to the theme management section",
+            "3. Create a new theme",
+            "4. Set the theme's background and text colors",
+            "5. Save the theme",
+            "6. Apply the theme to the default application",
+            "7. Verify that the theme is displayed correctly",
+            "8. Reset the theme to default settings",
+            "9. Verify that the system reverts to the default theme"
+        ],
+        "expectedResult": "All steps are completed successfully, and the theme is correctly applied and reverted without any errors.",
+        "testCaseID": "When a UAV is deactivated the UAVActivationManager shall cancel all current and scheduled flight plans",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-587"
+        ]
+    },
+    {
+        "Requirement": "RE-576",
+        "testObjective": "To test the functionality of the new user authentication feature introduced in version 1.2 of the application.",
+        "preconditions": [
+            "The application must be built with the new authentication library version 2.3.1",
+            "The user database schema must be updated to support the new authentication tokens",
+            "A test environment with sufficient user roles configured for testing"
+        ],
+        "testSteps": [
+            "1. Create a new user account with the new authentication feature enabled",
+            "2. Log in as the new user using the system-generated credentials",
+            "3. Verify that the user has access to the application interface",
+            "4. Attempt to log in with invalid credentials and observe the error message",
+            "5. Test the feature under load conditions by simulating multiple user login attempts"
+        ],
+        "expectedResult": "The authentication process should successfully authenticate the new user and display an error message upon invalid credentials, and the system should handle multiple simultaneous login attempts without performance degradation.",
+        "testCaseID": "The VehicleCore shall support virtual UAVs",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-576"
+        ]
+    },
+    {
+        "Requirement": "RE-574",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System has the latest security updates"
+        ],
+        "testSteps": [
+            "Login with provided credentials",
+            "Check if user is authenticated successfully",
+            "Logout user and login again",
+            "Test if user is still authenticated after logout"
+        ],
+        "expectedResult": "User is authenticated successfully on first login and remains authenticated after logout.",
+        "testCaseID": "The VehicleCore shall support UAVs connected via the GCS",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-574"
+        ]
+    },
+    {
+        "Requirement": "RE-563",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System configured with new authentication settings"
+        ],
+        "testSteps": [
+            "Log in as user with new credentials",
+            "Verify that the authentication panel appears",
+            "Attempt to log out and confirm it's successful"
+        ],
+        "expectedResult": "Successful authentication and logout process",
+        "testCaseID": "When a group of UAVs are assigned flight patterns as part of a mission  the system shall provide a warning if any paths overlap.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-563"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a personal fitness plan with real-time updates and progress tracking.",
+        "testObjective": "Verify that the new fitness plan feature is functional, including the ability to add exercises, track progress, and display real-time metrics such as heart rate and calories burned.",
+        "preconditions": [
+            "The system has a stable user interface with no active bugs blocking normal operation."
+        ],
+        "testSteps": [
+            "1. Log in as a user with access to the fitness plan feature.",
+            "2. Click on the 'Create Fitness Plan' button in the dashboard.",
+            "3. Enter the plan details including exercise names, durations, and calories burned.",
+            "4. Save the plan.",
+            "5. Verify that the plan is displayed in the user's profile.",
+            "6. Trigger the real-time monitoring feature by selecting a device or enabling it.",
+            "7. Start the fitness session and observe the real-time updates on the displayed metrics.",
+            "8. Stop the session and check that the metrics are no longer updating.",
+            "9. Log out and log back in to ensure session data persistence.",
+            "10. Test the feature with different types of devices and connectivity methods."
+        ],
+        "expectedResult": "The fitness plan feature is successfully implemented with all specified functionalities working as expected, including real-time updates and progress tracking.",
+        "testCaseID": "If requested  the SingleUAVFlightPlanScheduler shall abort the currently executing flight plan of an UAV",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-558"
+        ]
+    },
+    {
+        "Requirement": "RE-555",
+        "testObjective": "To test the functionality of the new user authentication feature in the application.",
+        "preconditions": [
+            "The application must be built with the latest version of the authentication library."
+        ],
+        "testSteps": [
+            "1. Log in as the admin user.",
+            "2. Navigate to the 'User Management' section.",
+            "3. Try to create a new user.",
+            "4. Verify that the new user is added to the system.",
+            "5. Attempt to log out of the application as an admin.",
+            "6. Check that the admin user remains logged in.",
+            "7. Log out as a regular user.",
+            "8. Verify that the regular user is not logged in."
+        ],
+        "expectedResult": "The user authentication functionality works correctly, with proper login and logout functionality.",
+        "testCaseID": "If a UAV does not have any pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall notify the UAV to hover in place.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-555"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has at least one user role defined",
+            "User has the necessary permissions to access the system's role management interface"
+        ],
+        "testSteps": [
+            "1. Log in as an administrator user",
+            "2. Navigate to the user roles section",
+            "3. Click on the 'Create Role' button",
+            "4. Enter a custom role name",
+            "5. Select predefined permissions from the available list",
+            "6. Validate the role creation process",
+            "7. Log out and log back in to ensure role creation is persistent"
+        ],
+        "expectedResult": "Successful creation of a custom user role with predefined permissions.",
+        "testCaseID": "If a scheduled flight is not manually assigned to a UAV  the SingleUAVFlightPlanScheduler shall assign the route automatically to an UAV",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-551"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions.",
+        "preconditions": [
+            "The system currently supports basic user roles with standard permissions.",
+            "A new feature is being developed to allow users to create custom user roles with predefined permissions."
+        ],
+        "testSteps": [
+            "1. Design a user interface for the custom role creation form.",
+            "2. Implement the form with necessary fields for role definition.",
+            "3. Develop the logic to save custom roles.",
+            "4. Create predefined roles with sample permissions.",
+            "5. Test the creation process to ensure it works as expected.",
+            "6. Verify that the custom roles are correctly saved and linked to predefined permissions."
+        ],
+        "expectedResult": "A successfully implemented feature where users can create custom user roles with predefined permissions, and these roles are correctly linked to the specified permissions.",
+        "testCaseID": "If a route contains a specific {{UAVID}}  the SingleUAVFlightPlanScheduler shall assign the route to the given UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-549"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "Verify that users can successfully create and manage custom tags within their projects.",
+        "preconditions": [
+            "The system has a tagging feature enabled",
+            "Tagging configuration is properly configured",
+            "The database schema supports tagging attributes",
+            "User authentication is functional for creating tags"
+        ],
+        "testSteps": [
+            "1. Create a new tag with sample content",
+            "2. Assign the tag to a project",
+            "3. Modify the tag's attributes",
+            "4. Verify the tag is correctly applied to the project",
+            "5. Delete the tag and ensure it is removed from all projects"
+        ],
+        "expectedResult": "All tests pass successfully, tags are correctly managed within the system.",
+        "testCaseID": "When requested  the SingleUAVFlightPlanScheduler shall schedule a route for execution.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-547"
+        ]
+    },
+    {
+        "Requirement": "RE-545",
+        "testObjective": "To test the functionality of the new user authentication feature in the application",
+        "preconditions": [
+            "Database connection is established",
+            "User credentials are available",
+            "System has the latest security updates"
+        ],
+        "testSteps": [
+            "1. Log in using username and password",
+            "2. Verify that the user dashboard loads successfully",
+            "3. Check the availability of a new feature section",
+            "4. Click on the new feature section and verify that it displays the correct information",
+            "5. Logout and log in again to ensure session security"
+        ],
+        "expectedResult": "User authentication process works correctly, user dashboard displays all pages, new feature information is accurate, and session security is maintained after logout and login.",
+        "testCaseID": "When requested  if a mission is currently active  the MissionPlanner shall cancel the active mission.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-545"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions without any issues.",
+        "preconditions": [
+            "The system must have a valid database schema with existing roles defined.",
+            "A test environment with sufficient permissions is available for testing.",
+            "The application has the necessary API endpoints exposed for role creation.",
+            "The system has a proper logging setup to capture any errors during the process."
+        ],
+        "testSteps": [
+            "1. Create a new role with predefined permissions.",
+            "2. Verify that the role has the correct permissions assigned.",
+            "3. Log any errors that occur during the process.",
+            "4. Ensure that the role creation process is successful.",
+            "5. Repeat the process with different permissions to test role variations."
+        ],
+        "expectedResult": "Success - Custom roles are created with the specified permissions, and the process is repeatable.",
+        "testCaseID": "The MissionPlanner shall manage predefined FlightPatterns",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-541"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "Verify that users can successfully create and manage custom tags within their projects.",
+        "preconditions": [
+            "System has the RE-531 functionality enabled",
+            "User has access to the project management interface"
+        ],
+        "testSteps": [
+            "1. Log in as a user with project management access",
+            "2. Navigate to the project management interface",
+            "3. Create a new tag with a custom name",
+            "4. Save the tag",
+            "5. Verify the tag appears in the project management interface",
+            "6. Modify an existing tag's name",
+            "7. Save the modification",
+            "8. Verify the tag name change in the interface"
+        ],
+        "expectedResult": "All custom tags are correctly created and managed within the project interface.",
+        "testCaseID": "When a flight plan is activated for a UAV currently on the ground  the FlightSchedulingandExecution shall notify the UAV to takeoff vertically until it reaches the prescribed altitude.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-531"
+        ]
+    },
+    {
+        "Requirement": "RE-525",
+        "testObjective": "To test the functionality of the new user authentication feature in the application",
+        "preconditions": [
+            "The application has been set up with the new user authentication feature enabled",
+            "All necessary user accounts have been created",
+            "The system has been initialized with the required configuration for the new feature"
+        ],
+        "testSteps": [
+            "Log in as a new user account created under the new authentication feature",
+            "Verify that the user authentication feature is functioning correctly",
+            "Logout and log in again to confirm the feature's stability"
+        ],
+        "expectedResult": "The user authentication feature is functioning correctly and stable.",
+        "testCaseID": "If a flight plan is active and the hover in place command is rescinded  the FlightManager shall notify the UAV to continue to the originally designated waypoint.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-525"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature that allows users to create and manage a personal fitness plan with real-time tracking of their exercise and diet data.",
+        "testObjective": "Verify that the new personal fitness plan feature is implemented correctly, including the ability to create and manage the plan, track exercise and diet data in real-time, and ensure that the data is synced across all devices.",
+        "preconditions": [
+            "System has sufficient storage capacity to handle fitness plan data",
+            "Browser is up to date with the latest security patches",
+            "The user has installed the latest version of the app",
+            "The user has enabled the fitness tracking feature in settings",
+            "The user has synced their Google account with the app"
+        ],
+        "testSteps": [
+            "1. Open the app and sign in with Google account",
+            "2. Navigate to the 'MyFitness' section",
+            "3. Click on 'Create New Plan'",
+            "4. Input the plan details including exercise and diet",
+            "5. Save the plan",
+            "6. Check that the plan appears in the list of saved plans",
+            "7. Create a new diet entry within the plan",
+            "8. Input the diet details",
+            "9. Save the diet entry",
+            "10. Verify that the diet entry appears in the list of saved entries",
+            "11. Use the app to track exercise and diet on another device",
+            "12. Check that the tracked data syncing properly across devices",
+            "13. Export the fitness plan data to CSV format from the app",
+            "14. Open the CSV file and verify the data accuracy",
+            "15. Export the diet data to Excel format from the app",
+            "16. Open the Excel file and verify the data accuracy"
+        ],
+        "expectedResult": "The new personal fitness plan feature is functioning as intended, with all data being correctly tracked and synced across devices, and the export options working properly.",
+        "testCaseID": "If a flight route is assigned to a UAV which is currently hovering in place  the FlightManager shall assign the route and maintain the hover in place mode.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-523"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature that allows users to create and manage a personal fitness plan with real-time tracking of their exercise and diet data.",
+        "testObjective": "Verify that the new fitness plan feature is functional and integrates correctly with the existing data tracking system.",
+        "preconditions": [
+            "The existing data tracking system is fully operational.",
+            "The database schema has been updated to include fields for exercise and diet tracking."
+        ],
+        "testSteps": [
+            "1. Create a new fitness plan entry with sample data.",
+            "2. Add sample exercise data to the database.",
+            "3. Add sample diet data to the database.",
+            "4. Verify that the new fitness plan entry is visible in the dashboard.",
+            "5. Verify that the exercise data is correctly recorded in the database.",
+            "6. Verify that the diet data is correctly recorded in the database.",
+            "7. Test the integration between the fitness plan and exercise data.",
+            "8. Test the integration between the fitness plan and diet data."
+        ],
+        "expectedResult": "All tests passed, the new fitness plan feature is functional and integrates correctly with the existing data tracking system.",
+        "testCaseID": "When the hover in place command is issued  the FlightManager shall halt the UAV in place and maintain its current position.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-521"
+        ]
+    },
+    {
+        "Requirement": "RE-517",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "System configured with new authentication settings"
+        ],
+        "testSteps": [
+            "Log in with provided credentials",
+            "Verify that the user is authenticated successfully",
+            "Check that the authentication status updates in the system logs"
+        ],
+        "expectedResult": "User is authenticated successfully in the system with updated authentication status",
+        "testCaseID": "When given two coordinates the CoordinateSystem shall compute the direction from the first coordinate to the second coordinate.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-517"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that the custom user roles with predefined permissions are created successfully and the permissions are correctly assigned.",
+        "preconditions": [
+            "Database schema has been updated to include the new roles table structure",
+            "Application has been configured with the necessary role definitions and policies",
+            "User authentication system is operational and can create user roles"
+        ],
+        "testSteps": [
+            "1. Create a new user role with predefined permissions using the system interface.",
+            "2. Verify that the new role is listed in the user roles dashboard.",
+            "3. Create a new user and assign the custom role to them.",
+            "4. Verify that the user has access to the resources associated with the custom role.",
+            "5. Log out and log back in to ensure role assignment persists.",
+            "6. Check that the role permissions are correctly assigned to other users with the same role."
+        ],
+        "expectedResult": "The custom user roles are created with the predefined permissions, and the role permissions are correctly assigned to other users with the same role.",
+        "testCaseID": "When given two coordinates the CoordinateSystem shall compute the distance between them.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-516"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has a role definition API",
+            "User roles table exists in the database"
+        ],
+        "testSteps": [
+            "Create a new role definition with predefined permissions",
+            "Validate that the role definition is correctly stored in the database",
+            "Test user creation with the new role",
+            "Test user assignment to the role"
+        ],
+        "expectedResult": "Success - Role definitions with custom permissions are correctly created and stored, user assignments work as expected.",
+        "testCaseID": "When requested  the CoordinateSystem shall transform coordinates to alternate formats.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-510"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "To verify that users can successfully create and manage custom tags for their projects.",
+        "preconditions": [
+            "The system has a tagging module implemented",
+            "The tagging module has a database schema supporting custom tags",
+            "The system has a user authentication module in place",
+            "The tagging module has a user interface for creating and managing tags"
+        ],
+        "testSteps": [
+            "1. Create a new tag with the system",
+            "2. Assign the tag to a project",
+            "3. Modify the tag's name and description",
+            "4. Delete the tag",
+            "5. Verify that the tag exists in the system's database"
+        ],
+        "expectedResult": "The system should allow users to create, assign, modify, and delete custom tags without any issues, and all operations should be reflected in the system's database",
+        "testCaseID": "When a flight route requires a customized takeoff altitude that differs from the system's default takeoff altitude  it shall be specified in the flight route.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-508"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom templates for their reports.",
+        "testObjective": "Verify that custom templates can be created and managed, ensuring that reports are generated correctly.",
+        "preconditions": [
+            "The system has a report generation feature enabled",
+            "Templates database is populated with default templates"
+        ],
+        "testSteps": [
+            "1. Access the report generation interface",
+            "2. Navigate to the template creation section",
+            "3. Provide necessary template details",
+            "4. Save the template",
+            "5. Generate a report using the custom template",
+            "6. Verify the report contains the correct data formatted as expected",
+            "7. Delete the custom template if no longer needed",
+            "8. Log the test results in the system logs",
+            "9. Ensure that the deletion of the template does not affect other functionalities",
+            "10. Verify that the templates database still contains the default templates"
+        ],
+        "expectedResult": "All tests passed successfully.",
+        "testCaseID": "The FlightRouteManager shall persist flight routes.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-505"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions and access levels.",
+        "testObjective": "Verify that the new feature for creating custom user roles with predefined permissions and access levels is functional and behaves as expected.",
+        "preconditions": [
+            "The system has a user roles table with existing default roles.",
+            "The system has a permissions table with predefined permissions.",
+            "A new 'create roles' endpoint has been added to the API.",
+            "The UI has a user role creation form with the necessary fields.",
+            "The database schema includes a new roles table with the required columns.",
+            "The system has a user authentication layer that allows users to assign roles.",
+            "The system has a security layer that enforces role-based access control.",
+            "The system has an API gateway that routes requests to the appropriate endpoints.",
+            "The system has a testing framework in place to validate API endpoints.",
+            "The system has a test environment configured with the necessary permissions and roles."
+        ],
+        "testSteps": [
+            "1. Log in as a system administrator user.",
+            "2. Navigate to the user roles section in the administrative interface.",
+            "3. Click on the 'Create New Role' button.",
+            "4. Enter the role name, select permissions from the predefined list.",
+            "5. Assign an access level to the role.",
+            "6. Click 'Save Role' to create the new role.",
+            "7. Verify that the new role appears in the list of user roles.",
+            "8. Log out of the system.",
+            "9. Test the new 'create roles' API endpoint by sending a POST request with role data.",
+            "10. Verify that the API returns the created role with correct permissions and access level.",
+            "11. Test the 'assign roles' UI functionality by attempting to modify an existing role's permissions and access level.",
+            "12. Verify that the modified role reflects the changes in the database and UI.",
+            "13. Test the role-based access control by creating a user with the new role and verifying their access to relevant resources.",
+            "14. Log out of the system and ensure no unintended side effects."
+        ],
+        "expectedResult": "The system successfully implements the new feature, allowing users to create custom roles with predefined permissions and access levels, and validates that all functionalities work as expected.",
+        "testCaseID": "The FlightRouteManager shall ensure that all flight routes represent a {{VALIDFLIGHTROUTE}}.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-503"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom themes for their personal devices.",
+        "testObjective": "To verify that users can successfully create and manage custom themes for their personal devices without any issues.",
+        "preconditions": [
+            "Device is enrolled in the system",
+            "Default theme is installed on the device"
+        ],
+        "testSteps": [
+            "Open the device settings",
+            "Navigate to the theme customization section",
+            "Create a new theme",
+            "Select colors and patterns",
+            "Save the theme",
+            "Verify the theme is applied to the device",
+            "Revert the theme if necessary"
+        ],
+        "expectedResult": "The device successfully displays the custom theme after creation and management.",
+        "testCaseID": "When the return to home command is issued  the FlightManager shall return the UAV to its original launch location without issuing any additional waypoint or routing commands.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-424"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom widgets in the application interface.",
+        "testObjective": "To verify that the new feature for creating and managing custom widgets has been implemented correctly and functions as expected.",
+        "preconditions": [
+            "The application interface is fully functional and ready for new features to be added",
+            "There are no existing custom widget features in the application that conflict with the new implementation",
+            "The backend server is capable of handling the new widget management functionality",
+            "The database schema includes the necessary tables to support custom widgets management",
+            "The necessary permissions and roles have been defined for widget creation and management",
+            "The user interface team has created the necessary UI components for custom widgets",
+            "The integration team has ensured that the widget creation and management integrates with other system components"
+        ],
+        "testSteps": [
+            "1. Create a new custom widget with all required attributes and settings",
+            "2. Save the widget and verify that it appears in the interface",
+            "3. Modify the widget's attributes and settings to test various scenarios",
+            "4. Save the widget again and verify that the changes are reflected in the interface",
+            "5. Delete the widget and verify that it is removed from the interface",
+            "6. Attempt to create a widget with invalid attributes to test error handling",
+            "7. Verify that the widget creation and management interface displays appropriate error messages for invalid inputs",
+            "8. Verify that the widget creation and management interface displays appropriate success messages for valid widget creation"
+        ],
+        "expectedResult": "All test cases for the custom widget creation and management functionality have passed successfully, with no errors or exceptions indicating a failed implementation.",
+        "testCaseID": "When the GCS loses the connection to an UAV  the GCS shall attempt to reconnect",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-235"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature that allows users to create and manage a personal fitness plan with real-time tracking of their exercise and diet data, including a daily summary report.",
+        "testObjective": "Verify that the new fitness plan feature is functioning correctly by testing user interactions with the interface, data entry, and the generation of summary reports.",
+        "preconditions": [
+            "System has a basic understanding of fitness tracking functionality",
+            "Database has sufficient user and activity records for testing"
+        ],
+        "testSteps": [
+            "1. Create a new fitness plan",
+            "2. Add daily exercise activities",
+            "3. Add dietary intake data",
+            "4. Generate a summary report",
+            "5. Verify that the summary report displays all collected data accurately"
+        ],
+        "expectedResult": "The summary report contains all the entered data accurately and is displayed in an easily readable format.",
+        "testCaseID": "The UAVActivationManager shall only activate UAVs that are registered.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-161"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions without any issues.",
+        "preconditions": [
+            "The system must have a valid user account with sufficient permissions to execute the test",
+            "A valid API key must be provided for authentication",
+            "The database schema must be updated to include the new roles structure"
+        ],
+        "testSteps": [
+            "1. Log in as an admin user with the API key.",
+            "2. Navigate to the User Management section.",
+            "3. Click on the Role Management option.",
+            "4. Click on the Add Role button.",
+            "5. Fill in the Role Name field with a custom name.",
+            "6. Select the appropriate Permissions from the dropdown menu.",
+            "7. Save the new role.",
+            "8. Verify that the new role appears in the list of created roles.",
+            "9. Test the functionality by assigning the new role to an existing user.",
+            "10. Log out and log in again to ensure session security."
+        ],
+        "expectedResult": "The system successfully creates a new custom user role with the specified permissions, and the role is correctly assigned to a test user, resulting in the expected behavior.",
+        "testCaseID": "When a GCS requests activation of a newly detected UAV  the GCSMiddleware shall forward the request to Dronology.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-160"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has a user roles table",
+            "User has access to the permissions module"
+        ],
+        "testSteps": [
+            "Create a new user role",
+            "Define custom permissions for the role",
+            "Test role creation and permissions assignment",
+            "Verify that the role has the expected permissions"
+        ],
+        "expectedResult": "User roles with custom permissions are successfully created and assigned.",
+        "testCaseID": "When a UAV has an active onboard Obstacle Avoidance  then the ObstacleAvoidance system shall not issue directives",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-127"
+        ]
+    },
+    {
+        "Requirement": "RE-126",
+        "testObjective": "To test the functionality of the new user authentication feature",
+        "preconditions": [
+            "Database connection established",
+            "User credentials available",
+            "Application has the new authentication feature enabled"
+        ],
+        "testSteps": [
+            "Login with provided credentials",
+            "Verify that the user is authenticated successfully",
+            "Logout and attempt login with wrong credentials",
+            "Alert when wrong credentials are used"
+        ],
+        "expectedResult": "Successful login on first attempt, failure on wrong credentials",
+        "testCaseID": "The ObjectAvoidance system only issues commands within the capabilities of the UAV",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-126"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "To verify that users can successfully create and manage custom tags for their projects.",
+        "preconditions": [
+            "The system has a tagging interface accessible via the dashboard.",
+            "The backend supports storing and retrieving tag data.",
+            "The database schema includes a table for custom tags with necessary fields (e.g., tag name, description, project ID, and creation date).",
+            "The frontend has a form to input tag names and descriptions with a submit button accessible from the dashboard.",
+            "The frontend displays a list of available tags after successful creation."
+        ],
+        "testSteps": [
+            "1. Navigate to the dashboard.",
+            "2. Access the tagging interface.",
+            "3. Enter a new tag name and description in the form.",
+            "4. Submit the form to create a new tag.",
+            "5. Verify that the tag appears in the list of available tags.",
+            "6. Modify an existing tag's name or description.",
+            "7. Submit the modification form.",
+            "8. Verify that the updated tag appears in the list.",
+            "9. Delete a tag.",
+            "10. Verify that the tag is removed from the list.",
+            "11. Delete all tags at once if applicable."
+        ],
+        "expectedResult": "All steps from 1 to 11 are completed successfully, with tags appearing and being modified correctly in the system.",
+        "testCaseID": "If a UAV takes evasive actions the system will ensure that it will eventually reach its destination",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-125"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a personal fitness plan with real-time updates and progress tracking.",
+        "testObjective": "Verify that the new fitness plan feature works as expected with real-time updates and accurate progress tracking.",
+        "preconditions": [
+            "The system has a user with sufficient permissions to create fitness plans",
+            "The database has the necessary tables and data structures to store fitness plan information"
+        ],
+        "testSteps": [
+            "1. Create a new fitness plan with all required fields filled out",
+            "2. Save the plan",
+            "3. Monitor the plan's status updates in real-time",
+            "4. Verify that progress metrics (e.g., steps, heart rate, calories burned) are accurately tracked and displayed"
+        ],
+        "expectedResult": "The fitness plan is successfully created and displayed with real-time updates and accurate progress metrics.",
+        "testCaseID": "When a stationary or moving object is within the proximity of a UAV the ObjectAvoidance system shall issue evasive directives to the UAV",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-124"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a personal fitness plan with real-time tracking of their exercise and diet data.",
+        "testObjective": "Verify that the new fitness plan feature works as intended, including the ability to create a plan, track progress, and generate reports.",
+        "preconditions": [
+            "Database Connectivity",
+            "API Access",
+            "User Authentication"
+        ],
+        "testSteps": [
+            "1. Create a new fitness plan with predefined goals and exercises.",
+            "2. Add dietary requirements including food items and quantities.",
+            "3. Set up real-time tracking with a sample dataset.",
+            "4. Generate a progress report and verify its accuracy.",
+            "5. Export the plan to a CSV file for offline use."
+        ],
+        "expectedResult": "All fitness plan creation, tracking, and reporting functionalities are operational and accurate with no errors.",
+        "testCaseID": "The RealTimeFlightUI shall display the location of active UAVs as icons on the map.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-120"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a personal fitness plan.",
+        "testObjective": "Verify that the new feature for creating and managing a personal fitness plan is functional and behaves as expected.",
+        "preconditions": [
+            "The system has a user authentication mechanism in place.",
+            "The database schema includes tables for storing fitness plans and associated data."
+        ],
+        "testSteps": [
+            "1. Log in as a registered user.",
+            "2. Navigate to the 'Fitness' section.",
+            "3. Click on 'Create Fitness Plan' button.",
+            "4. Fill in the fitness plan details including exercise types, duration, and goals.",
+            "5. Save the plan.",
+            "6. Verify that the plan appears in the user's dashboard.",
+            "7. Modify an existing fitness plan.",
+            "8. Delete a fitness plan.",
+            "9. Log out.",
+            "10. Verify that all operations are reflected correctly in the system logs."
+        ],
+        "expectedResult": "The user should be able to successfully create, modify, and delete a personal fitness plan without encountering any errors, and all actions should be logged properly.",
+        "testCaseID": "When the RealTimeFlightUI is loaded  a map shall be displayed.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-114"
+        ]
+    },
+    {
+        "Requirement": "RE-112",
+        "testObjective": "To test the functionality of the new user authentication feature introduced in version 1.2 of the application.",
+        "preconditions": [
+            "The application has been upgraded to version 1.2",
+            "A valid user account exists in the system with the necessary permissions",
+            "The authentication module is properly configured"
+        ],
+        "testSteps": [
+            "1. Log in using a valid username and password",
+            "2. Verify that the user dashboard loads correctly",
+            "3. Ensure that the user's profile section is accessible from the dashboard",
+            "4. Test the submission of a new user request form",
+            "5. Check the system logs for any errors related to user authentication"
+        ],
+        "expectedResult": "The user authentication feature functions correctly with valid credentials, and the user dashboard displays the user's profile and allows successful submission of a new user request form.",
+        "testCaseID": "If a command is issued by the VaadinUI for an UAV  the VaadinUI shall request control of that UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-112"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "To verify that users can successfully create and manage custom tags for their projects.",
+        "preconditions": [
+            "The system has a tagging interface where users can input custom tags.",
+            "The backend supports storing custom tags along with project data.",
+            "The frontend provides a tag management interface with save and edit functionalities."
+        ],
+        "testSteps": [
+            "1. Log in as a user with sufficient permissions to create tags.",
+            "2. Navigate to the project management interface.",
+            "3. Select a project and click on 'Manage Tags'.",
+            "4. Enter a custom tag name in the provided field.",
+            "5. Click 'Save' to add the tag.",
+            "6. Verify that the custom tag appears in the project's tag list.",
+            "7. Edit the custom tag by selecting it.",
+            "8. Modify the tag name and other relevant attributes.",
+            "9. Click 'Save' to update.",
+            "10. Verify that the updated tag reflects in the project's tag list.",
+            "11. Logout and log back in if changes require user authentication."
+        ],
+        "expectedResult": "Upon successful execution of the above steps, the custom tag should be successfully created, edited, and remain in the project's tag list for verification.",
+        "testCaseID": "The UIMiddleware shall only assign one control-client at a time for each UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-110"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that the custom user roles with predefined permissions are created successfully and the permissions are correctly assigned.",
+        "preconditions": [
+            "The system has a user roles table with existing default roles",
+            "The system has a permissions table with existing default permissions",
+            "The system has an API endpoint to create user roles"
+        ],
+        "testSteps": [
+            "Define custom user roles with predefined permissions",
+            "Assign the predefined permissions to the custom user roles",
+            "Create a new user role using the defined custom roles",
+            "Verify that the new user role is created successfully",
+            "Verify that the permissions are correctly assigned to the new user role"
+        ],
+        "expectedResult": "The system should have new custom user roles with predefined permissions assigned correctly, and the system should reflect the new roles and permissions after successful creation.",
+        "testCaseID": "The UIMiddleware shall provide an interface for registering UI clients.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-108"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions without any issues.",
+        "preconditions": [
+            "System has at least version 5.0.0",
+            "Database has at least version 10.0.0",
+            "Role definitions are configured as per the documentation"
+        ],
+        "testSteps": [
+            "1. Create a new user role using the interface.",
+            "2. Assign predefined permissions to the new role.",
+            "3. Test the creation process by attempting to create a role with invalid permissions.",
+            "4. Verify that the system logs a clear error message when invalid permissions are attempted to create a role."
+        ],
+        "expectedResult": "Success - All tests passed without any errors.",
+        "testCaseID": "When a UAV's current flight is cancelled  the SingleUAVFlightPlanScheduler shall in turn cancel all scheduled flight plans for that UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-103"
+        ]
+    },
+    {
+        "Requirement": "RE-101",
+        "testObjective": "To verify that the application correctly handles the scenario where a user logs in with a password that contains special characters.",
+        "preconditions": [
+            "User has entered a password containing special characters"
+        ],
+        "testSteps": [
+            "1. Create a user account with a password containing special characters.",
+            "2. Attempt to log in using the created account.",
+            "3. Verify that the login process correctly handles the special characters in the password."
+        ],
+        "expectedResult": "Login is successful and the application correctly handles special characters in the password.",
+        "testCaseID": "If a UAV has pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall execute the next assigned flight plan.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-101"
+        ]
+    },
+    {
+        "Requirement": "RE-100",
+        "testObjective": "To test the functionality of the new feature RE-100",
+        "preconditions": [
+            "System must be running the latest version of the application",
+            "RE-100 feature is available for testing"
+        ],
+        "testSteps": [
+            "Launch the application",
+            "Activate the RE-100 feature",
+            "Perform a series of predefined test actions",
+            "Verify that all test actions have been executed successfully",
+            "Log the test results in the designated log file"
+        ],
+        "expectedResult": "All test actions completed without any errors",
+        "testCaseID": "If requested  the SingleUAVFlightPlanScheduler shall unassign the flight plan assigned to a UAV that is awaiting execution.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-100"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that the custom user roles with predefined permissions are created successfully and the permissions are correctly assigned.",
+        "preconditions": [
+            "The system has a user roles table in the database",
+            "A permissions table exists with predefined permissions",
+            "The system supports role-based access control (RBAC) model"
+        ],
+        "testSteps": [
+            "Create a new custom role using the system interface",
+            "Assign predefined permissions to the new role",
+            "Validate that the new role appears in the user roles table",
+            "Verify that the assigned permissions are correctly linked to the new role",
+            "Log in as an unauthorized user and attempt to create a role with invalid permissions to ensure failure",
+            "Log out and log in as an authorized user with the correct permissions and attempt to create the role again to ensure success"
+        ],
+        "expectedResult": "The new custom role is successfully created with all predefined permissions assigned, and unauthorized users cannot create roles with invalid permissions.",
+        "testCaseID": "The SingleUAVFlightPlanScheduler shall maintain a managed list of pending flight plans for Each UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-86"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a list of custom tags for their projects.",
+        "testObjective": "To verify that users can successfully create, edit, and delete custom tags for their projects, and that these tags are displayed correctly in project listings.",
+        "preconditions": [
+            "The system has a tagging module implemented",
+            "User has the necessary permissions to create and manage tags",
+            "The database has a table structure to store tag information"
+        ],
+        "testSteps": [
+            "1. Create a new tag",
+            "2. Edit an existing tag",
+            "3. Delete a tag",
+            "4. Verify that the tag appears in the project list"
+        ],
+        "expectedResult": "Tags are correctly created, edited, and deleted, and are visible in project listings.",
+        "testCaseID": "When a flight plan is executed  the VehicleCore shall send the next waypoint to the UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-80"
+        ]
+    },
+    {
+        "Requirement": "RE-77",
+        "testObjective": "To verify that the system can handle multiple simultaneous requests without performance degradation",
+        "preconditions": [
+            "System is configured with a high traffic setup",
+            "The system has sufficient resources to handle multiple requests"
+        ],
+        "testSteps": [
+            "Simulate 1000 simultaneous requests",
+            "Monitor system performance metrics",
+            "Check for any degradation in response time"
+        ],
+        "expectedResult": "The system maintains optimal performance with no significant degradation in response time",
+        "testCaseID": "Each waypoint shall be specified using coordinates that include longitude  latitude  and altitude.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-77"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a personal fitness plan with real-time updates and progress tracking.",
+        "testObjective": "Verify that the new fitness plan feature is functional and provides accurate real-time updates and progress tracking.",
+        "preconditions": [
+            "The system has a user with valid credentials logged in.",
+            "There is an existing fitness plan feature in the system that needs to be updated.",
+            "The fitness plan interface has been developed and is ready for testing."
+        ],
+        "testSteps": [
+            "1. Log in as a user with valid credentials.",
+            "2. Access the fitness plan interface.",
+            "3. Create a new fitness plan with the required details.",
+            "4. Input current workout data, including duration and intensity.",
+            "5. Save the fitness plan.",
+            "6. Verify that the fitness plan appears in the user's dashboard.",
+            "7. Observe real-time updates after submitting workout data.",
+            "8. Check that the progress tracking displays accurate metrics for the plan."
+        ],
+        "expectedResult": "The fitness plan feature is successfully implemented and functions correctly, providing real-time updates and accurate progress tracking for users.",
+        "testCaseID": "The VehicleCore shall associate a {{UAVTYPE}} for each UAV defining its basic attributes.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-38"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a list of custom tags for their projects.",
+        "testObjective": "To verify that users can successfully create, edit, and delete custom tags for their projects, and that these tags are displayed correctly in project listings.",
+        "preconditions": [
+            "The system has a tagging module implemented",
+            "User has the role of 'Technical Lead'",
+            "The tagging module includes a 'tags' table with 'tag_name' and 'tag_description' columns",
+            "The tagging module includes a 'project_tags' table with 'project_id', 'tag_id', and 'status' columns",
+            "The tagging module includes a 'taggest' function to create new tags",
+            "The system has a tagging UI with a tag editor"
+        ],
+        "testSteps": [
+            "1. Log in as a Technical Lead user.",
+            "2. Navigate to the 'Projects' page.",
+            "3. Click on 'Create New Project'",
+            "4. In the new project's tag creation form, enter a 'tag_name' and 'tag_description' for the new tag.",
+            "5. Click 'Save Project' to create the project with the new tag.",
+            "6. Log out and log back in as the same user.",
+            "7. Navigate to the 'Projects' page.",
+            "8. Select an existing project.",
+            "9. Click on 'Edit Project Tags'.",
+            "10. In the tag editing form, verify the new tag is present.",
+            "11. Modify the new tag's 'tag_name' and 'tag_description' and click 'Save' to update.",
+            "12. Log out and log back in as the same user.",
+            "13. Re-select the project.",
+            "14. Click on 'Edit Project Tags' again.",
+            "15. Verify that the updated tag is present.",
+            "16. Delete the tag and verify that it is removed.",
+            "17. Log out and log back in as the same user.",
+            "18. Re-select the project.",
+            "19. Click on 'Edit Project Tags' again.",
+            "20. Verify that the tag is no longer present."
+        ],
+        "expectedResult": "All custom tags are created, edited, and deleted successfully. Tags are displayed correctly in project listings, and their metadata (name and description) are accurate. The edit and delete operations do not affect other project tags.",
+        "testCaseID": "The UAVActivationManager shall ensure that only one instance of each registered drone is active at any time.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-36"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage custom tags for their projects.",
+        "testObjective": "Verify that users can successfully create and manage custom tags for their projects without any issues.",
+        "preconditions": [
+            "The system must have a proper tagging mechanism in place to allow for custom tag creation and management."
+        ],
+        "testSteps": [
+            "1. Log in as a registered user with access to tagging features.",
+            "2. Navigate to the project management interface.",
+            "3. Create a new project or select an existing one.",
+            "4. Attempt to create a new custom tag.",
+            "5. Verify that the custom tag is listed in the project's tag list.",
+            "6. Modify an existing custom tag.",
+            "7. Verify that the modified tag is reflected accurately in the project's tag list.",
+            "8. Delete a custom tag.",
+            "9. Verify that the deleted tag does not appear in the project's tag list."
+        ],
+        "expectedResult": "All test cases for creating, managing, and deleting custom tags have passed successfully without any errors or issues.",
+        "testCaseID": "The SingleUAVFlightPlanScheduler shall only execute one flight plan at a time for each UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-28"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "Verify that the new feature allows users to create custom user roles with predefined permissions.",
+        "preconditions": [
+            "System has at least 1GB free disk space",
+            "Database has at least 10MB free space",
+            "Python development environment is set up"
+        ],
+        "testSteps": [
+            "1. Create a new user role",
+            "2. Assign predefined permissions to the role",
+            "3. Test creation of the role",
+            "4. Verify that the role has the assigned permissions"
+        ],
+        "expectedResult": "The new user roles are created with the predefined permissions assigned correctly.",
+        "testCaseID": "The VehicleCore shall assign a unique ID to each activated UAV.",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-25"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create custom user roles with predefined permissions.",
+        "testObjective": "To verify that users can successfully create custom user roles with predefined permissions without any issues.",
+        "preconditions": [
+            "The system currently supports user roles with predefined permissions.",
+            "A new feature is available for creating custom user roles.",
+            "The database schema is updated to include the new role creation table."
+        ],
+        "testSteps": [
+            "1. Create a new user role with predefined permissions.",
+            "2. Assign predefined permissions to the new role.",
+            "3. Verify that the new role is created successfully.",
+            "4. Verify that the assigned permissions are correctly applied to the new role.",
+            "5. Test the creation of another custom role with different permissions.",
+            "6. Verify the successful creation and correct application of the new role.",
+            "7. Log and analyze any errors that occur during the process.",
+            "8. Ensure that all tests pass without any issues."
+        ],
+        "expectedResult": "All tests pass successfully, and the new feature is implemented correctly with predefined permissions assigned to custom user roles.",
+        "testCaseID": "If a client registers for notifications  the UIMiddleware shall send notifications for specific events",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-9"
+        ]
+    },
+    {
+        "Requirement": "Implement a new feature to allow users to create and manage a list of custom tags for their projects.",
+        "testObjective": "To verify that users can successfully create, edit, and delete custom tags for their projects, and that these tags are displayed correctly in project listings.",
+        "preconditions": [
+            "The system has a tagging module implemented",
+            "Users have the capability to assign tags to their projects"
+        ],
+        "testSteps": [
+            "Create a new custom tag",
+            "Assign the custom tag to a project",
+            "Edit the custom tag",
+            "Delete the custom tag",
+            "Verify that the custom tag appears in project listings"
+        ],
+        "expectedResult": "All custom tags are successfully created, edited, deleted, and displayed in project listings.",
+        "testCaseID": "When requested  the VehicleCore shall shall transition the UAV between states according to allowed state transitions as depicted in the UAV state transition diagram",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: RE-8"
+        ]
+    }
+]
