@@ -87,7 +87,7 @@ class TestCaseComparator:
             if not missing_fields:
                 valid_entries += 1
             else:
-                invalid_entries_id.append(id)
+                invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                 for field in missing_fields:
                     missing_field_counts[field] += 1
 
@@ -123,7 +123,7 @@ class TestCaseComparator:
                 if field_name in entry and entry[field_name] not in [None, ""]:
                     value_counts[entry[field_name]] += 1
                 else:
-                    invalid_entries_id.append(id)
+                    invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
         
         # Find duplicates
         duplicates = {key: count for key, count in value_counts.items() if count > 1}
@@ -158,19 +158,19 @@ class TestCaseComparator:
         for id, entry in enumerate(json_data):
             if id not in self.invalid_ids:
                 if self.required_fields.get("test_case_id") not in entry or self.required_fields.get("requirement") not in entry:
-                    invalid_entries_id.append(id)
+                    invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                     continue  # Skip invalid entries
                 
                 try:
-                    test_case_index = int(entry[self.required_fields.get("test_case_id")])  # Ensure testCaseID is an integer
+                    test_case_index = entry[self.required_fields.get("test_case_id")]
                 except ValueError:
                     mismatches.append({self.required_fields.get("test_case_id"): entry[self.required_fields.get("test_case_id")], "error": "Invalid testCaseID format"})
-                    invalid_entries_id.append(id)
+                    invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                     continue
 
                 # Check if testCaseID corresponds to a valid index in original_requirements
-                if 0 <= test_case_index < len(original_requirements):
-                    expected_requirement = original_requirements[test_case_index]
+                if test_case_index in original_requirements['issueid'].values:
+                    expected_requirement = original_requirements.loc[original_requirements['issueid'] == test_case_index, 'RequirementText'].values[0]
                     actual_requirement = entry[self.required_fields.get("requirement")]
 
                     # Compute similarity score
@@ -184,10 +184,10 @@ class TestCaseComparator:
                             "found": actual_requirement,
                             "similarity_score": round(similarity_score, 2)
                         })
-                        invalid_entries_id.append(id)
+                        invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                 else:
                     mismatches.append({self.required_fields.get("test_case_id"): test_case_index, "error": self.required_fields.get("test_case_id") + " out of range"})
-                    invalid_entries_id.append(id)
+                    invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
 
         self.invalid_ids = combine_and_deduplicate(invalid_entries_id, self.invalid_ids) 
 
@@ -219,7 +219,7 @@ class TestCaseComparator:
                     else:
                         for rule in result["failed_checks"]:
                             failed_rule_counts[rule] += 1
-                        invalid_entries_id.append(id)
+                        invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                 # elif field_name in entry and entry[field_name] in [None, ""]:
                     #test_objective field empty 
                 # else:
@@ -257,7 +257,7 @@ class TestCaseComparator:
                         else:
                             for rule in result["failed_checks"]:
                                 failed_rule_counts[rule] += 1
-                            invalid_entries_id.append(id)
+                            invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                 # elif field_name in entry and entry[field_name] in [None, ""]:
                     #test_objective field empty 
                 # else:
@@ -295,9 +295,9 @@ class TestCaseComparator:
                         else:
                             for rule in result["failed_checks"]:
                                 failed_rule_counts[rule] += 1
-                            invalid_entries_id.append(id)
+                            invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                 else: # field empty
-                    invalid_entries_id.append(id)
+                    invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                     
         self.invalid_ids = combine_and_deduplicate(invalid_entries_id, self.invalid_ids) 
         
@@ -329,7 +329,7 @@ class TestCaseComparator:
                     else:
                         for rule in result["failed_checks"]:
                             failed_rule_counts[rule] += 1
-                        invalid_entries_id.append(id)
+                        invalid_entries_id.append(entry[self.required_fields.get("test_case_id")])
                 # elif field_name in entry and entry[field_name] in [None, ""]:
                     #test_objective field empty 
                 # else:
@@ -377,8 +377,6 @@ class TestCaseComparator:
         
         return self.invalid_ids
 
-
-
 DATA_PATH = "C:/Users/alexs/Documents/Studium/Informatik/Seminar/RBST-prompt-engineering/datasets/dronology/dronology_with_id.csv"
 
 # Example usage
@@ -387,15 +385,14 @@ if __name__ == "__main__":
     # Get the directory of the current script
     script_dir = Path(__file__).parent
     # Define the file path relative to the script's directory
-    json_path = script_dir / "results/results_chat_prompt0_zero.json"          # [1, 4, 69, 90, 71, 74, 75, 11, 46, 18, 87, 56, 62, 58, 91, 28, 29, 94]
-    #json_path = script_dir / "results/results_chat_prompt1_persona.json"       # [6, 7, 9, 10, 25, 29, 44, 45, 46, 47, 49, 55, 57, 58, 64, 69, 71, 72, 75, 76, 77, 78, 79, 82, 87, 91, 96]
-    #json_path = script_dir / "results/results_chat_prompt2_tot.json"           # [9, 10, 11, 29, 42, 44, 46, 56, 57, 58, 61, 71, 78, 82, 87, 89, 90, 91, 95, 96]
-    #json_path = script_dir / "results/results_chat_prompt3_context_simple.json"# [96, 33, 67, 58, 35, 3, 71, 40, 41, 74, 43, 44, 77, 46, 14, 48, 90, 91]
-    #json_path = script_dir / "results/results_chat_prompt4_preparsing_and_tot.json"# 
-    #json_path = script_dir / "results/results_chat_prompt4_preparsing_and_tot_reqfirst.json"# [71, 8, 44, 45, 46, 82, 88, 58, 91, 92, 29]
+    #json_path = script_dir / "results/results_chat_prompt0_zero.json"                          # ['RE-729', 'RE-672', 'RE-160', 'RE-589', 'RE-549', 'RE-659', 'RE-595', 'RE-655', 'RE-709', 'RE-503', 'RE-38', 'RE-656', 'RE-508', 'RE-555', 'RE-25', 'RE-108']
+    #json_path = script_dir / "results/results_chat_prompt1_persona.json"                       # ['RE-100', 'RE-594', 'RE-503', 'RE-510', 'RE-549', 'RE-160', 'RE-722', 'RE-127', 'RE-8', 'RE-739', 'RE-523', 'RE-424', 'RE-736', 'RE-668', 'RE-574', 'RE-558', 'RE-126', 'RE-112', 'RE-38', 'RE-563', 'RE-714', 'RE-596', 'RE-508', 'RE-551', 'RE-595', 'RE-597', 'RE-125', 'RE-656', 'RE-702']
+    #json_path = script_dir / "results/results_chat_prompt2_tot.json"                           # ['RE-38', 'RE-508', 'RE-77', 'RE-541', 'RE-656', 'RE-595', 'RE-722', 'RE-126', 'RE-9', 'RE-503', 'RE-549', 'RE-125', 'RE-112', 'RE-597', 'RE-714', 'RE-555', 'RE-127', 'RE-551', 'RE-100']
+    #json_path = script_dir / "results/results_chat_prompt3_context_and_tot.json"               # ['RE-549', 'RE-751', 'RE-38', 'RE-670', 'RE-597', 'RE-508', 'RE-595', 'RE-8', 'RE-722', 'RE-126', 'RE-503']
+    #json_path = script_dir / "results/results_chat_prompt4_preparsing_and_tot_reqfirst.json"   # ['RE-127', 'RE-597', 'RE-643', 'RE-503', 'RE-77', 'RE-595', 'RE-38', 'RE-576', 'RE-126', 'RE-9', 'RE-741', 'RE-549']
     
     df = pd.read_csv(DATA_PATH)
-    requirements = df['RequirementText']
+    requirements = df[['issueid', 'RequirementText']]
     
     comparer = TestCaseComparator()
     

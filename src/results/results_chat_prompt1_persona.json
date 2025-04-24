@@ -13,7 +13,7 @@
             "4. Verify that the selected map layer is displayed correctly."
         ],
         "expectedResult": "The MapComponent displays the selected map layer correctly.",
-        "testCaseID": 0,
+        "testCaseID": "RE-766",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The MapComponent shall support different types of map layers (e.g.  terrain  satellite)"
@@ -36,7 +36,7 @@
             "6. Verify that the MissionPlanner executed the flight plans for multiple UAVs concurrently."
         ],
         "expectedResult": "All selected flight plans are executed for each selected UAV concurrently by the MissionPlanner.",
-        "testCaseID": 1,
+        "testCaseID": "RE-759",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The MissionPlanner shall execute flight plans for multiple UAVs concurrently."
@@ -55,7 +55,7 @@
             "3. Verify that the GCS transmits the UAV's properties to the GCSMiddleware."
         ],
         "expectedResult": "The GCS has transmitted the UAV's properties to the GCSMiddleware.",
-        "testCaseID": 2,
+        "testCaseID": "RE-754",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCS shall transmit the UAV's properties to the GCSMiddleware"
@@ -76,7 +76,7 @@
             "5. Verify that the GCSMiddleware communicates with the UAV to confirm the location data."
         ],
         "expectedResult": "The GCS has successfully transmitted the UAV's current location to the GCSMiddleware.",
-        "testCaseID": 3,
+        "testCaseID": "RE-751",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCS shall transmit the UAV's current location to the GCSMiddleware"
@@ -96,7 +96,7 @@
             "4. Check that the GCS has a record of the new UAV in its database."
         ],
         "expectedResult": "The GCS correctly reports the newly connected UAV to the GCSMiddleware, and the GCSMiddleware logs the new UAV's presence and maintains a record of the new UAV in its database.",
-        "testCaseID": 4,
+        "testCaseID": "RE-746",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCS shall report newly connected UAVs to the GCSMiddleware."
@@ -116,21 +116,21 @@
             "4. Repeat the process for additional UAVs if necessary."
         ],
         "expectedResult": "All connected UAVs have their message frequencies assigned by the GCS.",
-        "testCaseID": 5,
+        "testCaseID": "RE-741",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCS shall assign a message frequency for all UAVs."
         ]
     },
     {
-        "testCaseID": 6,
+        "testCaseID": "RE-739",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the GCS receives a UAV command from the GCSMiddleware  the GCS shall forward the command to the respective UAV."
         ]
     },
     {
-        "testCaseID": 7,
+        "testCaseID": "RE-736",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the connection to the GCS from the GCSMiddleware is lost  the GCSMiddleware shall notify Dronology and deactivate all associated UAVs."
@@ -150,21 +150,21 @@
             "3. Verify that the command is processed by the GCS."
         ],
         "expectedResult": "The GCS receives and processes the command from Dronology.",
-        "testCaseID": 8,
+        "testCaseID": "RE-729",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCSMiddleware shall forward commands sent from Dronology to a GCS"
         ]
     },
     {
-        "testCaseID": 9,
+        "testCaseID": "RE-722",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCSMiddleware shall handle state messages   monitoring messages  and mode change messages  received from an GCS."
         ]
     },
     {
-        "testCaseID": 10,
+        "testCaseID": "RE-714",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCSMiddleware  shall follow a predefined set of steps to establish a connection between a GCS and Dronology"
@@ -182,11 +182,11 @@
             "1. Start the application.",
             "2. Add multiple GCS instances.",
             "3. Send a request to the middleware.",
-            "4. Wait until the middleware processes the request and returns a response.",
-            "5. Verify that all GCS instances have been processed correctly."
+            "4. Verify that the middleware processes the request across all GCS instances.",
+            "5. Verify that the middleware correctly aggregates responses from all GCS instances."
         ],
-        "expectedResult": "The GCSMiddleware correctly processes and responds to multiple GCS requests.",
-        "testCaseID": 11,
+        "expectedResult": "The middleware successfully processes the request and aggregates responses from all GCS instances.",
+        "testCaseID": "RE-709",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The GCSMiddleware shall handle multiple GCS"
@@ -196,36 +196,22 @@
         "Requirement": "The DronologyRuntimeMonitor shall be able to receive messages from any Dronology component.",
         "testObjective": "Verify that the DronologyRuntimeMonitor can receive messages from any Dronology component.",
         "preconditions": [
-            "The application must be running.",
-            "There are active components in Dronology."
+            "The DronologyRuntimeMonitor must be configured to receive messages from any Dronology component."
         ],
         "testSteps": [
-            "1. Identify a Dronology component.",
-            "2. Send a message to that component.",
-            "3. Verify that the message is received by the DronologyRuntimeMonitor."
+            "1. Configure the DronologyRuntimeMonitor to receive messages from any Dronology component.",
+            "2. Enable the Dronology component that generates messages.",
+            "3. Verify that the DronologyRuntimeMonitor receives messages from the enabled Dronology component."
         ],
-        "expectedResult": "Messages from any Dronology component are received by the DronologyRuntimeMonitor.",
-        "testCaseID": 12,
+        "expectedResult": "The DronologyRuntimeMonitor successfully receives messages from the Dronology component.",
+        "testCaseID": "RE-706",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The DronologyRuntimeMonitor shall be able to receive messages from any Dronology component"
         ]
     },
     {
-        "Requirement": "When a new monitoring message is received the DronologyRuntimeMonitor shall forward the message to all subscribed clients.",
-        "testObjective": "Verify that when a new monitoring message is received the DronologyRuntimeMonitor forwards the message to all subscribed clients.",
-        "preconditions": [
-            "The application must be running.",
-            "There is at least one monitoring message in the queue.",
-            "All clients are subscribed to receive messages from DronologyRuntimeMonitor."
-        ],
-        "testSteps": [
-            "1. Ensure that a new monitoring message is added to the queue.",
-            "2. Trigger the receipt of the new monitoring message by the DronologyRuntimeMonitor.",
-            "3. Verify that all subscribed clients receive the new monitoring message through their respective channels."
-        ],
-        "expectedResult": "All subscribed clients receive the new monitoring message from DronologyRuntimeMonitor.",
-        "testCaseID": 13,
+        "testCaseID": "RE-702",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a new monitoring message is received the DronologyRuntimeMonitor shall forward the message to all subscribed clients"
@@ -236,17 +222,29 @@
         "testObjective": "Verify that the DronologyRuntimeMonitor retrieves and distributes monitoring messages to clients.",
         "preconditions": [
             "The application must be running.",
-            "The DronologyRuntimeMonitor is configured to retrieve monitoring messages."
+            "DronologyRuntimeMonitor is operational.",
+            "There are monitoring messages to retrieve."
         ],
         "testSteps": [
-            "1. Configure the DronologyRuntimeMonitor to retrieve monitoring messages.",
-            "2. Start the application.",
-            "3. Monitor messages are being generated by the application.",
-            "4. As a client, check if the DronologyRuntimeMonitor is receiving messages.",
-            "5. Verify that the DronologyRuntimeMonitor distributes messages to clients."
+            "1. Start the application.",
+            "2. Enable DronologyRuntimeMonitor.",
+            "3. Add monitoring messages.",
+            "4. As a client, retrieve the messages.",
+            "5. As a client, distribute the messages to other clients.",
+            "6. Verify that the messages are successfully retrieved and distributed.",
+            "7. As a user, cancel a monitoring message.",
+            "8. Wait until DronologyRuntimeMonitor has cleared the canceled message.",
+            "9. As a client, retrieve the cleared message again.",
+            "10. Verify that the cleared message is accessible.",
+            "11. As a user, add a new monitoring message.",
+            "12. As a client, retrieve the new message.",
+            "13. Verify that the new message is present.",
+            "14. As a user, delete the new message.",
+            "15. As a client, retrieve the deleted message.",
+            "16. Verify that the deleted message is no longer accessible."
         ],
-        "expectedResult": "DronologyRuntimeMonitor retrieves and distributes monitoring messages to clients.",
-        "testCaseID": 14,
+        "expectedResult": "All monitoring messages are properly retrieved, distributed, cleared, and deleted.",
+        "testCaseID": "RE-701",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients"
@@ -257,15 +255,15 @@
         "testObjective": "Verify that the RealTimeFlightUI notifies users when an emergency occurs.",
         "preconditions": [
             "The application must be running.",
-            "An emergency has occurred."
+            "An emergency condition is detected."
         ],
         "testSteps": [
-            "1. Simulate an emergency.",
-            "2. As a user, trigger emergency notification.",
-            "3. Wait until RealTimeFlightUI notifies users."
+            "1. Detect an emergency condition.",
+            "2. As a user, ensure the RealTimeFlightUI receives a notification.",
+            "3. Verify that the notification indicates an emergency state."
         ],
-        "expectedResult": "Emergency notification is triggered and displayed in RealTimeFlightUI.",
-        "testCaseID": 15,
+        "expectedResult": "Emergency condition is detected and users receive notification indicating an emergency state.",
+        "testCaseID": "RE-698",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RealTimeFlightUI shall notify users when an emergency occurs."
@@ -279,14 +277,16 @@
             "The map interface is visible and active."
         ],
         "testSteps": [
-            "1. Launch the application.",
+            "1. Access the RealTimeFlightUI.",
             "2. Open the map interface.",
-            "3. Add one or more UAVs to the map.",
-            "4. Select one or more UAVs to follow.",
-            "5. Verify that the selected UAVs are highlighted or marked as being followed on the map."
+            "3. Add one or more UAVs to follow.",
+            "4. Ensure that multiple UAVs can be selected and displayed on the map.",
+            "5. Verify that the UI provides indicators for each selected UAV, such as icons, names, or tracking markers.",
+            "6. Test the ability to toggle the visibility of individual UAVs.",
+            "7. Confirm that the UI updates in real-time as the position of the UAVs changes on the map."
         ],
-        "expectedResult": "Users can follow one or multiple UAVs on the map interface.",
-        "testCaseID": 16,
+        "expectedResult": "Users can successfully follow one or multiple UAVs on the map with real-time updates.",
+        "testCaseID": "RE-695",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RealTimeFlightUI shall allow users to follow one or multiple UAVs on the map."
@@ -302,10 +302,10 @@
         "testSteps": [
             "1. Select a group of UAVs.",
             "2. Perform emergency operation (hover, send to home).",
-            "3. Verify that all selected UAVs are in the desired state (hovered or returned to home)."
+            "3. Verify that emergency operation was performed on all selected UAVs."
         ],
-        "expectedResult": "Emergency operations are successfully performed on all selected UAVs.",
-        "testCaseID": 17,
+        "expectedResult": "Emergency operation was successfully performed on all selected UAVs.",
+        "testCaseID": "RE-693",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RealTimeFlightUI shall allow users to perform emergency operations (e.g. hovering multiple UAVs  sending multiple UAVs to home) to a group of UAVs"
@@ -320,11 +320,11 @@
         ],
         "testSteps": [
             "1. Select one or more UAVs from the list.",
-            "2. As a user applies flight operations to the selected UAV(s).",
-            "3. Verify that flight operations are successfully applied to the selected UAV(s)."
+            "2. As a user applies a flight operation.",
+            "3. Verify that the flight operation is applied to the selected UAVs."
         ],
-        "expectedResult": "Flight operations are successfully applied to one or more selected UAVs.",
-        "testCaseID": 18,
+        "expectedResult": "Flight operations are successfully applied to the selected UAVs.",
+        "testCaseID": "RE-691",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RealTimeFlightUI shall allow users to apply flight operations to one or more selected UAVs."
@@ -339,12 +339,13 @@
         ],
         "testSteps": [
             "1. Open the RealTimeFlightUI.",
-            "2. Identify all active flight plans.",
-            "3. Ensure that the RealTimeFlightUI displays all active flight plans on the map.",
-            "4. Verify that the display updates in real-time as flight plans are added or removed."
+            "2. Add one or more active flight plans.",
+            "3. Verify that all active flight plans are displayed on the map.",
+            "4. Cancel any active flight plans.",
+            "5. Verify that the RealTimeFlightUI no longer displays any flight plans on the map."
         ],
-        "expectedResult": "All currently active flight plans are displayed on the map without omission or delay.",
-        "testCaseID": 19,
+        "expectedResult": "The RealTimeFlightUI displays all currently active flight plans on the map, and after cancellation, it no longer displays any active flight plans.",
+        "testCaseID": "RE-689",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RealTimeFlightUI shall display all currently active flight plans on the map."
@@ -358,12 +359,13 @@
             "There are currently activated UAVs."
         ],
         "testSteps": [
-            "1. Launch the application.",
-            "2. Activate all currently activated UAVs.",
-            "3. Observe the RealTimeFlightUI to check that the name and status of all currently activated UAVs are displayed."
+            "1. Activate a UAV.",
+            "2. As a system administrator, verify the RealTimeFlightUI displays the name and status of the activated UAV.",
+            "3. Activate additional UAVs.",
+            "4. As a system administrator, verify the RealTimeFlightUI displays the name and status of all currently activated UAVs."
         ],
         "expectedResult": "The RealTimeFlightUI displays the name and status of all currently activated UAVs.",
-        "testCaseID": 20,
+        "testCaseID": "RE-681",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RealTimeFlightUI shall display the name and status of all currently activated UAVs"
@@ -381,7 +383,7 @@
             "2. Verify that a list of all existing routes is displayed."
         ],
         "expectedResult": "A list of all existing routes is displayed in the RouteCreationUI.",
-        "testCaseID": 21,
+        "testCaseID": "RE-679",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the RouteCreationUI is loaded a list of all existing routes shall be displayed."
@@ -392,16 +394,16 @@
         "testObjective": "Verify that the RouteCreationUI allows a user to delete a route.",
         "preconditions": [
             "The application must be running.",
-            "A route is created and exists in the application."
+            "A route must be present in the RouteCreationUI."
         ],
         "testSteps": [
-            "1. Create a route.",
-            "2. As a user, select the route to delete it.",
-            "3. Click the delete button or select delete from the menu.",
-            "4. Verify that the route is deleted from the application."
+            "1. Add a route.",
+            "2. Select the route to be deleted.",
+            "3. Click the delete button.",
+            "4. Verify that the route is removed from the RouteCreationUI."
         ],
-        "expectedResult": "The route is successfully deleted from the application.",
-        "testCaseID": 22,
+        "expectedResult": "The route is successfully deleted from the RouteCreationUI.",
+        "testCaseID": "RE-677",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RouteCreationUI shall allow a user to delete a route."
@@ -412,16 +414,17 @@
         "testObjective": "Verify that the RouteCreationUI allows users to create and modify routes.",
         "preconditions": [
             "The application must be running.",
-            "There is an existing route or a new route is available for creation."
+            "A route exists or can be created within the application."
         ],
         "testSteps": [
             "1. Open the RouteCreationUI.",
-            "2. Create a new route.",
-            "3. Modify an existing route.",
-            "4. Save the created or modified route."
+            "2. Click 'Create New Route' to initiate route creation.",
+            "3. Enter route details and save.",
+            "4. Modify an existing route by selecting it and adjusting its parameters.",
+            "5. Save the modified route."
         ],
-        "expectedResult": "The RouteCreationUI successfully allows the user to create and modify routes without errors.",
-        "testCaseID": 23,
+        "expectedResult": "Users can successfully create and modify routes within RouteCreationUI.",
+        "testCaseID": "RE-672",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RouteCreationUI shall allow the user to create and modify a route."
@@ -429,25 +432,25 @@
     },
     {
         "Requirement": "When requested the RouteCreationUI shall send a newly created or modified route to dronology.",
-        "testObjective": "Verify that when a user requests the creation of a route, the RouteCreationUI sends the newly created or modified route to Dronology.",
+        "testObjective": "Verify that when the RouteCreationUI is requested to send a newly created or modified route, it successfully sends the route to Dronology.",
         "preconditions": [
             "The application must be running.",
-            "A route is being created or modified."
+            "A new route or modified route is created."
         ],
         "testSteps": [
-            "1. Start the application.",
-            "2. Create or modify a route.",
-            "3. Wait until RouteCreationUI sends the route to Dronology."
+            "1. Create a new route or modify an existing one.",
+            "2. As a user initiates the send request from the RouteCreationUI.",
+            "3. Verify that Dronology receives the newly created or modified route."
         ],
-        "expectedResult": "The newly created or modified route is sent to Dronology via RouteCreationUI.",
-        "testCaseID": 24,
+        "expectedResult": "A newly created or modified route is successfully sent to Dronology.",
+        "testCaseID": "RE-670",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When requested  the RouteCreationUI shall send a newly created or modified route to dronology."
         ]
     },
     {
-        "testCaseID": 25,
+        "testCaseID": "RE-668",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. Each route shall include a unique ID  a textual description  and a set of waypoints  all of which are editable in the UI."
@@ -455,19 +458,18 @@
     },
     {
         "Requirement": "The RouteCreationUI shall only accept valid altitude and speed values for waypoint.",
-        "testObjective": "Verify that the RouteCreationUI rejects invalid altitude or speed values for waypoints.",
+        "testObjective": "Verify that the RouteCreationUI rejects invalid altitude or speed values when creating a waypoint.",
         "preconditions": [
             "The application must be running.",
-            "A waypoint is selected or created."
+            "A waypoint is being created."
         ],
         "testSteps": [
-            "1. Attempt to add a waypoint with invalid altitude (e.g., negative).",
-            "2. Attempt to add a waypoint with invalid speed (e.g., zero).",
-            "3. Verify that the RouteCreationUI displays an error message indicating invalid input for the respective parameter.",
-            "4. Repeat the process with valid altitude and speed values to ensure proper acceptance."
+            "1. Enter invalid altitude value for waypoint.",
+            "2. Enter invalid speed value for waypoint.",
+            "3. Observe if the RouteCreationUI displays error messages for invalid values."
         ],
-        "expectedResult": "Invalid altitude or speed values for waypoints are rejected with corresponding error messages, valid values are accepted without errors.",
-        "testCaseID": 26,
+        "expectedResult": "Invalid altitude or speed values are rejected, and error messages are displayed.",
+        "testCaseID": "RE-666",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RouteCreationUI shall only accept valid altitude and speed values for waypoint."
@@ -475,21 +477,18 @@
     },
     {
         "Requirement": "The RouteCreationUI shall distinguish between starting, ending, and intermediate waypoint markers.",
-        "testObjective": "Verify that the RouteCreationUI correctly distinguishes between starting, ending, and intermediate waypoint markers.",
+        "testObjective": "Verify that the RouteCreationUI correctly identifies and differentiates between starting, ending, and intermediate waypoint markers.",
         "preconditions": [
             "The application must be running.",
-            "At least one route is created with multiple waypoints."
+            "A route with waypoints must be created."
         ],
         "testSteps": [
-            "1. Create a route with at least three waypoints.",
-            "2. Identify the first waypoint as starting point.",
-            "3. Identify the last waypoint as ending point.",
-            "4. Verify that intermediate waypoints are correctly marked with appropriate indicators.",
-            "5. Cancel the route.",
-            "6. Verify that all waypoints are properly marked after route cancellation."
+            "1. Create a route with starting, ending, and intermediate waypoints.",
+            "2. As a user navigates through the waypoints.",
+            "3. Verify that each waypoint is correctly marked and differentiated from others."
         ],
-        "expectedResult": "All waypoints are correctly identified as starting, ending, and intermediate markers.",
-        "testCaseID": 27,
+        "expectedResult": "All waypoints are correctly identified and differentiated as starting, ending, or intermediate markers within the RouteCreationUI.",
+        "testCaseID": "RE-664",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RouteCreationUI shall distinguish between starting  ending  and intermediate waypoint markers."
@@ -508,14 +507,14 @@
             "3. Wait until RouteAssignmentUI notifies Dronology."
         ],
         "expectedResult": "Flight plan is canceled and Dronology received notification from RouteAssignmentUI.",
-        "testCaseID": 28,
+        "testCaseID": "RE-659",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a user  cancels a pending flight plan the RouteAssignmentUI shall notify Dronology."
         ]
     },
     {
-        "testCaseID": 29,
+        "testCaseID": "RE-656",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. A user may reorder routes or remove flight plans assigned to a UAV as long as the flight has not started execution."
@@ -526,15 +525,14 @@
         "testObjective": "Verify that when a UAV is selected the RouteAssignmentUI displays its active flight plans.",
         "preconditions": [
             "The application must be running.",
-            "A UAV must be selected in the list."
+            "A UAV must be selected in the system."
         ],
         "testSteps": [
-            "1. Select a UAV from the available list.",
-            "2. Verify that the RouteAssignmentUI displays active flight plans for the selected UAV.",
-            "3. Ensure that the displayed flight plans are accurate and up-to-date."
+            "1. Select a UAV from the list.",
+            "2. Verify that the RouteAssignmentUI displays active flight plans for the selected UAV."
         ],
-        "expectedResult": "The RouteAssignmentUI correctly displays the active flight plans for the selected UAV.",
-        "testCaseID": 30,
+        "expectedResult": "The RouteAssignmentUI shows the active flight plans of the selected UAV.",
+        "testCaseID": "RE-655",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a UAV is selected  the RouteAssignmentUI shall display its active flight plans."
@@ -542,19 +540,18 @@
     },
     {
         "Requirement": "When requested by the user the RouteAssignmentUI shall display details about the selected UAV and its flight plans.",
-        "testObjective": "Verify that when a user requests the display of a UAV's details and its flight plans, the RouteAssignmentUI shows the correct information.",
+        "testObjective": "Verify that when a user selects a UAV, the RouteAssignmentUI displays its details and flight plans.",
         "preconditions": [
             "The application must be running.",
-            "A user selects a UAV to view."
+            "A user selects a UAV from the list."
         ],
         "testSteps": [
-            "1. Open the application.",
-            "2. Select a UAV from the list.",
-            "3. As a user requests the display of flight plans for the selected UAV.",
-            "4. Verify that the RouteAssignmentUI displays the details about the selected UAV and its flight plans."
+            "1. Select a UAV from the list.",
+            "2. Verify that the RouteAssignmentUI displays the UAV's details and flight plans.",
+            "3. As an additional step, the user can hover over any flight plan to view detailed information about that plan."
         ],
-        "expectedResult": "The RouteAssignmentUI correctly displays the selected UAV's details and flight plans information.",
-        "testCaseID": 31,
+        "expectedResult": "UAV details and flight plans are displayed correctly in the RouteAssignmentUI.",
+        "testCaseID": "RE-651",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When requested by the user  the RouteAssignmentUI shall display details about the selected UAV and its flight plans."
@@ -568,12 +565,12 @@
             "There is at least one UAV active with routes assigned or to be assigned."
         ],
         "testSteps": [
-            "1. Open the RouteAssignmentUI.",
-            "2. Assign a route to a UAV or remove a route from a UAV.",
-            "3. Wait until the RouteAssignmentUI notifies Dronology."
+            "1. Create or retrieve an active UAV with routes assigned.",
+            "2. Assign a new route to the UAV or remove a route from the UAV.",
+            "3. Verify that the RouteAssignmentUI notifies Dronology."
         ],
-        "expectedResult": "Route assignment or removal is confirmed and Dronology has been notified via the RouteAssignmentUI.",
-        "testCaseID": 32,
+        "expectedResult": "The RouteAssignmentUI has notified Dronology either upon assignment or removal of a route from the UAV.",
+        "testCaseID": "RE-649",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a route is assigned or removed from a UAV  the RouteAssignmentUI shall notify Dronology."
@@ -590,10 +587,10 @@
             "1. Access the RouteAssignmentUI.",
             "2. Select an existing route from the route library.",
             "3. Assign the selected route to a UAV.",
-            "4. Verify that the route is successfully assigned to the UAV."
+            "4. Verify that the route has been assigned to the UAV."
         ],
         "expectedResult": "A route has been successfully assigned to the UAV.",
-        "testCaseID": 33,
+        "testCaseID": "RE-646",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RouteAssignmentUI shall provide means to select an existing routes and assign them to a UAV."
@@ -603,13 +600,16 @@
         "Requirement": "When loading the map view it shall be positioned at the pre-defined location.",
         "testObjective": "Verify that when the map view is loaded, it is positioned at the pre-defined location.",
         "preconditions": [
-            "The application must be running."
+            "The application must be running.",
+            "A map view is available to load."
         ],
         "testSteps": [
-            "1. Ensure the application is running."
+            "1. Open the application.",
+            "2. Load the map view.",
+            "3. Verify that the map view is positioned at the pre-defined location."
         ],
-        "expectedResult": "The map view is displayed and positioned at the pre-defined location.",
-        "testCaseID": 34,
+        "expectedResult": "The map view is correctly positioned at the pre-defined location.",
+        "testCaseID": "RE-643",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When loading the map view it shall be positioned at the pre-defined location"
@@ -623,11 +623,11 @@
             "Configuration parameters are stored."
         ],
         "testSteps": [
-            "1. Activate VaadinUI.",
+            "1. Activate the VaadinUI.",
             "2. Wait until VaadinUI is configured according to stored configuration parameters."
         ],
-        "expectedResult": "VaadinUI is configured according to stored configuration parameters.",
-        "testCaseID": 35,
+        "expectedResult": "VaadinUI is configured correctly according to stored configuration parameters.",
+        "testCaseID": "RE-642",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the VaadinUI is activated  the VaadinUI shall be configured according to stored configuration parameters."
@@ -638,15 +638,15 @@
         "testObjective": "Verify that the UIMiddleware accepts and activates a mission plan upon request.",
         "preconditions": [
             "The application must be running.",
-            "A mission plan is available for activation."
+            "A mission plan is available in the mission list."
         ],
         "testSteps": [
-            "1. Add a mission plan.",
-            "2. As a user requests to activate the mission plan.",
-            "3. Verify that the UIMiddleware accepts and activates the mission plan."
+            "1. Select a mission plan from the mission list.",
+            "2. Make a request to activate the mission plan.",
+            "3. Verify that the UIMiddleware accepts and activates the mission plan successfully."
         ],
-        "expectedResult": "The UIMiddleware has accepted and activated the mission plan as per the request.",
-        "testCaseID": 36,
+        "expectedResult": "The mission plan is successfully accepted and activated by the UIMiddleware.",
+        "testCaseID": "RE-639",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware shall accept and activate a mission plan upon request."
@@ -658,15 +658,17 @@
         "preconditions": [
             "The application must be running.",
             "There is an existing route defined.",
-            "An active UAV is selected."
+            "There is at least one active UAV."
         ],
         "testSteps": [
-            "1. Activate an existing route.",
-            "2. Select an active UAV.",
-            "3. Enable the route assignment for the active UAV."
+            "1. Activate an active UAV.",
+            "2. Enable the UIMiddleware.",
+            "3. Select an existing route.",
+            "4. Assign the route to the active UAV.",
+            "5. Verify that the route is assigned to the active UAV."
         ],
-        "expectedResult": "The route is successfully assigned to the active UAV.",
-        "testCaseID": 37,
+        "expectedResult": "The route is successfully assigned to an active UAV.",
+        "testCaseID": "RE-637",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware shall enable an existing route to be assigned to an active UAV."
@@ -677,37 +679,34 @@
         "testObjective": "Verify that the UIMiddleware enables the creation and modification of flight routes.",
         "preconditions": [
             "The application must be running.",
-            "Flight routes are currently unavailable."
+            "Flight routes are currently unavailable for creation or modification."
         ],
         "testSteps": [
-            "1. Enable the UIMiddleware.",
-            "2. Verify that flight routes are available.",
-            "3. Modify a flight route.",
-            "4. Verify that the modified flight route is available."
+            "1. Access the UIMiddleware interface.",
+            "2. Create a new flight route or edit an existing one.",
+            "3. Verify that the flight route is successfully created or modified."
         ],
-        "expectedResult": "Flight routes can be created and modified through the UIMiddleware.",
-        "testCaseID": 38,
+        "expectedResult": "Flight routes can be created and modified through the UIMiddleware interface.",
+        "testCaseID": "RE-634",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware shall enable the creation and modification of flight routes"
         ]
     },
     {
-        "Requirement": "The UIMiddleware accepts commands from UIs and forwards to Dronology.",
+        "Requirement": "The UIMiddleware accepts commands from UIs and forwards them to Dronology.",
         "testObjective": "Verify that the UIMiddleware accepts commands from UIs and forwards them to Dronology.",
         "preconditions": [
             "The application must be running.",
-            "There is a command sent by a UI.",
-            "Dronology is configured to receive commands."
+            "There is an active command from a UI."
         ],
         "testSteps": [
             "1. Trigger a command from the UI.",
-            "2. Verify that the UIMiddleware receives the command.",
-            "3. Verify that the UIMiddleware forwards the command to Dronology.",
-            "4. Verify that Dronology processes the command successfully."
+            "2. Observe if the UIMiddleware forwards the command to Dronology.",
+            "3. Verify that Dronology receives the command and processes it."
         ],
-        "expectedResult": "Commands are successfully accepted by UIMiddleware and forwarded to Dronology for processing.",
-        "testCaseID": 39,
+        "expectedResult": "The UIMiddleware successfully accepts the command from the UI and forwards it to Dronology, which correctly processes the command.",
+        "testCaseID": "RE-630",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware accepts commands from UIs and forwards to Dronology"
@@ -721,11 +720,11 @@
         ],
         "testSteps": [
             "1. Access the UIMiddleware interface.",
-            "2. Click on the 'Routes' tab.",
-            "3. Verify that the 'Routes' tab displays a list of all existing routes."
+            "2. Navigate to the 'Routes' section.",
+            "3. Verify that the list of routes is displayed correctly."
         ],
-        "expectedResult": "The UIMiddleware displays a list of all existing routes.",
-        "testCaseID": 40,
+        "expectedResult": "The UIMiddleware displays a complete list of all existing routes.",
+        "testCaseID": "RE-628",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware shall provide a list of all existing routes"
@@ -736,16 +735,15 @@
         "testObjective": "Verify that the UIMiddleware provides a list of all active UAVs.",
         "preconditions": [
             "The application must be running.",
-            "UAVs are active in the system."
+            "At least one UAV is active."
         ],
         "testSteps": [
-            "1. Identify all active UAVs in the system.",
+            "1. Ensure at least one UAV is active.",
             "2. Access the UIMiddleware.",
-            "3. Retrieve the list of active UAVs from the middleware.",
-            "4. Verify the list matches the active UAVs in the system."
+            "3. Verify that the middleware displays a list of all active UAVs."
         ],
-        "expectedResult": "The UIMiddleware correctly lists all active UAVs.",
-        "testCaseID": 41,
+        "expectedResult": "The UIMiddleware shows a list of all active UAVs.",
+        "testCaseID": "RE-626",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware shall provide a list of all active UAVs"
@@ -760,11 +758,11 @@
         ],
         "testSteps": [
             "1. Send a command to the CGS.",
-            "2. Receive a message from the CGS.",
-            "3. Verify that the ActivityLogger logs both the command and message."
+            "2. As a system, receive a message from the CGS.",
+            "3. Verify that the ActivityLogger records both the command and message."
         ],
-        "expectedResult": "The ActivityLogger logs all commands sent to and messages received from a CGS.",
-        "testCaseID": 42,
+        "expectedResult": "The ActivityLogger has successfully logged all commands and messages from the CGS.",
+        "testCaseID": "RE-616",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The ActivityLogger shall log all commands sent to and messages received from a CGS."
@@ -775,45 +773,44 @@
         "testObjective": "Verify that the ActivityLogger logs all flight plan related events.",
         "preconditions": [
             "The application must be running.",
-            "Flight plans are being managed.",
-            "ActivityLogger is enabled."
+            "Flight plans are being managed."
         ],
         "testSteps": [
-            "1. Enable ActivityLogger.",
-            "2. Add flight plans.",
-            "3. Perform actions that trigger flight plan events.",
-            "4. Verify that ActivityLogger has logged all relevant flight plan events."
+            "1. Enable the ActivityLogger.",
+            "2. Create or retrieve flight plans.",
+            "3. Perform an activity that generates flight plan events (e.g., takeoff, landing, route assignment).",
+            "4. Verify that the ActivityLogger records all relevant flight plan related events."
         ],
-        "expectedResult": "ActivityLogger has logged all flight plan related events.",
-        "testCaseID": 43,
+        "expectedResult": "All flight plan related events are logged by the ActivityLogger.",
+        "testCaseID": "RE-611",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The ActivityLogger shall log all flight plan related events."
         ]
     },
     {
-        "testCaseID": 44,
+        "testCaseID": "RE-597",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The InternalSimulator shall approximate the state of the battery"
         ]
     },
     {
-        "testCaseID": 45,
+        "testCaseID": "RE-596",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When given a landing command the InternalSimulator shall move the UAV from to the ground altitude corresponding to its current longitude and latitude."
         ]
     },
     {
-        "testCaseID": 46,
+        "testCaseID": "RE-595",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When given a goto command  the InternalSimulator shall update the location of the UAV at increments of {{SIMULATIONSTEPSIZE}} meters  moving it towards the target destination until the destination is reached."
         ]
     },
     {
-        "testCaseID": 47,
+        "testCaseID": "RE-594",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When given a takeoff command the InternalSimulator shall move the UAV to the takeoff altitude corresponding to its current longitude and latitude."
@@ -828,19 +825,31 @@
         ],
         "testSteps": [
             "1. Select a UAV model from the available options.",
-            "2. Configure the simulation environment to mimic the operational conditions of the selected UAV.",
-            "3. Run the simulation and observe the behavior of the InternalSimulator.",
-            "4. Compare the InternalSimulator's behavior with that of the selected UAV under the same conditions."
+            "2. Configure the InternalSimulator to mimic the selected UAV's behavior.",
+            "3. Simulate the UAV's behavior in the InternalSimulator.",
+            "4. Observe the simulated behavior in the InternalSimulator's interface.",
+            "5. Compare the simulated behavior with the actual behavior of the UAV."
         ],
-        "expectedResult": "The InternalSimulator's behavior closely matches the selected UAV's behavior under the operational conditions.",
-        "testCaseID": 48,
+        "expectedResult": "The InternalSimulator accurately approximates the behavior of the UAV.",
+        "testCaseID": "RE-593",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The InternalSimulator shall approximate the behavior of a UAV."
         ]
     },
     {
-        "testCaseID": 49,
+        "Requirement": "The UAVRegistrationManager shall store UAV meta-data information such as the UAV's technical characteristics.",
+        "testObjective": "Verify that the UAVRegistrationManager stores UAV meta-data information such as the UAV's technical characteristics.",
+        "preconditions": [
+            "The application must be running.",
+            "A user has successfully added a UAV to the system."
+        ],
+        "testSteps": [
+            "1. Add a UAV to the system.",
+            "2. Verify that the UAV meta-data information, including technical characteristics, is stored in the UAVRegistrationManager."
+        ],
+        "expectedResult": "UAV meta-data information, including technical characteristics, is successfully stored in the UAVRegistrationManager.",
+        "testCaseID": "RE-592",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UAVRegistrationManager shall store UAV meta-data information  such as the UAV's technical characteristics"
@@ -857,10 +866,10 @@
             "1. Activate all allowed UAVs.",
             "2. Attempt to activate another UAV.",
             "3. Wait until UAVActivationManager rejects the activation request.",
-            "4. Verify that the activation request was rejected."
+            "4. Verify that activation request was rejected."
         ],
-        "expectedResult": "No activation request is processed after the maximum number of allowed activated UAVs is reached.",
-        "testCaseID": 50,
+        "expectedResult": "No further activation requests are accepted after maximum allowed activated UAVs have been reached.",
+        "testCaseID": "RE-589",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the maximum numbers of allowed activated UAVs has been reached  the UAVActivationManager shall reject any further activation requests."
@@ -871,14 +880,15 @@
         "testObjective": "Verify that when a UAV is deactivated the UAVActivationManager cancels all current and scheduled flight plans.",
         "preconditions": [
             "The application must be running.",
-            "A UAV is deactivated."
+            "One or more flight plans are active or pending."
         ],
         "testSteps": [
-            "1. Deactivate one or more UAVs.",
-            "2. Wait until the UAVActivationManager cancels all current and scheduled flight plans."
+            "1. Add one or more flight plans.",
+            "2. Deactivate the UAV.",
+            "3. Wait until all current and scheduled flight plans are canceled."
         ],
-        "expectedResult": "All current and scheduled flight plans are canceled by the UAVActivationManager.",
-        "testCaseID": 51,
+        "expectedResult": "All current and scheduled flight plans are canceled.",
+        "testCaseID": "RE-587",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a UAV is deactivated the UAVActivationManager shall cancel all current and scheduled flight plans"
@@ -892,38 +902,19 @@
             "Virtual UAVs are defined in the system."
         ],
         "testSteps": [
-            "1. Add a virtual UAV configuration.",
-            "2. Activate the virtual UAV.",
-            "3. Verify that the virtual UAV is supported by VehicleCore.",
-            "4. Deactivate the virtual UAV.",
-            "5. Verify that the virtual UAV is no longer supported by VehicleCore."
+            "1. Define a virtual UAV in the system.",
+            "2. Start the virtual UAV.",
+            "3. Verify that the virtual UAV is running properly within the VehicleCore."
         ],
-        "expectedResult": "Virtual UAV is supported by VehicleCore.",
-        "testCaseID": 52,
+        "expectedResult": "The virtual UAV is successfully started and running within the VehicleCore.",
+        "testCaseID": "RE-576",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The VehicleCore shall support virtual UAVs"
         ]
     },
     {
-        "Requirement": "The VehicleCore shall support UAVs connected via the GCS.",
-        "testObjective": "Verify that the VehicleCore supports UAVs connected via the GCS.",
-        "preconditions": [
-            "The application must be running.",
-            "UAVs are connected via the GCS."
-        ],
-        "testSteps": [
-            "1. Connect one or more UAVs to the GCS.",
-            "2. As the application runs, the VehicleCore processes the connection.",
-            "3. Verify that the VehicleCore supports the connection established by the GCS.",
-            "4. As the application runs, the VehicleCore maintains the connection established by the GCS.",
-            "5. As the application runs, the VehicleCore disconnects from the GCS if the connection is lost.",
-            "6. Verify that the VehicleCore disconnects from the GCS if the connection is lost.",
-            "7. As the application runs, the VehicleCore processes disconnections from the GCS.",
-            "8. Verify that the VehicleCore processes disconnections from the GCS."
-        ],
-        "expectedResult": "The VehicleCore successfully supports and maintains connections between UAVs via the GCS, including handling disconnections.",
-        "testCaseID": 53,
+        "testCaseID": "RE-574",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The VehicleCore shall support UAVs connected via the GCS"
@@ -935,29 +926,27 @@
         "preconditions": [
             "The application must be running.",
             "A mission has been initiated with flight patterns assigned to multiple UAVs.",
-            "Flight patterns for each UAV have been defined.",
-            "The paths of any two UAVs' flight patterns overlap.",
-            "The system is configured to monitor for path overlaps."
+            "Flight patterns for each UAV have been configured.",
+            "Flight pattern paths for at least two UAVs overlap."
         ],
         "testSteps": [
-            "1. Initiate a mission with flight patterns for multiple UAVs.",
-            "2. Define flight patterns for each UAV ensuring that at least two flight paths overlap.",
-            "3. Monitor the system for any warnings related to overlapping flight paths.",
-            "4. As a system monitor, confirm that a warning is displayed when two or more flight paths overlap.",
-            "5. Verify that the warning indicates the specific overlapping flight paths for each pair of UAVs.",
-            "6. As a system monitor, confirm that the warning persists even if the flight patterns are adjusted but still overlap.",
-            "7. As a system monitor, confirm that the warning is cleared when flight patterns are modified in a way that no longer overlaps.",
-            "8. As a system monitor, confirm that the warning is cleared when flight patterns are completely removed from the mission."
+            "1. Initiate a mission with flight patterns assigned to multiple UAVs.",
+            "2. Configure flight patterns for each UAV.",
+            "3. Ensure flight pattern paths for at least two UAVs overlap.",
+            "4. As a system admin, check for warnings in the system.",
+            "5. Verify that a warning appears indicating that paths overlap.",
+            "6. As a system admin, resolve the warning by modifying flight patterns to avoid overlapping paths.",
+            "7. Verify that the warning is resolved and no longer appears in the system."
         ],
-        "expectedResult": "The system correctly provides a warning when any flight paths overlap, and properly disposes of the warning when paths are modified or removed.",
-        "testCaseID": 54,
+        "expectedResult": "Flight pattern paths for the group of UAVs do not overlap, and no warning is displayed. If they do overlap, a warning is displayed and can be resolved by adjusting flight patterns.",
+        "testCaseID": "RE-563",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a group of UAVs are assigned flight patterns as part of a mission  the system shall provide a warning if any paths overlap."
         ]
     },
     {
-        "testCaseID": 55,
+        "testCaseID": "RE-558",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If requested  the SingleUAVFlightPlanScheduler shall abort the currently executing flight plan of an UAV"
@@ -968,34 +957,32 @@
         "testObjective": "Verify that when a UAV reaches the final waypoint of its current flight plan without any pending flight plans the SingleUAVFlightPlanScheduler notifies the UAV to hover.",
         "preconditions": [
             "The application must be running.",
-            "A single UAV is in the system.",
-            "No pending flight plans are present for the UAV.",
-            "The UAV is at the final waypoint of its current flight plan."
+            "A UAV is in a flight plan.",
+            "The UAV has not added any pending flight plans."
         ],
         "testSteps": [
-            "1. Start the application.",
-            "2. Add a single flight plan to a UAV.",
-            "3. Ensure the UAV is at the final waypoint of the flight plan.",
-            "4. Trigger the completion of the flight plan.",
-            "5. Observe if the SingleUAVFlightPlanScheduler notifies the UAV to hover in place.",
-            "6. Verify that the UAV hovers in place without any issues."
+            "1. Add a flight plan to a UAV.",
+            "2. Ensure the UAV has not added any pending flight plans to other routes.",
+            "3. Have the UAV navigate to the final waypoint of its current flight plan.",
+            "4. Observe the SingleUAVFlightPlanScheduler notification.",
+            "5. Verify that the UAV hovers in place in the vicinity of the final waypoint."
         ],
-        "expectedResult": "When the UAV reaches the final waypoint without pending flight plans, the SingleUAVFlightPlanScheduler notifies it to hover in place.",
-        "testCaseID": 56,
+        "expectedResult": "The SingleUAVFlightPlanScheduler notifies the UAV to hover in place at the final waypoint of its current flight plan.",
+        "testCaseID": "RE-555",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a UAV does not have any pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall notify the UAV to hover in place."
         ]
     },
     {
-        "testCaseID": 57,
+        "testCaseID": "RE-551",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a scheduled flight is not manually assigned to a UAV  the SingleUAVFlightPlanScheduler shall assign the route automatically to an UAV"
         ]
     },
     {
-        "testCaseID": 58,
+        "testCaseID": "RE-549",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a route contains a specific {{UAVID}}  the SingleUAVFlightPlanScheduler shall assign the route to the given UAV."
@@ -1010,11 +997,11 @@
         ],
         "testSteps": [
             "1. Request the SingleUAVFlightPlanScheduler to schedule a route for execution.",
-            "2. Verify that the scheduler is in a scheduled state.",
+            "2. Verify that the scheduler is in the scheduled state.",
             "3. Check that the route is being executed successfully."
         ],
         "expectedResult": "The SingleUAVFlightPlanScheduler successfully schedules and executes the route.",
-        "testCaseID": 59,
+        "testCaseID": "RE-547",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When requested  the SingleUAVFlightPlanScheduler shall schedule a route for execution."
@@ -1025,15 +1012,16 @@
         "testObjective": "Verify that when a mission is currently active the MissionPlanner cancels the active mission.",
         "preconditions": [
             "The application must be running.",
-            "One or more missions are active."
+            "There is an active mission."
         ],
         "testSteps": [
-            "1. Add one or more active missions.",
-            "2. Request to cancel the active mission.",
-            "3. Wait until MissionPlanner cancels the active mission."
+            "1. Start the application.",
+            "2. Ensure that an active mission is present.",
+            "3. As a user requests to cancel the active mission.",
+            "4. Wait until the MissionPlanner cancels the active mission."
         ],
-        "expectedResult": "The active mission is successfully canceled.",
-        "testCaseID": 60,
+        "expectedResult": "The active mission is canceled by the MissionPlanner.",
+        "testCaseID": "RE-545",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When requested  if a mission is currently active  the MissionPlanner shall cancel the active mission."
@@ -1046,12 +1034,12 @@
             "The application must be running."
         ],
         "testSteps": [
-            "1. Add a new FlightPattern.",
-            "2. As a user modifies a FlightPattern.",
-            "3. As a user removes a FlightPattern."
+            "1. Ensure the MissionPlanner is initialized.",
+            "2. As a user, manage predefined FlightPatterns.",
+            "3. Verify that FlightPatterns are properly managed by the MissionPlanner."
         ],
-        "expectedResult": "The MissionPlanner maintains the predefined FlightPatterns correctly.",
-        "testCaseID": 61,
+        "expectedResult": "FlightPatterns are managed by the MissionPlanner as intended.",
+        "testCaseID": "RE-541",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The MissionPlanner shall manage predefined FlightPatterns"
@@ -1063,15 +1051,15 @@
         "preconditions": [
             "The application must be running.",
             "A UAV is on the ground.",
-            "A flight plan is selected and activated."
+            "A flight plan is activated."
         ],
         "testSteps": [
-            "1. Ensure a UAV is on the ground.",
-            "2. Activate a flight plan for the selected UAV.",
-            "3. As a system, verify that the FlightSchedulingandExecution notifies the UAV to takeoff vertically until it reaches the prescribed altitude."
+            "1. Activate a flight plan.",
+            "2. Ensure a UAV is on the ground.",
+            "3. Verify that the UAV is notified to takeoff vertically until it reaches the prescribed altitude."
         ],
-        "expectedResult": "The flight plan is activated and the FlightSchedulingandExecution notifies the UAV to takeoff vertically until it reaches the prescribed altitude.",
-        "testCaseID": 62,
+        "expectedResult": "The UAV takes off vertically and reaches the prescribed altitude as per the flight plan.",
+        "testCaseID": "RE-531",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a flight plan is activated for a UAV currently on the ground  the FlightSchedulingandExecution shall notify the UAV to takeoff vertically until it reaches the prescribed altitude."
@@ -1086,19 +1074,19 @@
         ],
         "testSteps": [
             "1. Initiate a flight plan.",
-            "2. As a user issues hover in place command.",
-            "3. As a user rescind the hover in place command.",
-            "4. Observe that FlightManager sends a notification to the UAV to continue to the originally designated waypoint."
+            "2. Send hover in place command.",
+            "3. Resind hover in place command.",
+            "4. Observe that FlightManager notifies UAV to continue to waypoint."
         ],
-        "expectedResult": "FlightManager notifies the UAV to continue to the originally designated waypoint.",
-        "testCaseID": 63,
+        "expectedResult": "FlightManager issues notification for the UAV to continue to the designated waypoint.",
+        "testCaseID": "RE-525",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a flight plan is active and the hover in place command is rescinded  the FlightManager shall notify the UAV to continue to the originally designated waypoint."
         ]
     },
     {
-        "testCaseID": 64,
+        "testCaseID": "RE-523",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a flight route is assigned to a UAV which is currently hovering in place  the FlightManager shall assign the route and maintain the hover in place mode."
@@ -1109,16 +1097,17 @@
         "testObjective": "Verify that when the hover in place command is issued the FlightManager halts the UAV in place and maintains its current position.",
         "preconditions": [
             "The application must be running.",
-            "A hover in place command is available in the command list."
+            "A hover in place command is available in the command list.",
+            "A UAV is currently in flight."
         ],
         "testSteps": [
-            "1. Add a flight plan.",
-            "2. Initiate the hover in place command.",
-            "3. Wait until the UAV is halted and its position is maintained.",
-            "4. Verify that the current position is maintained after the command is issued."
+            "1. Add a new flight plan with a hover in place command.",
+            "2. Issue the hover in place command to the UAV.",
+            "3. Verify that the UAV is halted and maintaining its current position.",
+            "4. Reset the flight plan and re-add it to verify that the behavior is consistent."
         ],
-        "expectedResult": "The UAV is halted and maintains its current position after the hover in place command is issued.",
-        "testCaseID": 65,
+        "expectedResult": "The hover in place command successfully halted the UAV and it maintains its current position.",
+        "testCaseID": "RE-521",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the hover in place command is issued  the FlightManager shall halt the UAV in place and maintain its current position."
@@ -1138,7 +1127,7 @@
             "4. Verify the computed direction is correct."
         ],
         "expectedResult": "The CoordinateSystem correctly computes and displays the direction from the first to the second coordinate.",
-        "testCaseID": 66,
+        "testCaseID": "RE-517",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When given two coordinates the CoordinateSystem shall compute the direction from the first coordinate to the second coordinate."
@@ -1149,16 +1138,15 @@
         "testObjective": "Verify that when given two coordinates the CoordinateSystem computes the distance between them accurately.",
         "preconditions": [
             "The application must be running.",
-            "Two distinct coordinates must be provided."
+            "Two valid coordinates are provided."
         ],
         "testSteps": [
-            "1. Add coordinate 1.",
-            "2. Add coordinate 2.",
-            "3. Compute distance between the two coordinates.",
-            "4. Verify that the computed distance is accurate."
+            "1. Enter two coordinates into the application.",
+            "2. Click the Compute button to calculate the distance.",
+            "3. Verify that the CoordinateSystem displays the computed distance accurately."
         ],
-        "expectedResult": "The distance is accurately computed between the two provided coordinates.",
-        "testCaseID": 67,
+        "expectedResult": "The CoordinateSystem accurately computes and displays the distance between the two entered coordinates.",
+        "testCaseID": "RE-516",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When given two coordinates the CoordinateSystem shall compute the distance between them."
@@ -1168,23 +1156,23 @@
         "Requirement": "When requested the CoordinateSystem shall transform coordinates to alternate formats.",
         "testObjective": "Verify that when the CoordinateSystem is requested to transform coordinates, it successfully converts them to alternate formats.",
         "preconditions": [
-            "The application must be running.",
-            "A coordinate transformation request has been made."
+            "The application must have a valid coordinate system configured."
         ],
         "testSteps": [
-            "1. Initiate a coordinate transformation request.",
-            "2. As the CoordinateSystem, process the request and transform coordinates to alternate formats.",
-            "3. Verify that the transformation was successful by checking the alternate format coordinates output."
+            "1. Add a valid coordinate system configuration.",
+            "2. Request a transformation of coordinates to an alternate format.",
+            "3. Verify that the CoordinateSystem successfully transforms the coordinates to the alternate format.",
+            "4. Log any errors or issues encountered during the transformation process."
         ],
-        "expectedResult": "The CoordinateSystem successfully transformed the coordinates to the alternate formats as requested.",
-        "testCaseID": 68,
+        "expectedResult": "The CoordinateSystem has successfully transformed the coordinates to the alternate format without any errors.",
+        "testCaseID": "RE-510",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When requested  the CoordinateSystem shall transform coordinates to alternate formats."
         ]
     },
     {
-        "testCaseID": 69,
+        "testCaseID": "RE-508",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a flight route requires a customized takeoff altitude that differs from the system's default takeoff altitude  it shall be specified in the flight route."
@@ -1195,29 +1183,29 @@
         "testObjective": "Verify that the FlightRouteManager persists flight routes.",
         "preconditions": [
             "The application must be running.",
-            "Flight routes must be added to the FlightRouteManager."
+            "Flight routes must be created."
         ],
         "testSteps": [
-            "1. Add flight routes.",
-            "2. Verify FlightRouteManager persists flight routes.",
-            "3. Log out or restart application if necessary."
+            "1. Create flight routes.",
+            "2. Perform an action that should cause the FlightRouteManager to persist the routes.",
+            "3. Verify that the FlightRouteManager persisted the flight routes."
         ],
-        "expectedResult": "Flight routes are persisted by FlightRouteManager.",
-        "testCaseID": 70,
+        "expectedResult": "Flight routes are persisted by the FlightRouteManager.",
+        "testCaseID": "RE-505",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The FlightRouteManager shall persist flight routes."
         ]
     },
     {
-        "testCaseID": 71,
+        "testCaseID": "RE-503",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The FlightRouteManager shall ensure that all flight routes represent a {{VALIDFLIGHTROUTE}}."
         ]
     },
     {
-        "testCaseID": 72,
+        "testCaseID": "RE-424",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the return to home command is issued  the FlightManager shall return the UAV to its original launch location without issuing any additional waypoint or routing commands."
@@ -1228,17 +1216,17 @@
         "testObjective": "Verify that when the GCS loses the connection to an UAV the GCS attempts to reconnect.",
         "preconditions": [
             "The application must be running.",
-            "A UAV is currently connected to the GCS."
+            "A UAV is already in flight and the GCS has lost the connection to the UAV."
         ],
         "testSteps": [
-            "1. Establish a connection between the GCS and an UAV.",
-            "2. As the GCS loses the connection to the UAV.",
-            "3. Ensure that the GCS attempts to reconnect.",
-            "4. Verify that the GCS reconnects successfully.",
-            "5. Verify that the GCS reconnects with the correct UAV."
+            "1. Establish a connection between the GCS and the UAV.",
+            "2. Simulate the loss of connection between the GCS and the UAV.",
+            "3. Verify that the GCS attempts to reconnect with the UAV.",
+            "4. Verify that the GCS successfully reconnects to the UAV if possible.",
+            "5. Verify that the GCS logs the attempt and success of the reconnection."
         ],
-        "expectedResult": "The GCS successfully attempts to reconnect with the same or another UAV.",
-        "testCaseID": 73,
+        "expectedResult": "The GCS loses connection with the UAV and then attempts to reconnect, succeeding if possible.",
+        "testCaseID": "RE-235",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the GCS loses the connection to an UAV  the GCS shall attempt to reconnect"
@@ -1249,67 +1237,67 @@
         "testObjective": "Verify that the UAVActivationManager only activates registered UAVs.",
         "preconditions": [
             "The application must be running.",
-            "UAVs are being tracked in the system."
+            "UAVs are being registered and activated."
         ],
         "testSteps": [
             "1. Register a UAV.",
-            "2. Check if the registered UAV is active.",
-            "3. Unregister the UAV.",
-            "4. Check if the unregistered UAV is inactive."
+            "2. Attempt to activate an unregistered UAV.",
+            "3. Verify that the unregistered UAV was not activated.",
+            "4. Register another UAV.",
+            "5. Attempt to activate the registered UAV.",
+            "6. Verify that the registered UAV was activated."
         ],
-        "expectedResult": "Only registered UAVs are active and unregistered UAVs are inactive.",
-        "testCaseID": 74,
+        "expectedResult": "Only registered UAVs are activated, unregistered ones are not.",
+        "testCaseID": "RE-161",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UAVActivationManager shall only activate UAVs that are registered."
         ]
     },
     {
-        "testCaseID": 75,
+        "testCaseID": "RE-160",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a GCS requests activation of a newly detected UAV  the GCSMiddleware shall forward the request to Dronology."
         ]
     },
     {
-        "testCaseID": 76,
+        "testCaseID": "RE-127",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a UAV has an active onboard Obstacle Avoidance  then the ObstacleAvoidance system shall not issue directives"
         ]
     },
     {
-        "Requirement": "The ObjectAvoidance system only issues commands within the capabilities of the UAV.",
-        "testObjective": "Verify that the ObjectAvoidance system only issues commands within the capabilities of the UAV.",
-        "preconditions": [
-            "The application must be running.",
-            "ObjectAvoidance system is enabled.",
-            "UAV has sufficient capabilities."
-        ],
-        "testSteps": [
-            "1. Ensure that ObjectAvoidance is enabled.",
-            "2. Verify that the UAV has sufficient capabilities to perform the task.",
-            "3. Add an obstacle in the simulation environment.",
-            "4. As a user, issue a command to the UAV to navigate around the obstacle.",
-            "5. Wait for the UAV to issue a command that avoids the obstacle.",
-            "6. Verify that the command issued by the UAV is within the capabilities of the UAV."
-        ],
-        "expectedResult": "The ObjectAvoidance system issues a command that the UAV can execute without exceeding its capabilities.",
-        "testCaseID": 77,
+        "testCaseID": "RE-126",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The ObjectAvoidance system only issues commands within the capabilities of the UAV"
         ]
     },
     {
-        "testCaseID": 78,
+        "testCaseID": "RE-125",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a UAV takes evasive actions the system will ensure that it will eventually reach its destination"
         ]
     },
     {
-        "testCaseID": 79,
+        "Requirement": "When a stationary or moving object is within the proximity of a UAV the ObjectAvoidance system shall issue evasive directives to the UAV.",
+        "testObjective": "Verify that when a stationary or moving object is within the proximity of a UAV the ObjectAvoidance system issues evasive directives.",
+        "preconditions": [
+            "The application must be running.",
+            "There is a UAV in flight.",
+            "There is a stationary or moving object within the proximity of the UAV."
+        ],
+        "testSteps": [
+            "1. Create a UAV in flight.",
+            "2. Bring a stationary or moving object within the proximity of the UAV.",
+            "3. Verify that the ObjectAvoidance system issues evasive directives.",
+            "4. Confirm that the evasive directives are followed by the UAV's behavior."
+        ],
+        "expectedResult": "Evasive directives are issued and followed by the UAV when a stationary or moving object is in proximity.",
+        "testCaseID": "RE-124",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a stationary or moving object is within the proximity of a UAV the ObjectAvoidance system shall issue evasive directives to the UAV"
@@ -1324,36 +1312,36 @@
         ],
         "testSteps": [
             "1. Open the application.",
-            "2. Ensure that one or more active UAVs are present.",
-            "3. Click on the RealTimeFlightUI.",
-            "4. Verify that active UAVs are displayed as icons on the map."
+            "2. Ensure that one or more active UAVs are detected.",
+            "3. Click on the 'RealTime Flight' module.",
+            "4. Verify that each active UAV is displayed as an icon on the map."
         ],
-        "expectedResult": "Active UAVs are displayed as icons on the RealTimeFlightUI map.",
-        "testCaseID": 80,
+        "expectedResult": "Active UAVs are displayed as icons on the map in the RealTime Flight module.",
+        "testCaseID": "RE-120",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The RealTimeFlightUI shall display the location of active UAVs as icons on the map."
         ]
     },
     {
-        "Requirement": "When the RealTimeFlightUI is loaded a map shall be displayed.",
-        "testObjective": "Verify that when the RealTimeFlightUI is loaded a map is displayed.",
+        "Requirement": "When the RealTimeFlightUI is loaded, a map shall be displayed.",
+        "testObjective": "Verify that when RealTimeFlightUI is loaded, a map is displayed.",
         "preconditions": [
             "The application must be running."
         ],
         "testSteps": [
             "1. Open the RealTimeFlightUI.",
-            "2. Wait until the map is displayed."
+            "2. Wait until a map is displayed."
         ],
-        "expectedResult": "The map is displayed.",
-        "testCaseID": 81,
+        "expectedResult": "A map is displayed when RealTimeFlightUI is loaded.",
+        "testCaseID": "RE-114",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When the RealTimeFlightUI is loaded  a map shall be displayed."
         ]
     },
     {
-        "testCaseID": 82,
+        "testCaseID": "RE-112",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a command is issued by the VaadinUI for an UAV  the VaadinUI shall request control of that UAV."
@@ -1364,15 +1352,17 @@
         "testObjective": "Verify that the UIMiddleware assigns only one control-client per UAV at any given time.",
         "preconditions": [
             "The application must be running.",
-            "Multiple control-clients are connected to the system."
+            "At least one UAV is present."
         ],
         "testSteps": [
-            "1. Connect multiple control-clients to the system.",
-            "2. Monitor the UIMiddleware's assignment of control-clients to each UAV.",
-            "3. Verify that only one client is assigned per UAV at all times."
+            "1. Add a first UAV.",
+            "2. Add a second UAV.",
+            "3. Check that each UAV has only one assigned control-client.",
+            "4. Add a third UAV.",
+            "5. Verify that each of the three UAVs has only one assigned control-client."
         ],
-        "expectedResult": "The UIMiddleware assigns only one control-client to each UAV without any conflicts.",
-        "testCaseID": 83,
+        "expectedResult": "Each UAV has exactly one assigned control-client without overlaps.",
+        "testCaseID": "RE-110",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware shall only assign one control-client at a time for each UAV."
@@ -1383,19 +1373,15 @@
         "testObjective": "Verify that the UIMiddleware provides an interface for registering UI clients.",
         "preconditions": [
             "The application must be running.",
-            "The middleware has been initialized."
+            "A UI client needs to be registered."
         ],
         "testSteps": [
             "1. Add a UI client.",
-            "2. As a user registers the UI client via UIMiddleware.",
-            "3. Wait until UIMiddleware confirms the UI client registration.",
-            "4. Verify that the UI client is listed in the middleware's interface.",
-            "5. As a user deregister the UI client.",
-            "6. Wait until UIMiddleware confirms the UI client deregistration.",
-            "7. Verify that the UI client is no longer listed in the middleware's interface."
+            "2. As a system, enable the UI client.",
+            "3. Wait until the UIMiddleware registers the UI client."
         ],
-        "expectedResult": "UI clients are correctly registered and deregistered through UIMiddleware's interface.",
-        "testCaseID": 84,
+        "expectedResult": "The UI client is successfully registered with the UIMiddleware.",
+        "testCaseID": "RE-108",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UIMiddleware shall provide an interface for registering UI clients."
@@ -1406,17 +1392,15 @@
         "testObjective": "Verify that when a UAV's current flight is cancelled the SingleUAVFlightPlanScheduler cancels all scheduled flight plans for that UAV.",
         "preconditions": [
             "The application must be running.",
-            "There is at least one scheduled flight plan for the UAV."
+            "A UAV is in use with at least one scheduled flight plan."
         ],
         "testSteps": [
-            "1. Add a flight plan for the UAV.",
-            "2. Schedule the flight plan for the UAV.",
-            "3. Cancel the UAV's current flight.",
-            "4. Wait until all scheduled flight plans for the UAV are cancelled.",
-            "5. Verify that the scheduled flight plans have been cancelled."
+            "1. Add a scheduled flight plan for a UAV.",
+            "2. Cancelling the UAV's current flight.",
+            "3. Wait until all scheduled flight plans for that UAV are cancelled."
         ],
-        "expectedResult": "All scheduled flight plans for the UAV have been successfully cancelled.",
-        "testCaseID": 85,
+        "expectedResult": "All scheduled flight plans for the UAV are cancelled after cancelling the current flight.",
+        "testCaseID": "RE-103",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a UAV's current flight is cancelled  the SingleUAVFlightPlanScheduler shall in turn cancel all scheduled flight plans for that UAV."
@@ -1428,25 +1412,26 @@
         "preconditions": [
             "The application must be running.",
             "A single UAV has one or more pending flight plans.",
-            "The current flight plan has a final waypoint that is reachable and the next assigned flight plan exists.",
-            "The SingleUAVFlightPlanScheduler is configured to handle subsequent flight plans."
+            "The current flight plan is assigned to the UAV and has not been completed.",
+            "The current flight plan's final waypoint has been reached."
         ],
         "testSteps": [
-            "1. Add a single UAV with multiple pending flight plans.",
-            "2. Ensure the current flight plan has a final waypoint.",
-            "3. As the UAV reaches the final waypoint, trigger the completion of the current flight plan.",
-            "4. Verify that the SingleUAVFlightPlanScheduler executes the next assigned flight plan immediately upon completion of the current flight plan.",
-            "5. Observe that the next flight plan is executed as the current one is completed."
+            "1. Add one or more pending flight plans to a single UAV.",
+            "2. Ensure the current flight plan is assigned to the UAV and has not been completed.",
+            "3. Move the UAV to the final waypoint of the current flight plan.",
+            "4. Observe if the SingleUAVFlightPlanScheduler executes the next assigned flight plan automatically.",
+            "5. Verify that the next flight plan is correctly assigned to the UAV.",
+            "6. Repeat the process for additional flight plans if needed."
         ],
-        "expectedResult": "When the current flight plan's final waypoint is reached, the SingleUAVFlightPlanScheduler successfully executes the next assigned flight plan.",
-        "testCaseID": 86,
+        "expectedResult": "The SingleUAVFlightPlanScheduler executes the next assigned flight plan when the current flight plan's final waypoint is reached.",
+        "testCaseID": "RE-101",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a UAV has pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall execute the next assigned flight plan."
         ]
     },
     {
-        "testCaseID": 87,
+        "testCaseID": "RE-100",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If requested  the SingleUAVFlightPlanScheduler shall unassign the flight plan assigned to a UAV that is awaiting execution."
@@ -1461,12 +1446,14 @@
         ],
         "testSteps": [
             "1. Add a flight plan for an existing UAV.",
-            "2. Modify or remove a flight plan for the same UAV.",
-            "3. Verify that the managed list for the UAV is updated to reflect the changes.",
-            "4. Remove all flight plans from the UAV's list."
+            "2. Modify or remove a flight plan for an existing UAV.",
+            "3. Verify that the managed list is updated accordingly.",
+            "4. As a user adds another flight plan for an existing UAV.",
+            "5. As a user modifies or removes a flight plan for an existing UAV.",
+            "6. Verify that the managed list is updated again."
         ],
-        "expectedResult": "Flight plans are correctly added, modified, removed, and the list is maintained for each UAV.",
-        "testCaseID": 88,
+        "expectedResult": "The SingleUAVFlightPlanScheduler maintains an up-to-date list of pending flight plans for each UAV involved.",
+        "testCaseID": "RE-86",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The SingleUAVFlightPlanScheduler shall maintain a managed list of pending flight plans for Each UAV."
@@ -1485,7 +1472,7 @@
             "3. Verify that the next waypoint is sent to the UAV."
         ],
         "expectedResult": "The VehicleCore successfully sends the next waypoint to the UAV after executing the flight plan.",
-        "testCaseID": 89,
+        "testCaseID": "RE-80",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When a flight plan is executed  the VehicleCore shall send the next waypoint to the UAV."
@@ -1496,24 +1483,24 @@
         "testObjective": "Verify that each waypoint is specified using coordinates that include longitude, latitude, and altitude.",
         "preconditions": [
             "The application must be running.",
-            "A flight plan with waypoints must be created."
+            "There is at least one waypoint to test."
         ],
         "testSteps": [
-            "1. Open the application.",
-            "2. Create a flight plan with waypoints including longitude, latitude, and altitude coordinates.",
-            "3. Verify that the waypoints are correctly displayed in the flight plan.",
-            "4. Attempt to add a waypoint without including all three coordinates.",
-            "5. Observe if an error occurs when a waypoint is added without all three coordinates."
+            "1. Add a waypoint.",
+            "2. As a user, specify the longitude, latitude, and altitude of the waypoint.",
+            "3. Verify that the waypoint is displayed correctly with all three coordinates.",
+            "4. As a user, attempt to add another waypoint.",
+            "5. Verify that the new waypoint is specified with longitude, latitude, and altitude."
         ],
-        "expectedResult": "Each waypoint includes longitude, latitude, and altitude coordinates, and adding a waypoint without all three results in an error.",
-        "testCaseID": 90,
+        "expectedResult": "All waypoints are correctly specified with longitude, latitude, and altitude coordinates.",
+        "testCaseID": "RE-77",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. Each waypoint shall be specified using coordinates that include longitude  latitude  and altitude."
         ]
     },
     {
-        "testCaseID": 91,
+        "testCaseID": "RE-38",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The VehicleCore shall associate a {{UAVTYPE}} for each UAV defining its basic attributes."
@@ -1524,19 +1511,19 @@
         "testObjective": "Verify that the UAVActivationManager ensures only one active instance of each registered drone.",
         "preconditions": [
             "The application must be running.",
-            "At least one drone is registered.",
-            "Multiple drones are registered."
+            "At least two registered drones exist.",
+            "Each registered drone has an active instance."
         ],
         "testSteps": [
-            "1. Register multiple drones.",
-            "2. Activate a drone.",
-            "3. Activate another drone.",
-            "4. Verify that only one instance of each registered drone is active.",
-            "5. Deactivate the first drone.",
-            "6. Verify that only one instance of each registered drone remains active."
+            "1. Register at least two drones.",
+            "2. Activate all drones.",
+            "3. Check that only one instance is active for each drone.",
+            "4. Manually deactivate one drone and observe that the other remains active.",
+            "5. Add a third drone and check that only one instance is active for each drone.",
+            "6. Deactivate all drones except one and verify the active instance count for each drone."
         ],
-        "expectedResult": "Only one active instance per registered drone is maintained.",
-        "testCaseID": 92,
+        "expectedResult": "Each registered drone has exactly one active instance, and attempting to activate multiple instances does not result in errors.",
+        "testCaseID": "RE-36",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The UAVActivationManager shall ensure that only one instance of each registered drone is active at any time."
@@ -1544,19 +1531,20 @@
     },
     {
         "Requirement": "The SingleUAVFlightPlanScheduler shall only execute one flight plan at a time for each UAV.",
-        "testObjective": "Verify that the SingleUAVFlightPlanScheduler executes only one flight plan per UAV at a time.",
+        "testObjective": "Verify that the SingleUAVFlightPlanScheduler only executes one flight plan at a time for each UAV.",
         "preconditions": [
             "The application must be running.",
-            "There is at least one flight plan pending for a UAV."
+            "One or more SingleUAVFlightPlanScheduler instances are initialized."
         ],
         "testSteps": [
-            "1. Add a flight plan for UAV X.",
-            "2. Add another flight plan for UAV X.",
-            "3. Execute the first flight plan for UAV X.",
-            "4. Wait until the second flight plan for UAV X is not executed immediately after the first one."
+            "1. Add two flight plans for the same UAV.",
+            "2. Execute the first flight plan.",
+            "3. Verify that the second flight plan does not execute immediately.",
+            "4. Execute the second flight plan.",
+            "5. Verify that the first flight plan does not execute immediately."
         ],
-        "expectedResult": "Only one flight plan is executed per UAV at a time.",
-        "testCaseID": 93,
+        "expectedResult": "The SingleUAVFlightPlanScheduler successfully executes one flight plan per UAV without interference.",
+        "testCaseID": "RE-28",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The SingleUAVFlightPlanScheduler shall only execute one flight plan at a time for each UAV."
@@ -1572,10 +1560,10 @@
         "testSteps": [
             "1. Activate one or more UAVs.",
             "2. Check that each activated UAV has a unique identifier assigned.",
-            "3. Verify that no two activated UAVs share the same ID."
+            "3. Verify that the identifiers are different from each other."
         ],
-        "expectedResult": "All activated UAVs have unique IDs assigned without duplication.",
-        "testCaseID": 94,
+        "expectedResult": "All activated UAVs have unique IDs assigned.",
+        "testCaseID": "RE-25",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. The VehicleCore shall assign a unique ID to each activated UAV."
@@ -1583,25 +1571,26 @@
     },
     {
         "Requirement": "If a client registers for notifications the UIMiddleware shall send notifications for specific events.",
-        "testObjective": "Verify that the UIMiddleware sends notifications for specific events when a client registers for notifications.",
+        "testObjective": "Verify that when a client registers for notifications the UIMiddleware sends notifications for specific events.",
         "preconditions": [
             "The application must be running.",
             "A client has registered for notifications."
         ],
         "testSteps": [
-            "1. Register a client for notifications.",
-            "2. Trigger a specific event.",
-            "3. Wait until UIMiddleware sends a notification to the client."
+            "1. Start the application.",
+            "2. As a client, register for notifications.",
+            "3. As a client, trigger an event that should be notified.",
+            "4. Verify that UIMiddleware sends a notification for the registered event."
         ],
-        "expectedResult": "Notifications are sent to the client for the registered specific events.",
-        "testCaseID": 95,
+        "expectedResult": "Notifications are sent by UIMiddleware for the registered events.",
+        "testCaseID": "RE-9",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. If a client registers for notifications  the UIMiddleware shall send notifications for specific events"
         ]
     },
     {
-        "testCaseID": 96,
+        "testCaseID": "RE-8",
         "prompt": [
             "You are an expert software tester for Unmanned Aerial Systems (UAS). Reply using json.\n\nEXAMPLE INPUT REQUIREMENT:\nWhen a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\n\nEXAMPLE JSON OUTPUT:\n{\n    \"Requirement\": \"When a user cancels a pending flight plan the RouteAssignmentUI shall notify Dronology.\",\n    \"testObjective\": \"Verify that when a user cancels a pending flight plan the RouteAssignmentUI notifies Dronology.\",\n    \"preconditions\": [\n        \"The application must be running.\",\n        \"One or more flight plans are pending.\"\n    ],\n    \"testSteps\": [\n        \"1. Add one or more flight plans.\",\n        \"2. As a user cancel a flight plan.\",\n        \"3. Wait until RouteAssignmentUI notifies Dronology.\"\n    ],\n    \"expectedResult\": \"Flight plan is canceled and Dronology received notification from RouteAssignmentUI.\"\n}",
             "Generate json test description for the following requirement. When requested  the VehicleCore shall shall transition the UAV between states according to allowed state transitions as depicted in the UAV state transition diagram"
