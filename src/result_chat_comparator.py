@@ -65,6 +65,19 @@ class TestCaseComparator:
         with open(filename, "r", encoding="utf-8") as file:
             return json.load(file)
 
+    def remove_entries_by_ids(self, dataset, ids_to_remove):
+        """
+        Removes entries from the dataset that match the given test_case_ids.
+        
+        Args:
+            dataset (list): The original dataset (list of dicts).
+            ids_to_remove (list): List of test_case_id strings to remove.
+            
+        Returns:
+            list: Filtered dataset with unwanted entries removed.
+        """
+        return [entry for entry in dataset if entry[self.required_fields.get("test_case_id")] not in ids_to_remove]
+
     def validate_json_entries(self, json_data):
         """
         Validates JSON entries against required fields and returns statistics.
@@ -91,14 +104,14 @@ class TestCaseComparator:
                 for field in missing_fields:
                     missing_field_counts[field] += 1
 
-        self.invalid_ids = combine_and_deduplicate(invalid_entries_id, self.invalid_ids) 
+        #self.invalid_ids = combine_and_deduplicate(invalid_entries_id, self.invalid_ids) 
 
         return {
             "total_entries": total_entries,
             "valid_entries": valid_entries,
             "invalid_entries": total_entries - valid_entries,
             "missing_field_counts": dict(missing_field_counts),
-            "invalid_entries_id": self.invalid_ids
+            "invalid_entries_id": invalid_entries_id
         }
 
     def check_unique_field(self, json_data):
@@ -287,8 +300,8 @@ class TestCaseComparator:
             if id not in self.invalid_ids:
                 if field_name in entry and entry[field_name] not in [None, ""]:
                     total_entries += len(entry[field_name])
-                    for test_steps in entry[field_name]:
-                        result = validator.validate(test_steps)
+                    for test_step in entry[field_name]:
+                        result = validator.validate(test_step)
                         
                         if result["valid"]:
                             valid_count += 1
@@ -347,35 +360,39 @@ class TestCaseComparator:
 
     def check_field_meaningfulness(self, json_data, req_reference):
         # are added manually but still for safety purposes lets check if ID is unique
+        print("\nID check:")
         result_check_unique_field = self.check_unique_field(json_data) # invalid_entries_id
         print(result_check_unique_field)
         
         # verify testcase ID matches with the requirement from the req_reference
-        print("Requirements similarity to reference:")
+        print("\nRequirements similarity to reference:")
         result_validate_req = self.validate_requirements_with_similarity(json_data, req_reference)
         print(result_validate_req)
         
         # verify that test_objective entries are valid through rules
-        print("Test objective:")
+        print("\nTest objective:")
         result_val_test_objective = self.validate_test_objective(json_data)
         print(result_val_test_objective)
         
         # verify that preconditions entries are valid through rules
-        print("Preconditions:")
+        print("\nPreconditions:")
         result_validate_preconditions = self.validate_preconditions(json_data)
         print(result_validate_preconditions)
         
         # verify that test step entries are valid through rules
-        print("Test Steps:")
+        print("\nTest Steps:")
         result_validate_test_steps = self.validate_test_steps(json_data)
         print(result_validate_test_steps)
         
         # verify that expected result entry is valid
-        print("Expected Result:")
+        print("\nExpected Result:")
         result_expected_result = self.validate_expected_result(json_data)
         print(result_expected_result)
         
         return self.invalid_ids
+
+
+
 
 DATA_PATH = "C:/Users/alexs/Documents/Studium/Informatik/Seminar/RBST-prompt-engineering/datasets/dronology/dronology_with_id.csv"
 
@@ -384,33 +401,55 @@ if __name__ == "__main__":
     
     # Get the directory of the current script
     script_dir = Path(__file__).parent
-    # Define the file path relative to the script's directory
-    #json_path = script_dir / "results/results_chat_prompt0_zero.json"                          # ['RE-729', 'RE-672', 'RE-160', 'RE-589', 'RE-549', 'RE-659', 'RE-595', 'RE-655', 'RE-709', 'RE-503', 'RE-38', 'RE-656', 'RE-508', 'RE-555', 'RE-25', 'RE-108']
-    #json_path = script_dir / "results/results_chat_prompt1_persona.json"                       # ['RE-100', 'RE-594', 'RE-503', 'RE-510', 'RE-549', 'RE-160', 'RE-722', 'RE-127', 'RE-8', 'RE-739', 'RE-523', 'RE-424', 'RE-736', 'RE-668', 'RE-574', 'RE-558', 'RE-126', 'RE-112', 'RE-38', 'RE-563', 'RE-714', 'RE-596', 'RE-508', 'RE-551', 'RE-595', 'RE-597', 'RE-125', 'RE-656', 'RE-702']
-    #json_path = script_dir / "results/results_chat_prompt2_tot.json"                           # ['RE-38', 'RE-508', 'RE-77', 'RE-541', 'RE-656', 'RE-595', 'RE-722', 'RE-126', 'RE-9', 'RE-503', 'RE-549', 'RE-125', 'RE-112', 'RE-597', 'RE-714', 'RE-555', 'RE-127', 'RE-551', 'RE-100']
-    #json_path = script_dir / "results/results_chat_prompt3_context_and_tot.json"               # ['RE-549', 'RE-751', 'RE-38', 'RE-670', 'RE-597', 'RE-508', 'RE-595', 'RE-8', 'RE-722', 'RE-126', 'RE-503']
-    #json_path = script_dir / "results/results_chat_prompt4_preparsing_and_tot_reqfirst.json"   # ['RE-127', 'RE-597', 'RE-643', 'RE-503', 'RE-77', 'RE-595', 'RE-38', 'RE-576', 'RE-126', 'RE-9', 'RE-741', 'RE-549']
     
-    df = pd.read_csv(DATA_PATH)
-    requirements = df[['issueid', 'RequirementText']]
-    
-    comparer = TestCaseComparator()
-    
-    ds_zero = comparer.load_json(json_path)
-    
-    print("Json template check:")
-    result_valid_entries = comparer.validate_json_entries(ds_zero)
-    print(result_valid_entries)
-    id_invalid_entries = result_valid_entries['invalid_entries_id']
-    
-    id_field_check_fails = comparer.check_field_meaningfulness(ds_zero, requirements)
-    print(combine_and_deduplicate(id_invalid_entries, id_field_check_fails))
-    
-    
-    #similarity_results = comparer.compare_datasets("dataset1.json", "dataset2.json")
+    json_names = [
+        "results_chat_prompt0_zero_1_5b.json",
+        "results_chat_prompt0_zero_8b.json",
+        "results_chat_prompt0_zero_14b.json",
+        "results_chat_prompt0_zero7b.json",
+        "results_chat_prompt1_persona7b.json",
+        "results_chat_prompt1_persona8b.json",
+        "results_chat_prompt1_persona14b.json",
+        "results_chat_prompt2_tot7b.json",
+        "results_chat_prompt2_tot8b.json",
+        "results_chat_prompt2_tot14b.json",
+        "results_chat_prompt3_context_and_tot7b.json",
+        "results_chat_prompt3_context_and_tot8b.json",
+        "results_chat_prompt3_context_and_tot14b.json",
+        "results_chat_prompt4_preparsing_and_tot_reqfirst7b.json",
+        "results_chat_prompt4_preparsing_and_tot_reqfirst8b.json",
+        "results_chat_prompt4_preparsing_and_tot_reqfirst14b.json",
+        "results_chat_prompt4_preparsing_and_tot7b.json"
 
-    # Print results
-    #for testCaseID, scores in similarity_results.items():
-    #    print(f"\nTestCaseID: {testCaseID}")
-    #    for field, score in scores.items():
-    #        print(f"  {field} Similarity: {score:.2f}")
+    ]
+    
+    for json_name in json_names:
+        print("\n\n")
+        print("-> Evaluating: " + json_name)
+        print("\n")
+
+        # Define the file path relative to the script's directory
+        json_path = script_dir / ("results/" + json_name) 
+
+        df = pd.read_csv(DATA_PATH)
+        requirements = df[['issueid', 'RequirementText']]
+        
+        comparer = TestCaseComparator()
+        
+        ds_zero = comparer.load_json(json_path)
+        
+        print("\nJson template check:")
+        result_valid_entries = comparer.validate_json_entries(ds_zero)
+        print(result_valid_entries)
+        id_invalid_entries = result_valid_entries['invalid_entries_id']
+        
+        ds_zero_without_invalid_entries = comparer.remove_entries_by_ids(ds_zero, id_invalid_entries)
+        requirements_without_invalid_entries = requirements[~df["issueid"].isin(id_invalid_entries)]
+        
+        id_field_check_fails = comparer.check_field_meaningfulness(ds_zero_without_invalid_entries, requirements_without_invalid_entries)
+        
+        print("\n")
+        print(id_field_check_fails)
+        #print(combine_and_deduplicate(id_invalid_entries, id_field_check_fails))
+        print("\n\n")
+        

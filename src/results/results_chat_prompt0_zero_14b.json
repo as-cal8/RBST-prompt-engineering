@@ -1,0 +1,1031 @@
+[
+    {
+        "Requirement": "The MapComponent shall support different types of map layers (e.g., terrain, satellite)",
+        "testObjective": "Verify that the MapComponent can display different types of map layers, such as terrain and satellite views.",
+        "preconditions": [
+            "The MapComponent is installed and running.",
+            "The application has access to the internet for map data retrieval."
+        ],
+        "testSteps": [
+            "1. Launch the application and navigate to the MapComponent.",
+            "2. Open the layer selection dialog or menu within the MapComponent.",
+            "3. Select the 'Terrain' layer option.",
+            "4. Observe the map display to ensure the terrain layer is visible and correctly rendered.",
+            "5. Close the layer selection dialog or menu.",
+            "6. Repeat steps 3-5 for the 'Satellite' layer option.",
+            "7. Observe the map display to ensure the satellite layer is visible and correctly rendered.",
+            "8. Verify that both the terrain and satellite layers can be displayed without conflicts or errors."
+        ],
+        "expectedResult": "The MapComponent successfully displays and switches between the terrain and satellite map layers without any errors or issues.",
+        "testCaseID": "RE-766",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The MapComponent shall support different types of map layers (e.g.  terrain  satellite)"
+        ]
+    },
+    {
+        "Requirement": "The MissionPlanner shall execute flight plans for multiple UAVs concurrently.",
+        "testObjective": "To verify that the MissionPlanner can execute flight plans for multiple UAVs simultaneously without conflicts or errors.",
+        "preconditions": [
+            "MissionPlanner is installed and running.",
+            "At least two UAVs are available and connected to the system.",
+            "Each UAV has a valid flight plan assigned.",
+            "All flight plans are compatible with concurrent execution."
+        ],
+        "testSteps": [
+            "Launch MissionPlanner and ensure it's operational.",
+            "Prepare and assign distinct flight plans to each UAV.",
+            "Simultaneously initiate the execution of each UAV's flight plan through MissionPlanner.",
+            "Monitor the system for any conflicts, errors, or performance issues.",
+            "Pause or terminate the execution if any anomalies are detected.",
+            "Review log files and system outputs to assess the success of concurrent execution."
+        ],
+        "expectedResult": "The MissionPlanner successfully executes flight plans for all UAVs concurrently without conflicts, errors, or performance degradation.",
+        "testCaseID": "RE-759",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The MissionPlanner shall execute flight plans for multiple UAVs concurrently."
+        ]
+    },
+    {
+        "testCaseID": "RE-754",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCS shall transmit the UAV's properties to the GCSMiddleware"
+        ]
+    },
+    {
+        "testCaseID": "RE-751",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCS shall transmit the UAV's current location to the GCSMiddleware"
+        ]
+    },
+    {
+        "testCaseID": "RE-746",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCS shall report newly connected UAVs to the GCSMiddleware."
+        ]
+    },
+    {
+        "testCaseID": "RE-741",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCS shall assign a message frequency for all UAVs."
+        ]
+    },
+    {
+        "testCaseID": "RE-739",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the GCS receives a UAV command from the GCSMiddleware  the GCS shall forward the command to the respective UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-736",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the connection to the GCS from the GCSMiddleware is lost  the GCSMiddleware shall notify Dronology and deactivate all associated UAVs."
+        ]
+    },
+    {
+        "testCaseID": "RE-729",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCSMiddleware shall forward commands sent from Dronology to a GCS"
+        ]
+    },
+    {
+        "testCaseID": "RE-722",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCSMiddleware shall handle state messages   monitoring messages  and mode change messages  received from an GCS."
+        ]
+    },
+    {
+        "testCaseID": "RE-714",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCSMiddleware  shall follow a predefined set of steps to establish a connection between a GCS and Dronology"
+        ]
+    },
+    {
+        "Requirement": "The GCSMiddleware shall handle multiple GCS requests concurrently.",
+        "testObjective": "Verify that the GCSMiddleware can handle multiple GCS requests concurrently without performance degradation or errors.",
+        "preconditions": [
+            "GCSMiddleware is installed and running.",
+            "GCS server is available and responsive.",
+            "Test environment has sufficient resources (CPU, memory).",
+            "All test clients are prepared and ready to send requests."
+        ],
+        "testSteps": [
+            "Prepare multiple test clients to send GCS requests to the GCSMiddleware.",
+            "Simultaneously send a large number of GCS requests from all clients.",
+            "Monitor the GCSMiddleware's performance metrics such as CPU usage, memory usage, and request processing time.",
+            "Check if all requests are processed successfully and responses are received within acceptable time frames.",
+            "Log any errors or exceptions thrown by the GCSMiddleware during the test."
+        ],
+        "expectedResult": "The GCSMiddleware successfully processes all concurrent GCS requests without errors, maintains acceptable performance metrics, and ensures timely responses.",
+        "testCaseID": "RE-709",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCSMiddleware shall handle multiple GCS"
+        ]
+    },
+    {
+        "testCaseID": "RE-706",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The DronologyRuntimeMonitor shall be able to receive messages from any Dronology component"
+        ]
+    },
+    {
+        "testCaseID": "RE-702",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a new monitoring message is received the DronologyRuntimeMonitor shall forward the message to all subscribed clients"
+        ]
+    },
+    {
+        "Requirement": "The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients",
+        "testObjective": "Verify that the DronologyRuntimeMonitor can retrieve monitoring messages and distribute them to clients",
+        "preconditions": [
+            "DronologyRuntimeMonitor is installed and running",
+            "At least one monitoring client is connected",
+            "Monitoring messages are generated"
+        ],
+        "testSteps": [
+            "Start the DronologyRuntimeMonitor if it is not already running",
+            "Generate monitoring messages through the system under test",
+            "Wait for monitoring messages to be generated",
+            "Retrieve the monitoring messages from DronologyRuntimeMonitor",
+            "Verify that the retrieved messages are distributed to the connected clients",
+            "Check if all messages are successfully received by the clients"
+        ],
+        "expectedResult": "The DronologyRuntimeMonitor successfully retrieves and distributes all generated monitoring messages to the connected clients",
+        "testCaseID": "RE-701",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients"
+        ]
+    },
+    {
+        "Requirement": "The RealTimeFlightUI shall notify users when an emergency occurs.",
+        "testObjective": "Verify that the RealTimeFlightUI notifies users when an emergency occurs.",
+        "preconditions": [
+            "RealTimeFlightUI is running and connected to the backend.",
+            "User is logged into the RealTimeFlightUI."
+        ],
+        "testSteps": [
+            "1. Launch the RealTimeFlightUI application.",
+            "2. Log in with valid user credentials.",
+            "3. Navigate to the emergency notification section.",
+            "4. Simulate an emergency condition in the backend system.",
+            "5. Observe the UI for notification of the emergency.",
+            "6. Check if the notification is displayed to the user.",
+            "7. Verify that the notification includes appropriate emergency information."
+        ],
+        "expectedResult": "The RealTimeFlightUI displays a notification to the user when an emergency occurs, including relevant emergency information.",
+        "testCaseID": "RE-698",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall notify users when an emergency occurs."
+        ]
+    },
+    {
+        "testCaseID": "RE-695",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall allow users to follow one or multiple UAVs on the map."
+        ]
+    },
+    {
+        "Requirement": "The RealTimeFlightUI shall allow users to perform emergency operations (e.g. hovering multiple UAVs  sending multiple UAVs to home) to a group of UAVs",
+        "testObjective": "Test that the RealTimeFlightUI enables users to perform emergency operations on a group of UAVs, such as hovering or sending them home.",
+        "preconditions": [
+            "The RealTimeFlightUI is running and connected to the UAVs.",
+            "A group of UAVs is available and connected to the system.",
+            "The user has the necessary permissions to perform emergency operations."
+        ],
+        "testSteps": [
+            "1. Log in to the RealTimeFlightUI as a user with permissions to perform emergency operations.",
+            "2. Launch the application and ensure it is connected to the UAVs.",
+            "3. Select a group of UAVs from the available list.",
+            "4. Navigate to the emergency operations menu or section within the UI.",
+            "5. Choose an emergency operation option, such as 'Hover' or 'Return Home'.",
+            "6. Confirm the operation to initiate the command to the selected group of UAVs.",
+            "7. Observe the UI for feedback or confirmation that the operation was successful."
+        ],
+        "expectedResult": "The selected group of UAVs responds to the emergency operation command appropriately. For example, they should hover in place or begin the process of returning to their home location. The UI should display confirmation or status updates indicating the successful execution of the operation.",
+        "testCaseID": "RE-693",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall allow users to perform emergency operations (e.g. hovering multiple UAVs  sending multiple UAVs to home) to a group of UAVs"
+        ]
+    },
+    {
+        "testCaseID": "RE-691",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall allow users to apply flight operations to one or more selected UAVs."
+        ]
+    },
+    {
+        "testCaseID": "RE-689",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall display all currently active flight plans on the map."
+        ]
+    },
+    {
+        "testCaseID": "RE-681",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall display the name and status of all currently activated UAVs"
+        ]
+    },
+    {
+        "testCaseID": "RE-679",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the RouteCreationUI is loaded a list of all existing routes shall be displayed."
+        ]
+    },
+    {
+        "testCaseID": "RE-677",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RouteCreationUI shall allow a user to delete a route."
+        ]
+    },
+    {
+        "testCaseID": "RE-672",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RouteCreationUI shall allow the user to create and modify a route."
+        ]
+    },
+    {
+        "Route": {
+            "RouteID": "string",
+            "RouteName": "string",
+            "Description": "string",
+            "Waypoints": [
+                {
+                    "WaypointID": "string",
+                    "WaypointName": "string",
+                    "WaypointDescription": "string",
+                    "WaypointCoordinates": {
+                        "Latitude": "string",
+                        "Longitude": "string"
+                    }
+                }
+            ]
+        },
+        "Modified": "boolean",
+        "testCaseID": "RE-670",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the RouteCreationUI shall send a newly created or modified route to dronology."
+        ]
+    },
+    {
+        "testCaseID": "RE-668",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: Each route shall include a unique ID  a textual description  and a set of waypoints  all of which are editable in the UI."
+        ]
+    },
+    {
+        "testCaseID": "RE-666",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RouteCreationUI shall only accept valid altitude and speed values for waypoint."
+        ]
+    },
+    {
+        "testCaseID": "RE-664",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RouteCreationUI shall distinguish between starting  ending  and intermediate waypoint markers."
+        ]
+    },
+    {
+        "testCaseID": "RE-659",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a user  cancels a pending flight plan the RouteAssignmentUI shall notify Dronology."
+        ]
+    },
+    {
+        "Requirement": "A user may reorder routes or remove flight plans assigned to a UAV as long as the flight has not started execution.",
+        "testObjective": "Verify that a user can reorder routes or remove flight plans assigned to a UAV before the flight starts executing.",
+        "preconditions": [
+            "A UAV is assigned one or more flight plans.",
+            "The flight has not started executing."
+        ],
+        "testSteps": [
+            "1. Open the UAV's flight plan management interface.",
+            "2. Access the list of assigned flight plans.",
+            "3. Attempt to reorder the flight plans.",
+            "4. Attempt to remove one or more flight plans.",
+            "5. Verify that the flight plans are reordered or removed successfully.",
+            "6. Check if the flight execution status is still 'Not Started' after the changes."
+        ],
+        "expectedResult": "The flight plans are successfully reordered or removed, and the flight execution status remains 'Not Started'.",
+        "testCaseID": "RE-656",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: A user may reorder routes or remove flight plans assigned to a UAV as long as the flight has not started execution."
+        ]
+    },
+    {
+        "Requirement": "When a UAV is selected, the RouteAssignmentUI shall display its active flight plans.",
+        "testObjective": "Verify that the RouteAssignmentUI displays active flight plans when a UAV is selected.",
+        "preconditions": [
+            "The RouteAssignmentUI is available and accessible.",
+            "The system is connected to the UAV.",
+            "There are active flight plans associated with the selected UAV."
+        ],
+        "testSteps": [
+            "1. Launch the RouteAssignmentUI application.",
+            "2. Select a UAV from the available list.",
+            "3. Verify that the UI displays the active flight plans for the selected UAV.",
+            "4. Ensure that only active flight plans are shown, and inactive ones are not displayed."
+        ],
+        "expectedResult": "The RouteAssignmentUI successfully displays all active flight plans for the selected UAV.",
+        "testCaseID": "RE-655",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a UAV is selected  the RouteAssignmentUI shall display its active flight plans."
+        ]
+    },
+    {
+        "Requirement": "When requested by the user, the RouteAssignmentUI shall display details about the selected UAV and its flight plans.",
+        "testObjective": "Verify that the RouteAssignmentUI displays the selected UAV's details and flight plans when requested by the user.",
+        "preconditions": [
+            "The RouteAssignmentUI is available and accessible.",
+            "The user has selected a specific UAV from the available options."
+        ],
+        "testSteps": [
+            "1. Launch the RouteAssignmentUI application.",
+            "2. Navigate to the UAV selection interface.",
+            "3. Select a specific UAV from the available list.",
+            "4. Initiate the request for UAV details and flight plans.",
+            "5. Observe the displayed information on the UI."
+        ],
+        "expectedResult": "The selected UAV's details and its associated flight plans are displayed accurately and clearly on the RouteAssignmentUI.",
+        "testCaseID": "RE-651",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested by the user  the RouteAssignmentUI shall display details about the selected UAV and its flight plans."
+        ]
+    },
+    {
+        "Requirement": "When a route is assigned or removed from a UAV, the RouteAssignmentUI shall notify Dronology.",
+        "testObjective": "Verify that the RouteAssignmentUI notifies Dronology when a route is assigned or removed from a UAV.",
+        "preconditions": [
+            "The system is running and all components are operational.",
+            "A UAV is available and ready for route assignment.",
+            "A route is available and ready for assignment."
+        ],
+        "testSteps": [
+            "1. Open the RouteAssignmentUI.",
+            "2. Select the UAV to which the route will be assigned.",
+            "3. Assign the selected route to the UAV.",
+            "4. Observe that Dronology has been notified of the route assignment.",
+            "5. Remove the route from the UAV.",
+            "6. Observe that Dronology has been notified of the route removal."
+        ],
+        "expectedResult": "The RouteAssignmentUI successfully notifies Dronology of both the assignment and removal of the route from the UAV.",
+        "testCaseID": "RE-649",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a route is assigned or removed from a UAV  the RouteAssignmentUI shall notify Dronology."
+        ]
+    },
+    {
+        "testCaseID": "RE-646",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RouteAssignmentUI shall provide means to select an existing routes and assign them to a UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-643",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When loading the map view it shall be positioned at the pre-defined location"
+        ]
+    },
+    {
+        "testCaseID": "RE-642",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the VaadinUI is activated  the VaadinUI shall be configured according to stored configuration parameters."
+        ]
+    },
+    {
+        "Requirement": "The UIMiddleware shall accept and activate a mission plan upon request.",
+        "testObjective": "To verify that the UIMiddleware can accept and activate a mission plan upon request.",
+        "preconditions": [
+            "The UIMiddleware is running and accessible.",
+            "A valid mission plan file is available and ready to be sent."
+        ],
+        "testSteps": [
+            "1. Open a communication channel to the UIMiddleware.",
+            "2. Send the mission plan file to the UIMiddleware through the established channel.",
+            "3. Send an activation request to the UIMiddleware after transmitting the mission plan.",
+            "4. Monitor the response from the UIMiddleware to ensure the mission plan is accepted and activated."
+        ],
+        "expectedResult": "The UIMiddleware accepts the mission plan and activates it successfully, confirming with appropriate status codes or messages.",
+        "testCaseID": "RE-639",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall accept and activate a mission plan upon request."
+        ]
+    },
+    {
+        "testCaseID": "RE-637",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall enable an existing route to be assigned to an active UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-634",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall enable the creation and modification of flight routes"
+        ]
+    },
+    {
+        "testCaseID": "RE-630",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware accepts commands from UIs and forwards to Dronology"
+        ]
+    },
+    {
+        "testCaseID": "RE-628",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall provide a list of all existing routes"
+        ]
+    },
+    {
+        "Requirement": "The UIMiddleware shall provide a list of all active UAVs",
+        "testObjective": "To verify that the UIMiddleware can retrieve and display a list of all active UAVs.",
+        "preconditions": [
+            "The UIMiddleware is installed and running.",
+            "At least one UAV is active and connected to the system.",
+            "The system has proper authentication and authorization in place."
+        ],
+        "testSteps": [
+            "1. Launch the UIMiddleware application.",
+            "2. Log in to the UIMiddleware with valid credentials.",
+            "3. Navigate to the UAV management section.",
+            "4. Initiate the process to retrieve the list of active UAVs.",
+            "5. Observe the displayed list of UAVs to ensure all active UAVs are listed.",
+            "6. Verify that the list is updated in real-time or within a specified timeframe."
+        ],
+        "expectedResult": "The UIMiddleware successfully retrieves and displays a list of all active UAVs, ensuring the information is accurate and up-to-date.",
+        "testCaseID": "RE-626",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall provide a list of all active UAVs"
+        ]
+    },
+    {
+        "testCaseID": "RE-616",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The ActivityLogger shall log all commands sent to and messages received from a CGS."
+        ]
+    },
+    {
+        "Requirement": "The ActivityLogger shall log all flight plan related events.",
+        "testObjective": "Verify that the ActivityLogger correctly logs all flight plan related events.",
+        "preconditions": [
+            "Flight plan is created and active.",
+            "ActivityLogger is configured and running.",
+            "System is in a state where flight plan events can occur."
+        ],
+        "testSteps": [
+            "1. Navigate to the flight plan management interface.",
+            "2. Create a new flight plan and activate it.",
+            "3. Perform actions that trigger flight plan events (e.g., modify waypoints, change altitude, etc.).",
+            "4. Monitor the ActivityLogger to check for logged events.",
+            "5. Verify that all expected flight plan related events are recorded in the log."
+        ],
+        "expectedResult": "The ActivityLogger accurately records all flight plan related events with proper timestamps and details.",
+        "testCaseID": "RE-611",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The ActivityLogger shall log all flight plan related events."
+        ]
+    },
+    {
+        "testCaseID": "RE-597",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The InternalSimulator shall approximate the state of the battery"
+        ]
+    },
+    {
+        "Requirement": "When given a landing command, the InternalSimulator shall move the UAV from its current position to the ground altitude corresponding to its current longitude and latitude.",
+        "testObjective": "Verify that the InternalSimulator correctly moves the UAV to the ground altitude based on its current longitude and latitude when a landing command is received.",
+        "preconditions": [
+            "InternalSimulator is initialized and running.",
+            "UAV is in flight mode.",
+            "Current longitude and latitude of the UAV are known and valid."
+        ],
+        "testSteps": [
+            "1. Initialize the InternalSimulator with the UAV in flight mode.",
+            "2. Set the current longitude and latitude of the UAV to valid values.",
+            "3. Send a landing command to the InternalSimulator.",
+            "4. Monitor the UAV's altitude over time.",
+            "5. Verify that the UAV's altitude decreases smoothly until it reaches the ground altitude corresponding to the set longitude and latitude.",
+            "6. Check that the UAV comes to a stable stop at the ground level."
+        ],
+        "expectedResult": "The UAV smoothly descends to the ground altitude based on its current longitude and latitude and safely lands, coming to a stable stop without any issues.",
+        "testCaseID": "RE-596",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given a landing command the InternalSimulator shall move the UAV from to the ground altitude corresponding to its current longitude and latitude."
+        ]
+    },
+    {
+        "testCaseID": "RE-595",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given a goto command  the InternalSimulator shall update the location of the UAV at increments of {{SIMULATIONSTEPSIZE}} meters  moving it towards the target destination until the destination is reached."
+        ]
+    },
+    {
+        "testCaseID": "RE-594",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given a takeoff command the InternalSimulator shall move the UAV to the takeoff altitude corresponding to its current longitude and latitude."
+        ]
+    },
+    {
+        "testCaseID": "RE-593",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The InternalSimulator shall approximate the behavior of a UAV."
+        ]
+    },
+    {
+        "Requirement": "The UAVRegistrationManager shall store UAV meta-data information such as the UAV's technical characteristics.",
+        "testObjective": "Verify that the UAVRegistrationManager correctly stores UAV meta-data including technical characteristics.",
+        "preconditions": [
+            "UAVRegistrationManager is installed and operational.",
+            "Test environment has network access (if required).",
+            "Test user has necessary permissions to access and modify UAV registration data."
+        ],
+        "testSteps": [
+            "1. Launch the UAVRegistrationManager application.",
+            "2. Navigate to the UAV registration section.",
+            "3. Create a new UAV registration entry with detailed technical characteristics (e.g., model, manufacturer, propellers, battery, etc.).",
+            "4. Save the registration entry.",
+            "5. Retrieve the stored registration entry to verify the technical characteristics are accurately preserved.",
+            "6. Modify the registration entry to update one of the technical characteristics.",
+            "7. Save the updated registration entry.",
+            "8. Retrieve the updated entry to ensure the modification is correctly reflected."
+        ],
+        "expectedResult": "The UAVRegistrationManager accurately stores and updates UAV meta-data, including technical characteristics, without data loss or corruption.",
+        "testCaseID": "RE-592",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UAVRegistrationManager shall store UAV meta-data information  such as the UAV's technical characteristics"
+        ]
+    },
+    {
+        "testCaseID": "RE-589",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the maximum numbers of allowed activated UAVs has been reached  the UAVActivationManager shall reject any further activation requests."
+        ]
+    },
+    {
+        "testCaseID": "RE-587",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a UAV is deactivated the UAVActivationManager shall cancel all current and scheduled flight plans"
+        ]
+    },
+    {
+        "Requirement": "The VehicleCore shall support virtual UAVs",
+        "testObjective": "To verify that the VehicleCore can manage and interact with virtual UAVs effectively.",
+        "preconditions": [
+            "VehicleCore is installed and operational",
+            "Virtual UAV simulation environment is set up and ready"
+        ],
+        "testSteps": [
+            "Initialize the VehicleCore system.",
+            "Launch the virtual UAV simulation environment.",
+            "Attempt to connect VehicleCore to the virtual UAV.",
+            "Verify that the connection is successful.",
+            "Execute a series of commands through VehicleCore to control the virtual UAV.",
+            "Monitor the response and behavior of the virtual UAV during the command execution.",
+            "Terminate the test session."
+        ],
+        "expectedResult": "The VehicleCore successfully connects to and controls the virtual UAV, demonstrating effective support for virtual UAVs.",
+        "testCaseID": "RE-576",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The VehicleCore shall support virtual UAVs"
+        ]
+    },
+    {
+        "Requirement": "The VehicleCore shall support UAVs connected via the GCS",
+        "testObjective": "Verify that the VehicleCore can establish and maintain communication with UAVs connected via the GCS.",
+        "preconditions": [
+            "UAVs are connected to the GCS.",
+            "GCS is operational and configured correctly."
+        ],
+        "testSteps": [
+            "1. Verify that the VehicleCore is running and accessible.",
+            "2. Check the GCS for active UAV connections.",
+            "3. Attempt to send a command from the GCS to the UAV through the VehicleCore.",
+            "4. Monitor the system for any errors or disconnections.",
+            "5. Record the results of the communication attempt."
+        ],
+        "expectedResult": "Successful communication between the GCS and UAV via the VehicleCore without any errors or disconnections.",
+        "testCaseID": "RE-574",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The VehicleCore shall support UAVs connected via the GCS"
+        ]
+    },
+    {
+        "testCaseID": "RE-563",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a group of UAVs are assigned flight patterns as part of a mission  the system shall provide a warning if any paths overlap."
+        ]
+    },
+    {
+        "testCaseID": "RE-558",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If requested  the SingleUAVFlightPlanScheduler shall abort the currently executing flight plan of an UAV"
+        ]
+    },
+    {
+        "testCaseID": "RE-555",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a UAV does not have any pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall notify the UAV to hover in place."
+        ]
+    },
+    {
+        "testCaseID": "RE-551",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a scheduled flight is not manually assigned to a UAV  the SingleUAVFlightPlanScheduler shall assign the route automatically to an UAV"
+        ]
+    },
+    {
+        "testCaseID": "RE-549",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a route contains a specific {{UAVID}}  the SingleUAVFlightPlanScheduler shall assign the route to the given UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-547",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the SingleUAVFlightPlanScheduler shall schedule a route for execution."
+        ]
+    },
+    {
+        "testCaseID": "RE-545",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  if a mission is currently active  the MissionPlanner shall cancel the active mission."
+        ]
+    },
+    {
+        "testCaseID": "RE-541",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The MissionPlanner shall manage predefined FlightPatterns"
+        ]
+    },
+    {
+        "Requirement": "When a flight plan is activated for a UAV currently on the ground, the FlightSchedulingandExecution shall notify the UAV to takeoff vertically until it reaches the prescribed altitude.",
+        "testObjective": "Verify that when a flight plan is activated for a UAV on the ground, the FlightSchedulingandExecution system notifies the UAV to takeoff vertically until it reaches the prescribed altitude.",
+        "preconditions": [
+            "FlightSchedulingandExecution system is operational.",
+            "UAV is in a grounded state.",
+            "Flight plan is available and selected."
+        ],
+        "testSteps": [
+            "Activate the flight plan for the UAV that is currently on the ground.",
+            "Observe the system's response to the activation.",
+            "Monitor the UAV's status to ensure it begins the vertical takeoff procedure.",
+            "Track the UAV's altitude until it reaches the prescribed level."
+        ],
+        "expectedResult": "The UAV successfully takes off vertically and reaches the specified altitude upon activation of the flight plan, with proper notifications from the FlightSchedulingandExecution system.",
+        "testCaseID": "RE-531",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a flight plan is activated for a UAV currently on the ground  the FlightSchedulingandExecution shall notify the UAV to takeoff vertically until it reaches the prescribed altitude."
+        ]
+    },
+    {
+        "testCaseID": "RE-525",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a flight plan is active and the hover in place command is rescinded  the FlightManager shall notify the UAV to continue to the originally designated waypoint."
+        ]
+    },
+    {
+        "testCaseID": "RE-523",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a flight route is assigned to a UAV which is currently hovering in place  the FlightManager shall assign the route and maintain the hover in place mode."
+        ]
+    },
+    {
+        "Requirement": "When the hover in place command is issued, the FlightManager shall halt the UAV in place and maintain its current position.",
+        "testObjective": "To verify that the FlightManager halts the UAV in place and maintains its current position when the hover in place command is issued.",
+        "preconditions": [
+            "UAV is in flight",
+            "FlightManager is operational",
+            "Hover in place command is available"
+        ],
+        "testSteps": [
+            "Issue the hover in place command to the FlightManager.",
+            "Observe the UAV's position over time.",
+            "Verify that the UAV remains stationary in its current position."
+        ],
+        "expectedResult": "The UAV remains stationary in its current position after receiving the hover in place command.",
+        "testCaseID": "RE-521",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the hover in place command is issued  the FlightManager shall halt the UAV in place and maintain its current position."
+        ]
+    },
+    {
+        "testCaseID": "RE-517",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given two coordinates the CoordinateSystem shall compute the direction from the first coordinate to the second coordinate."
+        ]
+    },
+    {
+        "testCaseID": "RE-516",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given two coordinates the CoordinateSystem shall compute the distance between them."
+        ]
+    },
+    {
+        "testCaseID": "RE-510",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the CoordinateSystem shall transform coordinates to alternate formats."
+        ]
+    },
+    {
+        "testCaseID": "RE-508",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a flight route requires a customized takeoff altitude that differs from the system's default takeoff altitude  it shall be specified in the flight route."
+        ]
+    },
+    {
+        "Requirement": "The FlightRouteManager shall persist flight routes.",
+        "testObjective": "Verify that the FlightRouteManager correctly persists flight routes.",
+        "preconditions": [
+            "FlightRouteManager instance is created.",
+            "FlightRouteManager is initialized with an empty database or storage."
+        ],
+        "testSteps": [
+            "Create a new flight route object with valid parameters (e.g., source airport, destination airport, duration, etc.).",
+            "Call the persist method on the FlightRouteManager instance with the flight route object.",
+            "Check if the flight route is successfully added to the database or storage.",
+            "Verify that the persisted flight route data is accurate and matches the input parameters."
+        ],
+        "expectedResult": "The flight route is persisted in the database or storage, and the data is accurate.",
+        "testCaseID": "RE-505",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The FlightRouteManager shall persist flight routes."
+        ]
+    },
+    {
+        "testCaseID": "RE-503",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The FlightRouteManager shall ensure that all flight routes represent a {{VALIDFLIGHTROUTE}}."
+        ]
+    },
+    {
+        "testCaseID": "RE-424",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the return to home command is issued  the FlightManager shall return the UAV to its original launch location without issuing any additional waypoint or routing commands."
+        ]
+    },
+    {
+        "testCaseID": "RE-235",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the GCS loses the connection to an UAV  the GCS shall attempt to reconnect"
+        ]
+    },
+    {
+        "testCaseID": "RE-161",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UAVActivationManager shall only activate UAVs that are registered."
+        ]
+    },
+    {
+        "testCaseID": "RE-160",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a GCS requests activation of a newly detected UAV  the GCSMiddleware shall forward the request to Dronology."
+        ]
+    },
+    {
+        "Requirement": "When a UAV has an active onboard Obstacle Avoidance, the Obstacle Avoidance system shall not issue directives.",
+        "testObjective": "Verify that the Obstacle Avoidance system does not issue any directives when it is active.",
+        "preconditions": [
+            "UAV is operational and ready for flight.",
+            "Obstacle Avoidance system is active and enabled.",
+            "No external commands or inputs are being provided to the UAV."
+        ],
+        "testSteps": [
+            "1. Ensure the UAV is powered on and ready for operation.",
+            "2. Activate the Obstacle Avoidance system on the UAV.",
+            "3. Monitor the system for any directives issued by the Obstacle Avoidance system.",
+            "4. Observe the UAV's behavior in an environment with potential obstacles.",
+            "5. Ensure that no directives are issued by the Obstacle Avoidance system while it is active."
+        ],
+        "expectedResult": "The Obstacle Avoidance system does not issue any directives while active, ensuring the UAV operates under its own control without interference.",
+        "testCaseID": "RE-127",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a UAV has an active onboard Obstacle Avoidance  then the ObstacleAvoidance system shall not issue directives"
+        ]
+    },
+    {
+        "testCaseID": "RE-126",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The ObjectAvoidance system only issues commands within the capabilities of the UAV"
+        ]
+    },
+    {
+        "testCaseID": "RE-125",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a UAV takes evasive actions the system will ensure that it will eventually reach its destination"
+        ]
+    },
+    {
+        "testCaseID": "RE-124",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a stationary or moving object is within the proximity of a UAV the ObjectAvoidance system shall issue evasive directives to the UAV"
+        ]
+    },
+    {
+        "testCaseID": "RE-120",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall display the location of active UAVs as icons on the map."
+        ]
+    },
+    {
+        "testCaseID": "RE-114",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the RealTimeFlightUI is loaded  a map shall be displayed."
+        ]
+    },
+    {
+        "Requirement": "If a command is issued by the VaadinUI for an UAV, the VaadinUI shall request control of that UAV.",
+        "testObjective": "Verify that when a command is issued by the VaadinUI for a UAV, the VaadinUI requests control of that UAV.",
+        "preconditions": [
+            "UAV is already connected and available.",
+            "VaadinUI is operational and ready to send commands."
+        ],
+        "testSteps": [
+            "1. Open the VaadinUI application.",
+            "2. Connect to the UAV that will be used for this test.",
+            "3. Issue a command through the VaadinUI interface (e.g., 'Arm', 'Takeoff').",
+            "4. Observe the system's response after issuing the command.",
+            "5. Verify that the VaadinUI sends a request for control of the UAV."
+        ],
+        "expectedResult": "The VaadinUI successfully sends a request for control of the UAV upon issuing a command.",
+        "testCaseID": "RE-112",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a command is issued by the VaadinUI for an UAV  the VaadinUI shall request control of that UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-110",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall only assign one control-client at a time for each UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-108",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall provide an interface for registering UI clients."
+        ]
+    },
+    {
+        "Requirement": "When a UAV's current flight is cancelled, the SingleUAVFlightPlanScheduler shall in turn cancel all scheduled flight plans for that UAV.",
+        "testObjective": "Verify that cancelling a UAV's current flight results in the SingleUAVFlightPlanScheduler cancelling all scheduled flight plans for that UAV.",
+        "preconditions": [
+            "The UAV has one or more scheduled flight plans.",
+            "The UAV is currently executing a flight plan."
+        ],
+        "testSteps": [
+            "1. Retrieve the current flight plan of the UAV.",
+            "2. Cancel the current flight plan of the UAV.",
+            "3. Verify that all other scheduled flight plans for the UAV have been cancelled."
+        ],
+        "expectedResult": "All scheduled flight plans for the UAV are cancelled after the current flight plan is cancelled.",
+        "testCaseID": "RE-103",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a UAV's current flight is cancelled  the SingleUAVFlightPlanScheduler shall in turn cancel all scheduled flight plans for that UAV."
+        ]
+    },
+    {
+        "Requirement": "If a UAV has pending flight plans, then when it reaches the final waypoint of its current flight plan, the SingleUAVFlightPlanScheduler shall execute the next assigned flight plan.",
+        "testObjective": "Verify that when a UAV completes its current flight plan, the next pending flight plan is automatically executed by the SingleUAVFlightPlanScheduler.",
+        "preconditions": [
+            "UAV has at least two flight plans assigned.",
+            "First flight plan is in progress.",
+            "No other UAVs are operating in the same airspace.",
+            "All waypoints in the first flight plan are valid.",
+            "SingleUAVFlightPlanScheduler is active and configured to handle multiple flight plans."
+        ],
+        "testSteps": [
+            "1. Initialize the test environment with a UAV and three flight plans: FP1, FP2, FP3.",
+            "2. Assign FP1 as the current flight plan and FP2 and FP3 as pending flight plans.",
+            "3. Start the UAV's flight using FP1.",
+            "4. Monitor the UAV's progress through FP1's waypoints.",
+            "5. Once the UAV reaches the final waypoint of FP1, observe the system's response.",
+            "6. Verify that the SingleUAVFlightPlanScheduler initiates the execution of FP2.",
+            "7. Confirm that FP2 is being followed by the UAV, checking its waypoints.",
+            "8. Allow the UAV to complete FP2 and observe the system again.",
+            "9. Ensure that FP3 is then initiated by the SingleUAVFlightPlanScheduler.",
+            "10. Document all observations and system responses during the test."
+        ],
+        "expectedResult": "The SingleUAVFlightPlanScheduler successfully transitions the UAV from FP1 to FP2 upon completion, and subsequently from FP2 to FP3, ensuring continuous flight plan execution without manual intervention.",
+        "testCaseID": "RE-101",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a UAV has pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall execute the next assigned flight plan."
+        ]
+    },
+    {
+        "Requirement": "If requested, the SingleUAVFlightPlanScheduler shall unassign the flight plan assigned to a UAV that is awaiting execution.",
+        "testObjective": "Verify that the SingleUAVFlightPlanScheduler can successfully unassign a flight plan from a UAV that is awaiting execution when requested.",
+        "preconditions": [
+            "The SingleUAVFlightPlanScheduler is operational.",
+            "A UAV is assigned a flight plan and is in the awaiting execution state."
+        ],
+        "testSteps": [
+            "1. Initialize the SingleUAVFlightPlanScheduler.",
+            "2. Assign a flight plan to a UAV, setting its state to awaiting execution.",
+            "3. Send a request to the scheduler to unassign the flight plan from the UAV.",
+            "4. Monitor the system to observe the outcome of the unassignment request."
+        ],
+        "expectedResult": "The flight plan is successfully removed from the UAV, and the UAV is no longer in the awaiting execution state.",
+        "testCaseID": "RE-100",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If requested  the SingleUAVFlightPlanScheduler shall unassign the flight plan assigned to a UAV that is awaiting execution."
+        ]
+    },
+    {
+        "testCaseID": "RE-86",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The SingleUAVFlightPlanScheduler shall maintain a managed list of pending flight plans for Each UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-80",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a flight plan is executed  the VehicleCore shall send the next waypoint to the UAV."
+        ]
+    },
+    {
+        "Requirement": "Each waypoint shall be specified using coordinates that include longitude, latitude, and altitude.",
+        "testObjective": "Verify that each waypoint is specified using coordinates that include longitude, latitude, and altitude.",
+        "preconditions": [
+            "The system under test is running and accessible.",
+            "Waypoints have been defined in the system."
+        ],
+        "testSteps": [
+            "1. Navigate to the waypoint configuration section in the system.",
+            "2. Select a waypoint to review its coordinates.",
+            "3. Check if the selected waypoint displays longitude, latitude, and altitude values.",
+            "4. Repeat steps 2 and 3 for all waypoints in the system.",
+            "5. Ensure that each waypoint has all three coordinate values present."
+        ],
+        "expectedResult": "All waypoints display longitude, latitude, and altitude values as required.",
+        "testCaseID": "RE-77",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: Each waypoint shall be specified using coordinates that include longitude  latitude  and altitude."
+        ]
+    },
+    {
+        "Requirement": "The VehicleCore shall associate a {{UAVTYPE}} for each UAV defining its basic attributes.",
+        "testObjective": "Verify that the VehicleCore associates a UAVTYPE for each UAV, defining its basic attributes.",
+        "preconditions": [
+            "UAV is connected to the VehicleCore.",
+            "UAVTYPE is defined and available."
+        ],
+        "testSteps": [
+            "1. Launch the VehicleCore system.",
+            "2. Connect the UAV to the VehicleCore.",
+            "3. Verify that the UAV is recognized by the VehicleCore.",
+            "4. Check the attributes associated with the UAVTYPE.",
+            "5. Ensure that the attributes are correctly defined in the VehicleCore."
+        ],
+        "expectedResult": "The UAV is successfully associated with a UAVTYPE in the VehicleCore, with all basic attributes correctly defined.",
+        "testCaseID": "RE-38",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The VehicleCore shall associate a {{UAVTYPE}} for each UAV defining its basic attributes."
+        ]
+    },
+    {
+        "Requirement": "The UAVActivationManager shall ensure that only one instance of each registered drone is active at any time.",
+        "testObjective": "Verify that the UAVActivationManager correctly enforces the rule of only one active instance per registered drone at any given time.",
+        "preconditions": [
+            "UAVActivationManager system is operational and running.",
+            "At least two drones have been registered with the system.",
+            "No drones are currently active."
+        ],
+        "testSteps": [
+            "1. Register Drone A with the UAVActivationManager.",
+            "2. Register Drone B with the UAVActivationManager.",
+            "3. Activate Drone A using the UAVActivationManager API.",
+            "4. Attempt to activate Drone B using the UAVActivationManager API and observe the response.",
+            "5. Attempt to activate Drone A again using the UAVActivationManager API and observe the response."
+        ],
+        "expectedResult": "The UAVActivationManager should allow the activation of Drone A, deny the activation of Drone B, and deny the subsequent reactivation of Drone A, ensuring only one instance of each drone is active at any time.",
+        "testCaseID": "RE-36",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UAVActivationManager shall ensure that only one instance of each registered drone is active at any time."
+        ]
+    },
+    {
+        "testCaseID": "RE-28",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The SingleUAVFlightPlanScheduler shall only execute one flight plan at a time for each UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-25",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The VehicleCore shall assign a unique ID to each activated UAV."
+        ]
+    },
+    {
+        "testCaseID": "RE-9",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a client registers for notifications  the UIMiddleware shall send notifications for specific events"
+        ]
+    },
+    {
+        "state": "state1",
+        "transitions": [
+            "to_state2",
+            "to_state3"
+        ],
+        "testCaseID": "RE-8",
+        "prompt": [
+            "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the VehicleCore shall shall transition the UAV between states according to allowed state transitions as depicted in the UAV state transition diagram"
+        ]
+    }
+]

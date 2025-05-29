@@ -1,7 +1,8 @@
 import spacy
 from collections import defaultdict
+from validator_common import CommonValidator
 
-class TestObjectiveValidator:
+class TestObjectiveValidator(CommonValidator):
     def __init__(self):
         """Load the spaCy NLP model and define validation rules."""
         try:

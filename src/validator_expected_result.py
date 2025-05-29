@@ -1,6 +1,6 @@
+from validator_common import CommonValidator
 
-
-class ExpectedResultValidator:
+class ExpectedResultValidator(CommonValidator):
     def __init__(self):
         """Define general validation rules for expected result."""
         self.failed_checks = []

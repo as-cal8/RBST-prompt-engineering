@@ -1,5 +1,6 @@
 import spacy
 from collections import defaultdict
+from validator_common import CommonValidator
 
 """
     precondition should be present tense and describe a state or requirement.
@@ -7,10 +8,10 @@ from collections import defaultdict
         _type_: _description_
 """
 
-class PreconditionValidator:
+class PreconditionValidator(CommonValidator):
     def __init__(self):
-        """Load the spaCy model for NLP processing."""
-        self.nlp = spacy.load("en_core_web_sm")
+        super().__init__()
+
 
     def describes_state_or_requirement(self, doc):
         for token in doc:
@@ -19,42 +20,6 @@ class PreconditionValidator:
             if token.dep_ == "ROOT" and token.pos_ == "VERB":
                 # Covers imperative and declarative verbs
                 return True
-        return False
-    
-    def is_present_tense(self, doc):
-        """
-        Checks if the sentence is in present tense or expresses a present-state requirement.
-        """
-        # 1. Present simple
-        if any(token.tag_ in {"VBZ", "VBP"} for token in doc):
-            return True
-
-        # 2. Present continuous: AUX (is/are/am) + VBG
-        if any(token.pos_ == "AUX" and token.lemma_ == "be" for token in doc) and \
-        any(token.tag_ == "VBG" for token in doc):
-            return True
-
-        # 3. Imperative (starts with verb)
-        if len(doc) > 0 and doc[0].tag_ == "VB":
-            return True
-
-        # 4. Modal + VBG (e.g. must be running)
-        if any(token.tag_ == "MD" for token in doc) and \
-        any(token.tag_ == "VBG" for token in doc):
-            return True
-
-        # ✅ 5. Modal + BE + VBN (e.g. must be configured, must be known)
-        if any(token.tag_ == "MD" for token in doc) and \
-        any(token.lemma_ == "be" and token.pos_ == "AUX" for token in doc) and \
-        any(token.tag_ == "VBN" for token in doc):
-            return True
-
-        # ✅ 6. Modal + BE + Prep phrase / noun (e.g. "must be in X mode")
-        if any(token.tag_ == "MD" for token in doc) and \
-        any(token.lemma_ == "be" for token in doc) and \
-        any(token.dep_ == "prep" or token.pos_ == "ADP" for token in doc):
-            return True
-
         return False
 
     def validate(self, precondition):
