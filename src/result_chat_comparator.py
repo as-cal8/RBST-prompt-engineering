@@ -444,7 +444,9 @@ if __name__ == "__main__":
     ]
     
     summary_data_invalid = []
+    list_data_invalid = []
     summary_data_fieldcheck_fails = []
+    list_data_fieldcheck  = []
     
     for json_name, json_name_plt in zip(json_names, json_names_plotting):
         print("\n\n")
@@ -481,6 +483,8 @@ if __name__ == "__main__":
         """
         summary_data_invalid.append((json_name_plt, result_valid_entries['total_entries'], result_valid_entries['valid_entries'], len(result_valid_entries['invalid_entries_id'])))
         summary_data_fieldcheck_fails.append((json_name_plt, 100, (len(ds_zero_without_invalid_entries) - len(id_field_check_fails))/len(ds_zero_without_invalid_entries), len(id_field_check_fails)/len(ds_zero_without_invalid_entries)))
+        list_data_invalid.append((json_name_plt, result_valid_entries['invalid_entries_id']))
+        list_data_fieldcheck.append((json_name_plt, [test['testCaseID'] for test in ds_zero_without_invalid_entries]))
     
     
     # Create DataFrame
