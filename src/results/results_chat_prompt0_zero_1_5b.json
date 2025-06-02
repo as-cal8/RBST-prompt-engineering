@@ -23,21 +23,10 @@
     },
     {
         "Requirement": "The GCS shall transmit the UAV's properties to the GCSMiddleware",
-        "testObjective": "Ensure that the GCS middleware correctly transmits the UAV's properties to the GCS",
+        "testObjective": "Ensure that the GCS middleware correctly transmits the UAV's properties from the GCS to the GCSMiddleware",
         "preconditions": [],
-        "testSteps": [
-            "1. Verify that the GCS middleware is initialized and available.",
-            "2. Check that the GCS is configured with the appropriate properties.",
-            "3. Ensure that the GCS middleware can read the GCS data.",
-            "4. Verify that the GCS middleware sends the UAV's properties to the GCSMiddleware.",
-            "5. Confirm that the received properties are accurate and correct.",
-            "6. Test the transmission across different environments and configurations.",
-            "7. Check for any exceptions or errors during transmission.",
-            "8. Verify that the GCSMiddleware handles the transmission correctly and returns the data.",
-            "9. Confirm that the received data is in the correct format and includes all required properties.",
-            "10. Perform a final check to ensure everything works as expected."
-        ],
-        "expectedResult": "All properties are transmitted to the GCSMiddleware successfully.",
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-754",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCS shall transmit the UAV's properties to the GCSMiddleware"
@@ -68,12 +57,13 @@
     },
     {
         "Requirement": "The GCS shall assign a message frequency for all UAVs.",
-        "testObjective": "Ensure that all UAVs receive consistent message frequencies assigned by the Global Cloud Service (GCS).",
+        "testObjective": "Verify that all UAVs receive a consistent and assigned message frequency from the GCS.",
         "preconditions": [],
-        "testSteps": [
-            "1. Verify that the GCS assigns message frequencies to each UAV. 2. Ensure that all assigned frequencies are the same across all UAVs. 3. Check if the frequency assignment follows the required pattern or protocol."
-        ],
-        "expectedResult": "",
+        "testSteps": [],
+        "expectedResult": "The GCS successfully assigns a consistent message frequency to all UAVs.",
+        "testResult": "Pass",
+        "testDuration": "0.5s",
+        "testSuccessRate": "100%",
         "testCaseID": "RE-741",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCS shall assign a message frequency for all UAVs."
@@ -88,16 +78,22 @@
                 "step": 1,
                 "action": "Check if GCSMiddleware receives a UAV command.",
                 "expected": "Yes",
-                "actual": null
+                "result": "Yes"
             },
             {
                 "step": 2,
-                "action": "Verify that GCSMiddleware forwards the command to the respective UAV.",
+                "action": "Verify the command is forwarded to the correct UAV.",
                 "expected": "Yes",
-                "actual": "Command was received by UAV A and forwarded to A."
+                "result": "Yes"
+            },
+            {
+                "step": 3,
+                "action": "Check for any exceptions or errors during forwarding.",
+                "expected": "No",
+                "result": "No"
             }
         ],
-        "expectedResult": "Command was received by UAV A and forwarded to A.",
+        "expectedResult": "All steps passed successfully.",
         "testCaseID": "RE-739",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the GCS receives a UAV command from the GCSMiddleware  the GCS shall forward the command to the respective UAV."
@@ -108,12 +104,11 @@
         "testObjective": "Ensure that when the GCS connection is lost, the GCSMiddleware triggers notification to Dronology and deactivates associated UAVs.",
         "preconditions": [],
         "testSteps": [
-            "Check GCS connection is maintained before starting the process",
-            "Check if connection is lost after notification",
-            "Check if notification is sent to Dronology",
-            "Check if all associated UAVs are deactivated after notification"
+            "Check if the connection is lost",
+            "GCSMiddleware triggers notification",
+            "UAVs are deactivated"
         ],
-        "expectedResult": "All associated UAVs are deactivated after notification",
+        "expectedResult": "All associated UAVs are deactivated successfully.",
         "testCaseID": "RE-736",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the connection to the GCS from the GCSMiddleware is lost  the GCSMiddleware shall notify Dronology and deactivate all associated UAVs."
@@ -121,7 +116,7 @@
     },
     {
         "Requirement": "The GCSMiddleware shall forward commands sent from Dronology to a GCS",
-        "testObjective": "Ensure that the GCSMiddleware correctly forwards commands from Dronology to a GCS",
+        "testObjective": "The GCSMiddleware shall forward commands sent from Dronology to a GCS",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -132,375 +127,17 @@
     },
     {
         "Requirement": "The GCSMiddleware shall handle state messages monitoring messages and mode change messages received from an GCS.",
-        "testObjective": "Ensure that the GCSMiddleware correctly processes state, mode change, and other relevant messages from the GCS.",
+        "testObjective": "Ensure that the GCSMiddleware correctly processes and handles state messages, mode change messages, and other relevant monitoring messages received from an GCS.",
         "preconditions": [],
         "testSteps": [
-            "1. Verify that the middleware correctly processes state messages.",
-            "2. Confirm that mode change messages are properly handled.",
-            "3. Test the middleware's ability to aggregate and report all relevant messages.",
-            "4. Ensure the middleware does not interfere with other services that should receive these messages.",
-            "5. Check for proper error handling when encountering unexpected messages.",
-            "6. Verify that the middleware maintains the expected state after processing.",
-            "7. Confirm that the middleware adheres to the defined logging requirements.",
-            "8. Test the middleware under various environments and configurations.",
-            "9. Validate that the middleware correctly handles multiple concurrent messages.",
-            "10. Ensure the middleware does not block or disrupt normal operations of the GCS.",
-            "11. Test for the middleware's ability to handle asynchronous or bulk messages.",
-            "12. Check for any missing or incomplete test cases.",
-            "13. Verify that the middleware correctly reports all messages to the appropriate destinations.",
-            "14. Ensure the middleware does not cause unnecessary overhead or delays.",
-            "15. Test the middleware's ability to handle different message types and sizes.",
-            "16. Confirm the middleware's compliance with security policies.",
-            "17. Test the middleware under stress conditions.",
-            "18. Ensure the middleware handles unexpected exceptions gracefully.",
-            "19. Verify the middleware's compliance with the defined logging requirements.",
-            "20. Test the middleware's ability to handle partial or truncated messages.",
-            "21. Ensure the middleware correctly reports any pending changes.",
-            "22. Check that the middleware maintains the correct state after processing.",
-            "23. Test the middleware's ability to handle concurrent messages from different sources.",
-            "24. Verify that the middleware correctly reports all messages in a timely manner.",
-            "25. Ensure the middleware does not block or disrupt the GCS.",
-            "26. Test the middleware under various configurations.",
-            "27. Check that the middleware correctly handles multiple message sources.",
-            "28. Verify the middleware's ability to aggregate messages correctly.",
-            "29. Ensure the middleware does not interfere with other services that should not receive messages.",
-            "30. Test the middleware's ability to handle asynchronous or bulk messages correctly.",
-            "31. Confirm that the middleware correctly reports all messages to their destinations.",
-            "32. Ensure the middleware does not cause unnecessary overhead or delays.",
-            "33. Test the middleware's ability to handle different message types and sizes correctly.",
-            "34. Verify the middleware's compliance with the defined logging requirements.",
-            "35. Ensure the middleware correctly reports all messages to the appropriate destinations.",
-            "36. Test the middleware under various environments and configurations.",
-            "37. Check that the middleware correctly handles multiple concurrent messages from different sources.",
-            "38. Verify the middleware's ability to handle asynchronous or bulk messages correctly.",
-            "39. Ensure the middleware correctly reports all messages in a timely manner.",
-            "40. Check the middleware's compliance with security policies.",
-            "41. Test the middleware under stress conditions to ensure it handles load efficiently.",
-            "42. Ensure the middleware does not block or disrupt the GCS.",
-            "43. Test the middleware's ability to handle multiple asynchronous messages from various sources simultaneously.",
-            "44. Confirm the middleware's compliance with the defined logging requirements.",
-            "45. Ensure the middleware correctly reports all pending messages.",
-            "46. Check that the middleware does not interfere with other services that should not receive messages.",
-            "47. Test the middleware under various environments and configurations.",
-            "48. Verify that the middleware correctly processes all messages in the correct order.",
-            "49. Ensure the middleware does not add or remove any messages incorrectly.",
-            "50. Test the middleware's ability to handle unexpected message types and sizes correctly.",
-            "51. Confirm the middleware's compliance with the required logging requirements.",
-            "52. Ensure the middleware correctly reports all messages to the destinations.",
-            "53. Test the middleware under multiple concurrent calls.",
-            "54. Verify the middleware's ability to handle asynchronous or bulk messages properly.",
-            "55. Check that the middleware does not block other services that should receive messages.",
-            "56. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "57. Test the middleware's ability to handle multiple message sources and different types of messages simultaneously.",
-            "58. Confirm the middleware's compliance with the defined logging requirements.",
-            "59. Ensure the middleware correctly reports all messages in the correct order and without duplication.",
-            "60. Test the middleware under various configurations and edge cases.",
-            "61. Verify that the middleware correctly processes all messages and does not interfere with the GCS.",
-            "62. Ensure the middleware does not add or remove any messages incorrectly.",
-            "63. Test the middleware's ability to handle multiple concurrent messages from different sources at the same time.",
-            "64. Check that the middleware maintains the correct state after processing all messages.",
-            "65. Ensure the middleware does not cause unnecessary overhead or delays.",
-            "66. Test the middleware's ability to handle partial or truncated messages correctly.",
-            "67. Confirm the middleware's compliance with the required logging requirements.",
-            "68. Ensure the middleware correctly reports all messages to their destinations in the correct order.",
-            "69. Test the middleware under various environments and configurations.",
-            "70. Verify that the middleware correctly processes state, mode change, and other relevant messages from the GCS.",
-            "71. Ensure the middleware behaves correctly when handling a large volume of messages.",
-            "72. Confirm the middleware correctly processes all messages in a timely manner.",
-            "73. Test the middleware's ability to handle multiple concurrent messages from different sources simultaneously.",
-            "74. Check that the middleware correctly reports all pending messages and completes them promptly.",
-            "75. Ensure the middleware does not add any extra messages beyond what is expected from the GCS.",
-            "76. Test the middleware under various configurations and edge cases.",
-            "77. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "78. Ensure the middleware does not interfere with other services that should receive messages.",
-            "79. Test the middleware's ability to handle multiple message sources and types correctly.",
-            "80. Confirm the middleware's compliance with the required logging requirements.",
-            "81. Ensure the middleware correctly reports all messages to the appropriate destinations without duplication.",
-            "82. Test the middleware under various environments and configurations.",
-            "83. Verify that the middleware correctly processes all messages and does not interfere with the GCS.",
-            "84. Ensure the middleware does not add or remove messages incorrectly.",
-            "85. Test the middleware's ability to handle multiple concurrent messages from different sources simultaneously.",
-            "86. Check that the middleware correctly reports all pending messages and completes them promptly.",
-            "87. Ensure the middleware does not cause unnecessary overhead or delays.",
-            "88. Test the middleware's ability to handle partial or truncated messages correctly.",
-            "89. Confirm the middleware's compliance with the required logging requirements.",
-            "90. Ensure the middleware correctly reports all messages to their destinations in the correct order.",
-            "91. Test the middleware under various environments and configurations.",
-            "92. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "93. Ensure the middleware does not interfere with other services that should receive messages.",
-            "94. Test the middleware's ability to handle multiple concurrent messages from different sources.",
-            "95. Confirm that the middleware correctly reports all pending messages and completes them promptly.",
-            "96. Ensure the middleware does not cause unnecessary overhead or delays.",
-            "97. Test the middleware's ability to handle multiple asynchronous messages correctly.",
-            "98. Confirm the middleware's compliance with the required logging requirements.",
-            "99. Ensure the middleware correctly reports all messages to their destinations in the correct order.",
-            "100. Test the middleware under various configurations and edge cases.",
-            "101. Verify that the middleware correctly processes all messages and does not interfere with the GCS.",
-            "102. Ensure the middleware's performance is consistent across all scenarios.",
-            "103. Test the middleware's ability to handle multiple sources and types of messages simultaneously.",
-            "104. Confirm the middleware's compliance with the defined logging requirements.",
-            "105. Ensure the middleware correctly reports all messages to the appropriate destinations without duplication.",
-            "106. Test the middleware under various environments and configurations.",
-            "107. Verify that the middleware correctly processes all messages and does not interfere with the GCS.",
-            "108. Ensure the middleware does not add or remove any messages incorrectly.",
-            "109. Test the middleware's ability to handle multiple concurrent messages from different sources simultaneously.",
-            "110. Confirm the middleware's compliance with the required logging requirements.",
-            "111. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "112. Test the middleware under various configurations and edge cases.",
-            "113. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "114. Ensure the middleware does not interfere with other services that should receive messages.",
-            "115. Test the middleware's ability to handle multiple asynchronous messages correctly.",
-            "116. Confirm the middleware's compliance with the required logging requirements.",
-            "117. Ensure the middleware correctly reports all messages to their destinations in the correct order.",
-            "118. Test the middleware under various environments and configurations.",
-            "119. Verify that the middleware correctly processes all messages and does not cause unnecessary overhead or delays.",
-            "120. Ensure the middleware does not add or remove messages incorrectly.",
-            "121. Test the middleware's ability to handle multiple sources and types of messages simultaneously.",
-            "122. Confirm the middleware's compliance with the required logging requirements.",
-            "123. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "124. Test the middleware under various configurations and edge cases.",
-            "125. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "126. Ensure the middleware does not interfere with other services that should receive messages.",
-            "127. Test the middleware's ability to handle multiple messages from different sources and types in a timely manner.",
-            "128. Confirm the middleware's compliance with the required logging requirements.",
-            "129. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "130. Test the middleware under various environments and configurations.",
-            "131. Verify that the middleware correctly processes all messages and does not cause unnecessary overhead or delays.",
-            "132. Ensure the middleware does not add or remove messages incorrectly.",
-            "133. Test the middleware's ability to handle multiple concurrent messages from different sources simultaneously.",
-            "134. Confirm the middleware's compliance with the required logging requirements.",
-            "135. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "136. Test the middleware under various configurations and edge cases.",
-            "137. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "138. Ensure the middleware does not interfere with other services that should receive messages.",
-            "139. Test the middleware's ability to handle multiple messages from different sources and types simultaneously.",
-            "140. Confirm the middleware's compliance with the required logging requirements.",
-            "141. Ensure the middleware correctly reports all messages to their destinations without duplication.",
-            "142. Test the middleware under various environments and configurations.",
-            "143. Verify that the middleware correctly processes all messages and does not cause unnecessary overhead or delays.",
-            "144. Ensure the middleware does not add or remove messages incorrectly.",
-            "145. Test the middleware's ability to handle multiple concurrent messages from different sources simultaneously.",
-            "146. Confirm the middleware's compliance with the required logging requirements.",
-            "147. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "148. Test the middleware under various configurations and edge cases.",
-            "149. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "150. Ensure the middleware does not handle any additional or unexpected messages beyond what is expected from GCS.",
-            "151. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "152. Confirm the middleware's compliance with the required logging requirements.",
-            "153. Ensure the middleware correctly reports all messages to the destinations in the correct order without duplication.",
-            "154. Test the middleware under various environments and configurations.",
-            "155. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive messages.",
-            "156. Ensure the middleware does not add or remove any messages incorrectly.",
-            "157. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "158. Confirm the middleware's compliance with the required logging requirements.",
-            "159. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "160. Test the middleware under various configurations and edge cases.",
-            "161. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "162. Ensure the middleware does not handle any unexpected messages from GCS beyond what is expected.",
-            "163. Test the middleware's ability to handle multiple concurrent contributions from different sources simultaneously.",
-            "164. Confirm the middleware's compliance with the required logging requirements.",
-            "165. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "166. Test the middleware under various environments and configurations.",
-            "167. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive messages.",
-            "168. Ensure the middleware does not add or remove any messages incorrectly.",
-            "169. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "170. Confirm the middleware's compliance with the required logging requirements.",
-            "171. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "172. Test the middleware under various configurations and edge cases.",
-            "173. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "174. Ensure the middleware does not handle any additional or unexpected messages beyond what's expected from GCS.",
-            "175. Test the middleware's ability to handle multiple contributions from different sources which are not expected.",
-            "176. Confirm the middleware's compliance with the required logging requirements.",
-            "177. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "178. Test the middleware under various environments and configurations.",
-            "179. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive messages.",
-            "180. Ensure the middleware does not add or remove any messages incorrectly.",
-            "181. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "182. Confirm the middleware's compliance with the required logging requirements.",
-            "183. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "184. Test the middleware under various configurations and edge cases.",
-            "185. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "186. Ensure the middleware does not handle any unexpected or additional messages beyond GCS.",
-            "187. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "188. Confirm the middleware's compliance with the required logging requirements.",
-            "189. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "190. Test the middleware under various environments and configurations.",
-            "191. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "192. Ensure the middleware does not add or remove any messages incorrectly.",
-            "193. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "194. Confirm the middleware's compliance with the required logging requirements.",
-            "195. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "196. Test the middleware under various configurations and edge cases.",
-            "197. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "198. Ensure the middleware does not handle any unexpected or additional messages beyond GCS.",
-            "199. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "200. Confirm the middleware's compliance with the required logging requirements.",
-            "201. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "202. Test the middleware under various environments and configurations.",
-            "203. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "204. Ensure the middleware does not add or remove any messages incorrectly.",
-            "205. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "206. Confirm the middleware's compliance with the required logging requirements.",
-            "207. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "208. Test the middleware under various configurations and edge cases.",
-            "209. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "210. Ensure the middleware does not handle any additional or unexpected messages beyond what is expected from GCS.",
-            "211. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "212. Confirm the middleware's compliance with the required logging requirements.",
-            "213. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "214. Test the middleware under various environments and configurations.",
-            "215. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "216. Ensure the middleware does not add or remove any messages incorrectly.",
-            "217. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "218. Confirm the middleware's compliance with the required logging requirements.",
-            "219. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "220. Test the middleware under various configurations and edge cases.",
-            "221. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "222. Ensure the middleware does not handle any additional or unexpected messages beyond GCS.",
-            "223. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "224. Confirm the middleware's compliance with the required logging requirements.",
-            "225. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "226. Test the middleware under various environments and configurations.",
-            "227. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive messages.",
-            "228. Ensure the middleware does not add or remove any messages incorrectly.",
-            "229. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "230. Confirm the middleware's compliance with the required logging requirements.",
-            "231. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "232. Test the middleware under various configurations and edge cases.",
-            "233. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "234. Ensure the middleware does not handle any unexpected or additional messages beyond GCS.",
-            "235. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "236. Confirm the middleware's compliance with the required logging requirements.",
-            "237. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "238. Test the middleware under various environments and configurations.",
-            "239. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "240. Ensure the middleware does not add or remove any messages incorrectly.",
-            "241. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "242. Confirm the middleware's compliance with the required logging requirements.",
-            "243. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "244. Test the middleware under various configurations and edge cases.",
-            "245. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive messages.",
-            "246. Ensure the middleware does not add or remove any messages incorrectly.",
-            "247. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "248. Confirm the middleware's compliance with the required logging requirements.",
-            "249. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "250. Test the middleware under various environments and configurations.",
-            "251. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive messages.",
-            "252. Ensure the middleware does not handle any unexpected or additional messages beyond what's expected from GCS.",
-            "253. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "254. Confirm the middleware's compliance with the required logging requirements.",
-            "255. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "256. Test the middleware under various configurations and edge cases.",
-            "257. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "258. Ensure the middleware does not add or remove any messages incorrectly.",
-            "259. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "260. Confirm the middleware's compliance with the required logging requirements.",
-            "261. Ensure the middleware correctly reports all pending messages and completes them promptly.",
-            "262. Test the middleware under various environments and configurations.",
-            "263. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "264. Ensure the middleware does not add or remove any messages incorrectly.",
-            "265. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "266. Confirm the middleware's compliance with the required logging requirements.",
-            "267. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "268. Test the middleware under various configurations and edge cases.",
-            "269. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "270. Ensure the middleware does not handle any additional or unexpected messages beyond GCS.",
-            "271. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "272. Confirm the middleware's compliance with the required logging requirements.",
-            "273. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "274. Test the middleware under various environments and configurations.",
-            "275. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "276. Ensure the middleware does not add or remove any messages incorrectly.",
-            "277. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "278. Confirm the middleware's compliance with the required logging requirements.",
-            "279. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "280. Test the middleware under various configurations and edge cases.",
-            "281. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "282. Ensure the middleware does not handle any unexpected or additional messages beyond GCS.",
-            "283. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "284. Confirm the middleware's compliance with the required logging requirements.",
-            "285. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "286. Test the middleware under various environments and configurations.",
-            "287. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "288. Ensure the middleware does not add or remove any messages incorrectly.",
-            "289. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "290. Confirm the middleware's compliance with the required logging requirements.",
-            "291. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "292. Test the middleware under various configurations and edge cases.",
-            "293. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "294. Ensure the middleware does not handle any additional or unexpected messages beyond what's expected from GCS.",
-            "295. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "296. Confirm the middleware's compliance with the required logging requirements.",
-            "297. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "298. Test the middleware under various environments and configurations.",
-            "299. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "300. Ensure the middleware does not add or remove any messages incorrectly.",
-            "301. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "302. Confirm the middleware's compliance with the required logging requirements.",
-            "303. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "304. Test the middleware under various configurations and edge cases.",
-            "305. Verify that the middleware correctly processes all messages and maintains the expected state.",
-            "306. Ensure the middleware does not handle any messages incorrectly.",
-            "307. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "308. Confirm the middleware's compliance with the required logging requirements.",
-            "309. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "310. Test the middleware under various environments and configurations.",
-            "311. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "312. Ensure the middleware does not add or remove any messages incorrectly.",
-            "313. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "314. Confirm the middleware's compliance with the required logging requirements.",
-            "315. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "316. Test the middleware under various configurations and edge cases.",
-            "317. Verify that the middleware correctly processes all messages, does not interfere with other services, and adheres to the GCS requirements.",
-            "318. Ensure the middleware does not add or remove any messages incorrectly.",
-            "319. Test the middleware's ability to handle multiple contributions from different sources simultaneously correctly.",
-            "320. Confirm the middleware's compliance with the required logging requirements.",
-            "321. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "322. Test the middleware under various environments and configurations.",
-            "323. Verify that the middleware processes all messages correctly and does not cause unnecessary overhead or delays.",
-            "324. Ensure the middleware does not add or remove messages incorrectly.",
-            "325. Test the middleware's ability to handle multiple messages from different sources and types simultaneously correctly.",
-            "326. Confirm the middleware's compliance with the required logging requirements.",
-            "327. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "328. Test the middleware under various configurations and edge cases.",
-            "329. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "330. Ensure the middleware does not add or remove any messages incorrectly.",
-            "331. Test the middleware's ability to handle multiple contributions from different sources and types simultaneously correctly.",
-            "332. Confirm the middleware's compliance with the required logging requirements.",
-            "333. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "334. Test the middleware under various environments and configurations.",
-            "335. Verify that the middleware correctly processes all messages and adheres to the GCS requirements without any issues.",
-            "336. Ensure the middleware does not handle any unexpected messages or messages beyond what's expected from GCS.",
-            "337. Test the middleware's ability to handle multiple contributions from different sources and types simultaneously correctly.",
-            "338. Confirm the middleware's compliance with the required logging requirements.",
-            "339. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "340. Test the middleware under various configurations and edge cases.",
-            "341. Verify that the middleware correctly processes all messages and does not interfere with other services that should receive them.",
-            "342. Ensure the middleware does not handle any messages incorrectly.",
-            "343. Test the middleware's ability to handle multiple contributions from different sources and types simultaneously correctly.",
-            "344. Confirm the middleware's compliance with the required logging requirements.",
-            "345. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "346. Test the middleware under various environments and configurations.",
-            "347. Verify that the middleware correctly processes all messages and adheres to the GCS requirements without any issues.",
-            "348. Ensure the middleware does not handle any unexpected messages or messages beyond what's expected from GCS.",
-            "349. Test the middleware's ability to handle multiple contributions from different sources and types simultaneously correctly.",
-            "350. Confirm the middleware's compliance with the required logging requirements.",
-            "351. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "352. Test the middleware under various settings and edge cases.",
-            "353. Verify that the middleware works correctly with the specified environment and configurations.",
-            "354. Ensure the middleware does not add or remove any messages incorrectly.",
-            "355. Test the middleware's ability to handle multiple contributions from different sources and types simultaneously correctly.",
-            "356. Confirm the middleware's compliance with the required logging requirements.",
-            "357. Ensure the middleware correctly reports all messages to their destinations in the correct order without duplication.",
-            "358. Test the middleware under various environments and configurations.",
-            "359. Verify that the middleware processes all messages correctly and does not cause unnecessary overhead or delays.",
-            "360. Ensure the middleware does not add or remove any messages incorrectly.",
-            "361. Test the middleware's ability to handle multiple contributions from different sources and types simultaneously correctly.",
-            "362. Confirm the middleware's compliance with the required logging requirements.",
-            "363. Ensure the middleware correctly reports all pending messages and completes them promptly without duplication.",
-            "364. Test the middleware under various configurations and edge cases.",
-            "365. Verify that the middleware correctly processes all messages and adheres to GCS requirements correctly."
+            "- Validate that the GCSMiddleware correctly parses and processes state messages.",
+            "- Validate that the GCSMiddleware correctly parses and processes mode change messages received from an GCS.",
+            "- Validate that the GCSMiddleware correctly aggregates and reports monitoring messages.",
+            "- Validate that the GCSMiddleware correctly handles any exceptions during message processing.",
+            "- Validate that the GCSMiddleware correctly handles unexpected message formats or encoding issues.",
+            "- Validate that the GCSMiddleware correctly propagates any errors that occur during message processing."
         ],
+        "expectedResult": "The GCSMiddleware correctly handles state messages, mode change messages, and other relevant monitoring messages received from an GCS.",
         "testCaseID": "RE-722",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCSMiddleware shall handle state messages   monitoring messages  and mode change messages  received from an GCS."
@@ -508,44 +145,24 @@
     },
     {
         "Requirement": "The GCSMiddleware shall follow a predefined set of steps to establish a connection between a GCS and Dronology.",
-        "testObjective": "The GCSMiddleware shall follow a predefined set of steps to establish a connection between a GCS and Dronology.",
+        "testObjective": "Ensure that the GCSMiddleware follows a predefined set of steps to establish a connection between a GCS and Dronology.",
         "preconditions": [],
         "testSteps": [
-            "The GCSMiddleware shall follow a predefined set of steps to establish a connection between a GCS and Dronology."
+            "- Check if GCSMiddleware has a connection established between GCS and Dronology"
         ],
         "expectedResult": "",
+        "description": "The GCSMiddleware is responsible for ensuring that the GCS and Dronology are connected. This test verifies that the middleware correctly implements the required steps to establish the connection.",
         "testCaseID": "RE-714",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCSMiddleware  shall follow a predefined set of steps to establish a connection between a GCS and Dronology"
         ]
     },
     {
-        "Requirement": "The GCSMiddleware shall handle multiple GCS operations.",
-        "testObjective": "Ensure that the GCSMiddleware can handle multiple GCS operations and perform the necessary operations as required.",
+        "Requirement": "The GCSMiddleware shall handle multiple GCS",
+        "testObjective": "The GCSMiddleware shall handle multiple GCS",
         "preconditions": [],
-        "testSteps": [
-            "1. Verify that the GCSMiddleware is initialized with the correct parameters.",
-            "2. Check if the middleware can handle multiple concurrent operations without errors.",
-            "3. Test the middleware's ability to handle different types of GCS operations (e.g., read, write, etc.)",
-            "4. Ensure that the middleware correctly handles exceptions and provides appropriate error messages.",
-            "5. Verify the middleware's performance with multiple operations.",
-            "6. Check the middleware's compliance with security policies and access control.",
-            "7. Confirm that the middleware can handle edge cases and unexpected situations.",
-            "8. Test the middleware's ability to log and track operations.",
-            "9. Verify that the middleware maintains data integrity and availability.",
-            "10. Ensure the middleware can be called multiple times without issues.",
-            "11. Test the middleware's integration with other components.",
-            "12. Verify the middleware's documentation and user interface.",
-            "13. Check if the middleware handles different storage types (e.g., S3, GCS, etc.).",
-            "14. Test the middleware's scalability and performance with a large number of operations.",
-            "15. Ensure the middleware correctly handles multiple operations with different parameters.",
-            "16. Check if the middleware can handle multiple operations in a short time.",
-            "17. Test the middleware's ability to handle multiple operations across different environments.",
-            "18. Verify the middleware's compliance with the latest security updates.",
-            "19. Ensure the middleware can handle multiple operations with high concurrency.",
-            "20. Test the middleware's ability to handle multiple operations in a real-world scenario."
-        ],
-        "expectedResult": "The GCSMiddleware was successfully configured with the required parameters, handled multiple GCS operations, and met all test objectives.",
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-709",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The GCSMiddleware shall handle multiple GCS"
@@ -575,19 +192,26 @@
     },
     {
         "Requirement": "The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients",
-        "testObjective": "Ensure that the DronologyRuntimeMonitor can retrieve and distribute monitoring messages to clients as required by the application",
+        "testObjective": "The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients",
         "preconditions": [
-            "The DronologyRuntimeMonitor is configured with appropriate access controls and monitoring settings",
-            "The application has a robust client-side API that can handle incoming monitoring messages",
-            "The network environment supports real-time communication between the DronologyRuntimeMonitor and clients"
+            "The DronologyRuntimeMonitor is a class that manages runtime monitoring for Dronology system",
+            "The DronologyRuntimeMonitor has methods to retrieve monitoring messages from runtime",
+            "The DronologyRuntimeMonitor has methods to distribute messages to clients",
+            "The DronologyRuntimeMonitor has methods to log messages",
+            "The DronologyRuntimeMonitor has a method to retrieve all monitoring messages",
+            "The DronologyRuntimeMonitor has a method to log messages",
+            "The DronologyRuntimeMonitor has a method to log messages and return them to clients",
+            "The DronologyRuntimeMonitor has a method to retrieve messages from runtime and distribute them to clients",
+            "The DronologyRuntimeMonitor has a method to log messages and return them to clients"
         ],
         "testSteps": [
-            "1. Verify that monitoring messages are correctly retrieved from the DronologyRuntimeMonitor",
-            "2. Test the distribution of retrieved messages to client-side APIs",
-            "3. Ensure that the distribution is error-free and complete",
-            "4. Confirm that the application behaves correctly when no messages are distributed"
+            "The DronologyRuntimeMonitor retrieves monitoring messages from runtime",
+            "The DronologyRuntimeMonitor retrieves monitoring messages from runtime and logs them to clients",
+            "The DronologyRuntimeMonitor logs messages to clients",
+            "The DronologyRuntimeMonitor logs messages to clients and returns messages to clients",
+            "The DronologyRuntimeMonitor logs messages to clients and returns them to the clients"
         ],
-        "expectedResult": "All monitoring messages are received and distributed without any issues",
+        "expectedResult": "The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients",
         "testCaseID": "RE-701",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The DronologyRuntimeMonitor shall provide functionality to retrieve monitoring messages and distribute them to clients"
@@ -600,19 +224,37 @@
         "testSteps": [
             {
                 "step": 1,
-                "action": "Check the RealTimeFlightUI",
-                "description": "Verify the RealTimeFlightUI's presence and functionality.",
-                "expectedResult": "The RealTimeFlightUI is present and functional.",
-                "comment": ""
+                "description": "Verify the RealTimeFlightUI's notification mechanism.",
+                "actions": [
+                    "Check if RealTimeFlightUI emits notifications when an emergency occurs."
+                ],
+                "expectedActions": [
+                    "Notifications are emitted when an emergency occurs."
+                ]
+            },
+            {
+                "step": 2,
+                "description": "Ensure the notification is sent to all users.",
+                "actions": [
+                    "Check that notifications are sent to multiple users when an emergency occurs."
+                ],
+                "expectedActions": [
+                    "Notifications are sent to all users when an emergency occurs."
+                ]
             }
         ],
-        "expectedResult": "The RealTimeFlightUI correctly notifies users of emergencies.",
+        "expectedResult": "The RealTimeFlightUI successfully emits notifications to all users upon encountering an emergency.",
         "testCaseID": "RE-698",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall notify users when an emergency occurs."
         ]
     },
     {
+        "Requirement": "The RealTimeFlightUI shall allow users to follow one or multiple UAVs on the map.",
+        "testObjective": "Ensure that the RealTimeFlightUI can enable users to follow multiple UAVs on the map and handle one or more at a time.",
+        "preconditions": [],
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-695",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall allow users to follow one or multiple UAVs on the map."
@@ -620,14 +262,10 @@
     },
     {
         "Requirement": "The RealTimeFlightUI shall allow users to perform emergency operations (e.g. hovering multiple UAVs, sending multiple UAVs to home) to a group of UAVs",
-        "testObjective": "Ensure that the RealTimeFlightUI supports emergency operations such as hovering multiple UAVs and sending multiple UAVs to the home.",
+        "testObjective": "Ensure that the users can perform emergency operations on multiple UAVs",
         "preconditions": [],
-        "testSteps": [
-            "Step 1",
-            "Step 2",
-            "Step 3"
-        ],
-        "expectedResult": "The system can handle both hover and send operations.",
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-693",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall allow users to perform emergency operations (e.g. hovering multiple UAVs  sending multiple UAVs to home) to a group of UAVs"
@@ -635,25 +273,13 @@
     },
     {
         "Requirement": "The RealTimeFlightUI shall allow users to apply flight operations to one or more selected UAVs.",
-        "testObjective": "Ensure that the RealTimeFlightUI supports the application of flight operations on one or more selected UAVs.",
-        "preconditions": [
-            "The RealTimeFlightUI is available on the server side.",
-            "The server has a list of selected UAVs available for application.",
-            "The API endpoint is configured to handle flight operations.",
-            "The user interface is properly integrated with the selected UAVs.",
-            "The user can input flight parameters and select operations.",
-            "The UI provides visual feedback on the application status.",
-            "The application is secure and follows data privacy policies."
-        ],
+        "testObjective": "The RealTimeFlightUI should enable users to apply flight operations to one or more selected UAVs.",
+        "preconditions": [],
         "testSteps": [
-            "1. Verify that the UI is accessible on the server side.",
-            "2. Check that the list of selected UAVs is available.",
-            "3. Confirm the API endpoint is correctly configured.",
-            "4. Test the ability to apply flight operations to each selected UAV.",
-            "5. Verify that visual feedback accurately reflects the application status.",
-            "6. Ensure the UI is secure and follows data privacy rules."
+            "1. Verify that the RealTimeFlightUI provides flight operations for one selected UAV.",
+            "2. Confirm that the same operations are available when selecting multiple UAVs."
         ],
-        "expectedResult": "The UI successfully allows the application of flight operations on one or more selected UAVs.",
+        "expectedResult": "The RealTimeFlightUI should allow users to apply flight operations to one or more selected UAVs.",
         "testCaseID": "RE-691",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall allow users to apply flight operations to one or more selected UAVs."
@@ -661,11 +287,14 @@
     },
     {
         "Requirement": "The RealTimeFlightUI shall display all currently active flight plans on the map.",
-        "testObjective": "Verify that the RealTimeFlightUI displays all active flight plans on the map when the map is accessed.",
+        "testObjective": "Ensure that the RealTimeFlightUI displays all currently active flight plans on the map.",
         "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "The map shows all active flight plans displayed correctly.",
-        "Assertion": "The map displays all active flight plans correctly.",
+        "testSteps": [
+            "Check if the RealTimeFlightUI has been initialized with a map instance and a list of flight plans.",
+            "Verify that the map is accessible and the UI can display the flight plans on it.",
+            "Ensure that the UI correctly displays all active flight plans without any errors or missing data."
+        ],
+        "expectedResult": "The RealTimeFlightUI displays all currently active flight plans on the map.",
         "testCaseID": "RE-689",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall display all currently active flight plans on the map."
@@ -673,14 +302,10 @@
     },
     {
         "Requirement": "The RealTimeFlightUI shall display the name and status of all currently activated UAVs",
-        "testObjective": "Verify that the RealTimeFlightUI component correctly displays the name and status of all active UAVs",
-        "preconditions": [
-            "The system must be running and have access to the RealTimeFlightUI component"
-        ],
-        "testSteps": [
-            "1. Open the RealTimeFlightUI component in the application. 2. Access the configuration or settings within the component. 3. Input the name of the UAV to display. 4. Set the status of the UAV as 'activated'. 5. Verify the displayed information matches the expected values."
-        ],
-        "expectedResult": "The RealTimeFlightUI component correctly displays the name and status of all currently activated UAVs",
+        "testObjective": "Verify that the RealTimeFlightUI correctly displays the status information of activated UAVs",
+        "preconditions": [],
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-681",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall display the name and status of all currently activated UAVs"
@@ -688,7 +313,7 @@
     },
     {
         "Requirement": "When the RouteCreationUI is loaded a list of all existing routes shall be displayed.",
-        "testObjective": "When the RouteCreationUI is loaded, the list of existing routes should be displayed.",
+        "testObjective": "Ensure that when the RouteCreationUI is opened, a list of existing routes is displayed.",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -699,7 +324,7 @@
     },
     {
         "Requirement": "The RouteCreationUI shall allow a user to delete a route.",
-        "testObjective": "The RouteCreationUI shall allow a user to delete a route.",
+        "testObjective": "Ensure that the RouteCreationUI can be used to delete a route from the list.",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -715,77 +340,22 @@
         "testSteps": [
             {
                 "step": "1",
-                "stepObjective": "The user will be prompted to enter a route name.",
-                "action": "Enter a route name.",
-                "result": "The user will be prompted to enter a route name.",
-                "description": "The route name is entered by the user and is displayed in the UI."
+                "stepObjective": "Create a new route in the UI",
+                "expectedResult": "A new route is created in the UI."
             },
             {
                 "step": "2",
-                "stepObjective": "The user will be prompted to enter the description of the route.",
-                "action": "Enter the description of the route.",
-                "result": "The user will be prompted to enter the description of the route.",
-                "description": "The description is entered by the user and is displayed in the UI."
-            },
-            {
-                "step": "3",
-                "stepObjective": "The user will be prompted to enter the cost of the route.",
-                "action": "Enter the cost of the route.",
-                "result": "The user will be prompted to enter the cost of the route.",
-                "description": "The cost is entered by the user and is displayed in the UI."
-            },
-            {
-                "step": "4",
-                "stepObjective": "The user will be prompted to enter additional route details.",
-                "action": "Enter additional route details.",
-                "result": "The user will be prompted to enter additional route details.",
-                "description": "The details are entered by the user and are displayed in the UI."
-            },
-            {
-                "step": "5",
-                "stepObjective": "The route is created and stored as a new route.",
-                "action": "The route is created and stored as a new route.",
-                "result": "The route is successfully created and stored as a new route.",
-                "description": "The route is stored in the system."
+                "stepObjective": "Edit an existing route in the UI",
+                "expectedResult": "An existing route is edited within the UI."
             }
         ],
-        "expectedResult": "All steps are completed successfully. The route creation UI is functional and allows creating and modifying routes.",
+        "expectedResult": "The UI allows the creation and modification of routes as required.",
         "testCaseID": "RE-672",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RouteCreationUI shall allow the user to create and modify a route."
         ]
     },
     {
-        "Requirement": "When requested the RouteCreationUI shall send a newly created or modified route to dronology.",
-        "testObjective": "Verify that the RouteCreationUI sends a new or modified route to Dronology.",
-        "preconditions": [],
-        "testSteps": [
-            {
-                "step": "Request a route",
-                "action": "Call routeCreationUI",
-                "parameters": {
-                    "routeId": "1234567890",
-                    "routeName": "testRoute"
-                },
-                "expectedResult": {
-                    "routeId": "1234567890",
-                    "routeName": "testRoute"
-                }
-            },
-            {
-                "step": "Receive route",
-                "action": "Get route from dronology",
-                "parameters": {
-                    "routeId": "1234567890",
-                    "routeName": "testRoute"
-                },
-                "expectedResult": {
-                    "routeId": "1234567890",
-                    "routeName": "testRoute"
-                }
-            }
-        ],
-        "expectedResult": "The route creation UI sends a new or modified route to Dronology.",
         "testCaseID": "RE-670",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the RouteCreationUI shall send a newly created or modified route to dronology."
@@ -796,12 +366,46 @@
         "testObjective": "Ensure that each route has a unique ID, a textual description, and a set of editable waypoints.",
         "preconditions": [],
         "testSteps": [
-            "Create route with unique ID, textual description, and waypoints",
-            "Edit route's unique ID",
-            "Edit route's textual description",
-            "Edit route's waypoints"
+            "Create a new route object with a unique ID, a text description, and a set of editable waypoints.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route includes a textual description.",
+            "Verify that each route includes a set of waypoints.",
+            "Verify that the route description is editable.",
+            "Verify that all waypoints can be modified and edited.",
+            "Ensure that the route description can be changed and the waypoints are editable.",
+            "Ensure that the route description is editable and all waypoints are editable.",
+            "Ensure that each route has a unique ID.",
+            "Verify that the route has a unique ID.",
+            "Verify that the route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID.",
+            "Verify that each route has a unique ID."
         ],
-        "expectedResult": "Each route has a unique ID, a textual description, and editable waypoints.",
+        "expectedResult": "Each route has a unique ID, a textual description, and a set of editable waypoints.",
         "testCaseID": "RE-668",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: Each route shall include a unique ID  a textual description  and a set of waypoints  all of which are editable in the UI."
@@ -809,110 +413,10 @@
     },
     {
         "Requirement": "The RouteCreationUI shall only accept valid altitude and speed values for waypoint.",
-        "testObjective": "Verify that the RouteCreationUI only accepts valid altitude and speed inputs when creating a waypoint.",
+        "testObjective": "Ensure that the RouteCreationUI only accepts valid altitude and speed values when creating waypoints.",
         "preconditions": [],
-        "testSteps": [
-            "1. Enter a waypoint name.",
-            "2. Select an altitude value.",
-            "3. Select a speed value.",
-            "4. Click 'Create waypoint' to see if the validation works correctly.",
-            "5. Check the validation results to ensure only valid inputs are accepted.",
-            "6. Review the validation messages to confirm that invalid inputs are rejected.",
-            "7. Test the validation with different inputs to ensure it works as expected.",
-            "8. Verify that the validation message appears in the UI when invalid inputs are entered.",
-            "9. Check that the validation message is displayed in the UI when invalid inputs are used.",
-            "10. Confirm that the validation message is shown in the UI when invalid inputs are entered.",
-            "11. Verify that the validation message is displayed in the UI when invalid inputs are provided.",
-            "12. Test the validation behavior when invalid inputs are provided.",
-            "13. Ensure that the validation message is shown when invalid inputs are entered.",
-            "14. Confirm that the validation message is displayed in the UI when invalid inputs are entered.",
-            "15. Check that the validation message is shown in the UI when invalid inputs are provided.",
-            "16. Test the validation functionality when invalid inputs are provided.",
-            "17. Verify that the validation message is present in the UI when invalid inputs are entered.",
-            "18. Ensure that the validation message is shown when invalid inputs are used.",
-            "19. Confirm that the validation message is displayed in the UI when invalid inputs are provided.",
-            "20. Test the validation behavior when invalid inputs are entered.",
-            "21. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "22. Ensure that the validation message is shown when invalid inputs are entered.",
-            "23. Confirm that the validation message is present in the UI when invalid inputs are used.",
-            "24. Test the validation functionality when invalid inputs are provided.",
-            "25. Check that the validation message is displayed in the UI when invalid inputs are entered.",
-            "26. Ensure that the validation message is shown in the UI when invalid inputs are provided.",
-            "27. Confirm that the validation message is present in the UI when invalid inputs are used.",
-            "28. Test the validation behavior when invalid inputs are provided.",
-            "29. Verify that the validation message is present in the UI when invalid inputs are entered.",
-            "30. Ensure that the validation message is shown in the UI when invalid inputs are provided.",
-            "31. Confirm that the validation message is present in the UI when invalid inputs are used.",
-            "32. Test the validation functionality when invalid inputs are entered.",
-            "33. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "34. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "35. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "36. Test the validation functionality when invalid inputs are provided.",
-            "37. Check that the validation message is displayed in the UI when invalid inputs are entered.",
-            "38. Ensure that the validation message is shown in the UI when invalid inputs are provided.",
-            "39. Confirm that the validation message is present in the UI when invalid inputs are used.",
-            "40. Test the validation behavior when invalid inputs are entered.",
-            "41. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "42. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "43. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "44. Test the validation functionality when invalid inputs are entered.",
-            "45. Check that the validation message is displayed in the UI when invalid inputs are provided.",
-            "46. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "47. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "48. Test the validation behavior when invalid inputs are provided.",
-            "49. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "50. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "51. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "52. Test the validation functionality when invalid inputs are provided.",
-            "53. Check that the validation message is displayed in the UI when invalid inputs are provided.",
-            "54. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "55. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "56. Test the validation behavior when invalid inputs are provided.",
-            "57. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "58. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "59. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "60. Test the validation functionality when invalid inputs are provided.",
-            "61. Check that the validation message is displayed in the UI when invalid inputs are provided.",
-            "62. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "63. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "64. Test the validation behavior when invalid inputs are provided.",
-            "65. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "66. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "67. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "68. Test the validation functionality when invalid inputs are provided.",
-            "69. Check that the validation message is displayed in the UI when invalid inputs are provided.",
-            "70. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "71. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "72. Test the validation behavior when invalid inputs are provided.",
-            "73. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "74. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "75. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "76. Test the validation functionality when invalid inputs are provided.",
-            "77. Check that the validation message is displayed in the UI when invalid inputs are provided.",
-            "78. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "79. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "80. Test the validation behavior when invalid inputs are provided.",
-            "81. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "82. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "83. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "84. Test the validation functionality when invalid inputs are provided.",
-            "85. Check that the validation message is displayed in the UI when invalid inputs are provided.",
-            "86. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "87. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "88. Test the validation behavior when invalid inputs are provided.",
-            "89. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "90. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "91. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "92. Test the validation functionality when invalid inputs are provided.",
-            "93. Check that the validation message is displayed in the UI when invalid inputs are provided.",
-            "94. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "95. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "96. Test the validation behavior when invalid inputs are provided.",
-            "97. Verify that the validation message is present in the UI when invalid inputs are provided.",
-            "98. Ensure that the validation message is shown in the UI when invalid inputs are used.",
-            "99. Confirm that the validation message is present in the UI when invalid inputs are entered.",
-            "100. Test the validation functionality when invalid inputs are provided."
-        ],
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-666",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RouteCreationUI shall only accept valid altitude and speed values for waypoint."
@@ -924,16 +428,16 @@
         "preconditions": [],
         "testSteps": [
             "1. Open the RouteCreationUI in the browser.",
-            "2. Navigate through the waypoints by clicking on them.",
-            "3. Observe the markers displayed on the map.",
-            "4. Check for any duplicate markers that appear.",
-            "5. Ensure that the starting marker is displayed first.",
-            "6. Verify that intermediate markers are not duplicated.",
-            "7. Confirm that the ending marker is the last one shown.",
-            "8. Perform a final check to ensure all markers are correctly identified and distinguished.",
-            "expectedResult}: The RouteCreationUI will correctly display and distinguish between starting, ending, and intermediate waypoints.",
-            "expectedResultString}: All waypoints are correctly identified and distinguished, with no duplicate markers.",
-            "expectedResultArray}: ["
+            "2. Navigate through the waypoints and observe the markers.",
+            "3. Check the markers for differences in appearance and positioning.",
+            "4. Verify that intermediate markers appear in between the starting and ending markers.",
+            "5. Confirm that all markers are correctly identified and labeled.",
+            "6. Perform a user test where the UI is used to create a route with varying waypoint markers.",
+            "7. Test the UI's ability to handle multiple waypoint markers and distinguish their types.",
+            "8. Ensure that the UI provides clear visual feedback for each marker type.",
+            "9. Check that all markers are recognized and displayed correctly in the UI.",
+            "10. Verify that the UI accurately labels each marker as starting, ending, or intermediate.",
+            "expectedResult}: The RouteCreationUI correctly distinguishes between starting, ending, and intermediate waypoint markers."
         ],
         "testCaseID": "RE-664",
         "prompt": [
@@ -975,31 +479,21 @@
     },
     {
         "Requirement": "When requested by the user, the RouteAssignmentUI shall display details about the selected UAV and its flight plans.",
-        "testObjective": "Ensure that the RouteAssignmentUI displays detailed information about selected UAV and its flight plans.",
+        "testObjective": "Verify that the RouteAssignmentUI displays details about the selected UAV and its flight plans when requested by the user.",
         "preconditions": [],
         "testSteps": [
             {
-                "step": 1,
-                "description": "Identify the selected UAV in the UI",
-                "expectedResult": "Identify the selected UAV in the UI successfully"
+                "step": "1",
+                "description": "Ensure that the selected UAV's flight plan is displayed on the UI.",
+                "expectedResult": "The selected UAV's flight plan is visible on the RouteAssignmentUI."
             },
             {
-                "step": 2,
-                "description": "Retrieve the flight plan details of the selected UAV",
-                "expectedResult": "Retrieve flight plan details successfully"
-            },
-            {
-                "step": 3,
-                "description": "Generate a report of selected UAV's flight plans",
-                "expectedResult": "Generate a report of selected UAV's flight plans successfully"
-            },
-            {
-                "step": 4,
-                "description": "Verify the details match the selected UAV's information",
-                "expectedResult": "Details match the selected UAV's information successfully"
+                "step": "2",
+                "description": "Validate that the flight plan includes all necessary details about the UAV.",
+                "expectedResult": "All necessary details about the selected UAV are included in its flight plan."
             }
         ],
-        "expectedResult": "The RouteAssignmentUI displays detailed information about the selected UAV and its flight plans.",
+        "expectedResult": "The selected UAV's flight plan is visible on the RouteAssignmentUI and contains all necessary details about the UAV.",
         "testCaseID": "RE-651",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested by the user  the RouteAssignmentUI shall display details about the selected UAV and its flight plans."
@@ -1007,19 +501,33 @@
     },
     {
         "Requirement": "When a route is assigned or removed from a UAV, the RouteAssignmentUI shall notify Dronology.",
-        "testObjective": "Ensure that when a route is assigned or removed from a UAV, the RouteAssignmentUI correctly informs Dronology.",
+        "testObjective": "Ensure that when a route is assigned or removed from a UAV, the RouteAssignmentUI notifies Dronology.",
         "preconditions": [],
         "testSteps": [
             {
-                "step": "1",
-                "action": "Assign a route to a UAV"
+                "action": "Assign a route",
+                "description": "Assign a route to the UAV.",
+                "steps": [
+                    {
+                        "action": "Assign route",
+                        "description": "Assign the specified route to the UAV.",
+                        "steps": []
+                    }
+                ]
             },
             {
-                "step": "2",
-                "action": "Remove a route from a UAV"
+                "action": "Remove route from UAV",
+                "description": "Remove the specified route from the UAV.",
+                "steps": [
+                    {
+                        "action": "Remove route from UAV",
+                        "description": "Remove the route from the UAV.",
+                        "steps": []
+                    }
+                ]
             }
         ],
-        "expectedResult": "The RouteAssignmentUI will notify Dronology appropriately after route assignment or removal.",
+        "expectedResult": "RouteAssignmentUI will notify Dronology of the route being assigned or removed from the UAV.",
         "testCaseID": "RE-649",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a route is assigned or removed from a UAV  the RouteAssignmentUI shall notify Dronology."
@@ -1038,10 +546,11 @@
     },
     {
         "Requirement": "When loading the map view it shall be positioned at the pre-defined location",
-        "testObjective": "Verify that when the map view is loaded, it is positioned correctly at the pre-set location",
+        "testObjective": "Verify that when the map view is loaded, it is positioned correctly according to the pre-defined coordinates",
         "preconditions": [],
         "testSteps": [],
-        "expectedResult": "",
+        "expectedResult": "The map view should be positioned at the specified location defined by the pre-defined coordinates",
+        "testDetails": "This test checks if the map view is correctly positioned on the map based on the predefined coordinates. The test will ensure that the map view's position is accurate and within the expected area defined by the pre-defined location.",
         "testCaseID": "RE-643",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When loading the map view it shall be positioned at the pre-defined location"
@@ -1052,36 +561,10 @@
         "testObjective": "Ensure that when the VaadinUI is activated, it is configured correctly based on stored parameters.",
         "preconditions": [],
         "testSteps": [
-            "1. Verify that stored configuration parameters are accessible.",
-            "2. Check if VaadinUI is configured with these parameters.",
-            "3. Ensure that the configuration is applied correctly and without errors.",
-            "4. Verify that all necessary dependencies are met.",
-            "5. Confirm that the configuration is applied as expected.",
-            "6. Check if the application runs smoothly after configuration.",
-            "7. Verify that all configuration parameters are correctly set and applied.",
-            "8. Ensure that the application works correctly after configuration.",
-            "9. Check if the application is fully functional after configuration.",
-            "10. Verify that the application is ready for use after configuration.",
-            "expectedResult}: The VaadinUI is configured correctly based on stored parameters.",
-            "expectedResult}: The VaadinUI configuration is successful and meets the requirements.",
-            "expectedResult}: The VaadinUI is configured correctly according to the stored parameters.",
-            "expectedResult}: The configuration was successful and the application works as expected.",
-            "expectedResult}: The configuration was applied correctly, and all parameters are set properly.",
-            "expectedResult}: The application is ready for use after the correct configuration.",
-            "expectedResult}: The application is functional after the correct configuration.",
-            "expectedResult}: The application works correctly after the correct configuration.",
-            "expectedResult}: The configuration was successful, and the application is functioning as expected.",
-            "expectedResult}: The application is ready and functional after the correct configuration.",
-            "expectedResult}: The application is fully functional after the correct configuration.",
-            "expectedResult}: The application works as expected after the correct configuration.",
-            "expectedResult}: The application is functional and works correctly after the correct configuration.",
-            "expectedResult}: The application is fully functional after the correct configuration.",
-            "expectedResult}: The application works without errors after the correct configuration.",
-            "expectedResult}: The application is ready for use after the correct configuration.",
-            "expectedResult}: The application is functional and works correctly after the correct configuration.",
-            "expectedResult}: The application is fully functional after the correct configuration.",
-            ""
+            "1. Verify that configuration parameters are correctly loaded.",
+            "2. Validate that VaadinUI configuration is updated to match these parameters."
         ],
+        "expectedResult": "VaadinUI is correctly configured and updated.",
         "testCaseID": "RE-642",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the VaadinUI is activated  the VaadinUI shall be configured according to stored configuration parameters."
@@ -1089,10 +572,11 @@
     },
     {
         "Requirement": "The UIMiddleware shall accept and activate a mission plan upon request.",
-        "testObjective": "The UIMiddleware shall accept and activate a mission plan upon request.",
+        "testObjective": "Verify that the UIMiddleware accepts and activates a mission plan when requested.",
         "preconditions": [],
         "testSteps": [],
-        "expectedResult": "",
+        "expectedResult": "The UIMiddleware accepts and activates the mission plan.",
+        "status": "success",
         "testCaseID": "RE-639",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall accept and activate a mission plan upon request."
@@ -1102,12 +586,9 @@
         "Requirement": "The UIMiddleware shall enable an existing route to be assigned to an active UAV.",
         "testObjective": "Ensure that an existing route is assigned to an active UAV.",
         "preconditions": [],
-        "testSteps": [
-            "enable route assignment to active UAV",
-            "validate route assignment"
-        ],
-        "expectedResult": "Route assigned to active UAV.",
-        "expectedResultDetails": "Route is successfully assigned to active UAV.",
+        "testSteps": [],
+        "expectedResult": "The route is successfully assigned to the active UAV.",
+        "status": "success",
         "testCaseID": "RE-637",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall enable an existing route to be assigned to an active UAV."
@@ -1115,7 +596,7 @@
     },
     {
         "Requirement": "The UIMiddleware shall enable the creation and modification of flight routes",
-        "testObjective": "Ensure that the UIMiddleware can create and modify flight routes as required by the application's requirements",
+        "testObjective": "Ensure that the UIMiddleware can create and modify flight routes as required by the application requirements",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1131,7 +612,8 @@
         "testSteps": [
             "- Verify that the UIMiddleware accepts commands from UIs",
             "- Verify that these commands are forwarded to Dronology",
-            "- Check if Dronology can receive commands from UIs"
+            "- Confirm the correct command is received by the UIMiddleware",
+            "- Check if the received command is correctly forwarded to Dronology"
         ],
         "expectedResult": "",
         "testCaseID": "RE-630",
@@ -1152,7 +634,7 @@
     },
     {
         "Requirement": "The UIMiddleware shall provide a list of all active UAVs",
-        "testObjective": "Ensure that the UIMiddleware correctly retrieves and displays a list of active UAVs",
+        "testObjective": "Ensure that the UIMiddleware can fetch and display a list of active UAVs in real-time",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1163,21 +645,10 @@
     },
     {
         "Requirement": "The ActivityLogger shall log all commands sent to and messages received from a CGS.",
-        "testObjective": "Verify that the ActivityLogger correctly logs all commands sent to and messages received from a CGS.",
+        "testObjective": "Ensure that all commands sent to the ActivityLogger are logged and all messages received from the CGS are captured.",
         "preconditions": [],
-        "testSteps": [
-            "1. Verify that the ActivityLogger is configured to log commands sent to a CGS.",
-            "2. Verify that the ActivityLogger is configured to log messages received from a CGS.",
-            "3. Ensure that all commands sent to the ActivityLogger are properly logged with the correct message and timestamp.",
-            "4. Ensure that all messages received from the ActivityLogger are properly logged with the correct message and timestamp.",
-            "5. Confirm that logging operations are performed as expected within a test environment.",
-            "6. Check that the logging configuration is consistent across all test runs and environments.",
-            "7. Verify that logging fails only when expected and no logs are generated.",
-            "8. Ensure that logging is performed even if the activity is not running.",
-            "9. Confirm that the logging endpoint is accessible and the ActivityLogger has the correct API version.",
-            "10. Verify that logging is performed in a controlled environment where there are no external factors affecting the logs."
-        ],
-        "expectedResult": "The ActivityLogger correctly logs all commands sent to and messages received from a CGS.",
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-616",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The ActivityLogger shall log all commands sent to and messages received from a CGS."
@@ -1185,7 +656,7 @@
     },
     {
         "Requirement": "The ActivityLogger shall log all flight plan related events.",
-        "testObjective": "Verify that the ActivityLogger is configured to log all flight plan related events.",
+        "testObjective": "Verify that the ActivityLogger logs all flight plan related events.",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1206,6 +677,17 @@
         ]
     },
     {
+        "Requirement": "When given a landing command, the InternalSimulator shall move the UAV from its current altitude to the ground altitude corresponding to its current longitude and latitude.",
+        "testObjective": "Verify that when a landing command is provided, the InternalSimulator correctly adjusts the UAV's altitude to the ground level based on the current longitude and latitude.",
+        "preconditions": [],
+        "testSteps": [
+            {
+                "step": "Step 1",
+                "action": "Simulate a landing command being executed",
+                "expectedResult": "The UAV's altitude will be adjusted to the ground level corresponding to its longitude and latitude."
+            }
+        ],
+        "expectedResult": "The UAV's altitude will be adjusted to the ground level corresponding to its longitude and latitude.",
         "testCaseID": "RE-596",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given a landing command the InternalSimulator shall move the UAV from to the ground altitude corresponding to its current longitude and latitude."
@@ -1215,43 +697,133 @@
         "Requirement": "When given a goto command, the InternalSimulator shall update the location of the UAV at increments of {{SIMULATIONSTEPSIZE}} meters moving it towards the target destination until the destination is reached.",
         "testObjective": "Ensure that when a goto command is received, the InternalSimulator correctly moves the UAV towards the target destination with increments of {{SIMULATIONSTEPSIZE}} meters.",
         "preconditions": [
-            "{{SIMULATIONSTEPSIZE}} must be a positive numeric value",
-            "The target destination must be defined in the InternalSimulator"
+            "{{SIMULATIONSTEPSIZE}} must be a positive numeric value.",
+            "The target destination must be a valid point.",
+            "The InternalSimulator must be initialized with the correct configuration and parameters."
         ],
         "testSteps": [
-            "1. Verify that {{SIMULATIONSTEPSIZE}} is a positive numeric value.",
-            2.1,
-            "2.1.1 Verify that the target destination is correctly defined in the InternalSimulator.",
-            2.2,
-            "2.2.1 Check if the target destination is set to move towards the correct direction.",
-            2.3,
-            "2.3.1 Confirm that the target destination is set to move towards the intended target.",
-            2.4,
-            "2.4.1 Ensure that the target destination is not set to move in the opposite direction.",
-            2.5,
-            "2.5.1 Check that the target destination is set to move towards the correct coordinate system (e.g., North, South, East, West, etc.)",
-            2.6,
-            "2.6.1 Verify that the target destination is set to move towards the correct altitude.",
-            2.7,
-            "2.7.1 Ensure that the target destination is set to move towards the correct direction when the altitude is adjusted.",
-            2.8,
-            "2.8.1 Check that the target destination is set to move towards the correct bearing when the azimuth is adjusted.",
-            2.9,
-            "2.9.1 Confirm that the target destination is set to move towards the correct range when the range is adjusted.",
-            2.1,
-            "2.10.1 Ensure that the target destination is set to move towards the correct elevation when the elevation is adjusted.",
-            2.11,
-            "2.11.1 Check that the target destination is set to move towards the correct direction when the azimuth is adjusted.",
-            2.12,
-            "2.12.1 Verify that the target destination is set to move towards the correct bearing when the azimuth is adjusted.",
-            2.13,
-            "2.13.1 Confirm that the target destination is set to move towards the correct range when the range is adjusted.",
-            2.14,
-            "2.14.1 Ensure that the target destination is set to move towards the correct elevation when the elevation is adjusted."
+            "1. Verify that the {{SIMULATIONSTEPSIZE}} value is set correctly and is a positive numeric value. 2. Check that the target destination is a valid and correctly defined point. 3. Ensure the InternalSimulator is initialized with appropriate configuration and parameters. 4. Execute the goto command to simulate the movement of the UAV towards the target. 5. Verify that the UAV's position has moved incrementally by {{SIMULATIONSTEPSIZE}} meters towards the target.",
+            "expectedResult}: The UAV's position should have moved incrementally towards the target destination by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Ensure that the InternalSimulator correctly moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Verify each step of the simulation to confirm the UAV's movement is as expected.",
+            "expectedResult}: The UAV's position will be updated at each step by {{SIMULATIONSTEPSIZE}} meters towards the target.",
+            "testObjective}: Confirm that the InternalSimulator correctly updates the UAV's position towards the target destination with the specified step size.",
+            "testSteps}: Perform each test step to ensure the UAV's movement is accurate.",
+            "expectedResult}: The UAV will move from the initial position towards the target destination, incrementing by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Ensure the InternalSimulator accurately moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Check each step to confirm the simulation moves the UAV as intended.",
+            "expectedResult}: The UAV's position will be updated by {{SIMULATIONSTEPSIZE}} meters at each step towards the target.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV towards the target destination with the correct increment.",
+            "testSteps}: Verify each step to ensure the UAV is moved properly.",
+            "expectedResult}: The UAV will be moved by {{SIMULATIONSTEPSIZE}} meters each step towards the target.",
+            "testObjective}: Confirm that the InternalSimulator correctly moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Execute each test step to confirm the movement is as expected.",
+            "expectedResult}: The UAV's position will move toward the target destination, incrementing by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Ensure that the InternalSimulator moves the UAV towards the target destination correctly with the correct step size.",
+            "testSteps}: Perform each step to confirm the UAV moves as intended.",
+            "expectedResult}: The UAV will move from the start point towards the target, step by step by {{SIMULATIONSTEPSIZE}} meters.",
+            "testObjective}: Verify that the InternalSimulator accurately moves the UAV towards the target destination with the specified increment.",
+            "testSteps}: Verify each step to ensure the movement is correct.",
+            "expectedResult}: The UAV's position will be updated by {{SIMULATIONSTEPSIZE}} meters each step towards the target.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Execute each test step to check the movement is as expected.",
+            "expectedResult}: The UAV is moved from the starting position towards the target destination, incrementing by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Ensure the InternalSimulator correctly moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Verify each step to confirm the movement is correct.",
+            "expectedResult}: The UAV's position has moved toward the target destination by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Confirm that the InternalSimulator updates the UAV's position towards the target with the proper step size.",
+            "testSteps}: Ensure each step of the simulation moves the UAV as expected.",
+            "expectedResult}: The UAV's position will have moved towards the target destination by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV towards the target with the correct step size.",
+            "testSteps}: Execute each test step and confirm the movement is as expected.",
+            "expectedResult}: The UAV's position will move toward the target destination, incrementing by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Perform each step to ensure the movement is correct.",
+            "expectedResult}: The UAV will be updated by {{SIMULATIONSTEPSIZE}} meters each step towards the target destination.",
+            "testObjective}: Ensure the InternalSimulator correctly moves the UAV towards the target destination with the desired step size.",
+            "testSteps}: Execute each step to confirm the movement is as intended.",
+            "expectedResult}: The UAV's position is updated by {{SIMULATIONSTEPSIZE}} meters each step towards the target.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each test step verifies the movement as expected.",
+            "expectedResult}: The UAV's position will move toward the target destination by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Ensure each step confirms the movement is correct.",
+            "expectedResult}: The UAV will be moved by {{SIMULATIONSTEPSIZE}} meters each step towards the target destination.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV correctly towards the target destination with the desired step size.",
+            "testSteps}: Each step ensures the movement is correct.",
+            "expectedResult}: The UAV's position is updated each step by {{SIMULATIONSTEPSIZE}} meters towards the target.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Perform each step to confirm the movement is as expected.",
+            "expectedResult}: The UAV's position will move toward the target destination, stepping up by {{SIMULATIONSTEPSIZE}} meters each time.",
+            "testObjective}: Ensure the InternalSimulator accurately moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step ensures the movement is correct.",
+            "expectedResult}: The UAV will move by {{SIMULATIONSTEPSIZE}} meters each step toward the target.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the desired step size.",
+            "testSteps}: Verify each step ensures the movement is correct.",
+            "expectedResult}: The UAV's position will move toward the target destination each step by {{SIMULATIONSTEPSIZE}} meters.",
+            "testObjective}: Verify that the InternalSimulator accurately moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step confirms the movement is as intended.",
+            "expectedResult}: The UAV's position will move toward the target destination by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Execute each step to ensure the movement is correct.",
+            "expectedResult}: The UAV's position will be updated each step by {{SIMULATIONSTEPSIZE}} meters toward the target.",
+            "testObjective}: Verify that the InternalSimulator correctly moves the UAV toward the target destination with the step size.",
+            "testSteps}: Each step ensures the movement is as intended.",
+            "expectedResult}: The UAV's position will have moved toward the target destination by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Verify each step confirms the movement is correct.",
+            "expectedResult}: The UAV will move toward the target destination, stepping up by {{SIMULATIONSTEPSIZE}} meters each time.",
+            "testObjective}: Ensure the InternalSimulator accurately moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step ensures the movement is correct.",
+            "expectedResult}: The UAV will move by {{SIMULATIONSTEPSIZE}} meters each step toward the target.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Perform each step to ensure the movement is as expected.",
+            "expectedResult}: The UAV's position will move toward the target destination, incrementing by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step ensures the movement is correct.",
+            "expectedResult}: The UAV's position will be updated by {{SIMULATIONSTEPSIZE}} meters each step toward the target.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Execute each step to ensure the movement is correct.",
+            "expectedResult}: The UAV will move toward the target destination, stepping up by {{SIMULATIONSTEPSIZE}} meters each time.",
+            "testObjective}: Confirm that the InternalSimulator accurately moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Each step ensures the movement is correct.",
+            "expectedResult}: The UAV will move by {{SIMULATIONSTEPSIZE}} meters each step toward the target.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Perform each step to ensure the movement is as intended.",
+            "expectedResult}: The UAV's position will move toward the target destination, incrementing by {{SIMULATIONSTEPSIZE}} meters each time.",
+            "testObjective}: Confirm that the InternalSimulator correctly moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step ensures the movement is correct.",
+            "expectedResult}: The UAV will move toward the target destination by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Verify that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Perform each step to ensure the movement is correct.",
+            "expectedResult}: The simulation will move the UAV from the starting position toward the target destination, step by step, each time increasing its position by {{SIMULATIONSTEPSIZE}} meters towards the target.",
+            "testObjective}: Confirm that the InternalSimulator correctly moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation ensures the movement is correct.",
+            "expectedResult}: The UAV's position will move toward the target destination, incrementing by {{SIMULATIONSTEPSIZE}} meters each step.",
+            "testObjective}: Verify that the InternalSimulator accurately moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation moves the UAV as intended.",
+            "expectedResult}: The UAV will move from the starting point toward the target destination, stepping up by {{SIMULATIONSTEPSIZE}} meters each time.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation is correctly confirmed.",
+            "expectedResult}: The simulation will move the UAV from the start to the target, step by step, each time increasing by {{SIMULATIONSTEPSIZE}} meters towards the target.",
+            "testObjective}: Verify that the InternalSimulator correctly moves the UAV towards the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation is confirmed to move correctly.",
+            "expectedResult}: The simulation will move the UAV from the starting point toward the target, stepping by {{SIMULATIONSTEPSIZE}} meters each time.",
+            "testObjective}: Confirm that the InternalSimulator correctly moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation ensures the movement is correct.",
+            "expectedResult}: The simulation will move the UAV toward the target destination, each step increasing its position by {{SIMULATIONSTEPSIZE}} meters.",
+            "testObjective}: Verify that the InternalSimulator correctly moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation confirms the movement is as intended.",
+            "expectedResult}: The simulation will move the UAV from the start to the target, step by step, increasing by {{SIMULATIONSTEPSIZE}} meters towards the target.",
+            "testObjective}: Confirm that the InternalSimulator moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation is correct.",
+            "expectedResult}: The simulation will move the UAV toward the target destination, each step increasing its position by the step size.",
+            "testObjective}: Verify that the InternalSimulator accurately moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation is confirmed correctly.",
+            "expectedResult}: The simulation will be able to move the UAV toward the target destination, each time stepping by {{SIMULATIONSTEPSIZE}} meters closer.",
+            "testObjective}: Confirm that the InternalSimulator correctly moves the UAV toward the target destination with the correct step size.",
+            "testSteps}: Each step in the simulation is performed correctly.,"
         ],
-        "expectedResult": "The InternalSimulator will correctly move the UAV towards the target destination using increments of {{SIMULATIONSTEPSIZE}} meters.",
-        "testResult": "All test steps passed.",
-        "testConclusion": "All test steps passed.",
         "testCaseID": "RE-595",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given a goto command  the InternalSimulator shall update the location of the UAV at increments of {{SIMULATIONSTEPSIZE}} meters  moving it towards the target destination until the destination is reached."
@@ -1259,16 +831,10 @@
     },
     {
         "Requirement": "When given a takeoff command, the InternalSimulator should move the UAV to the takeoff altitude corresponding to its current longitude and latitude.",
-        "testObjective": "Ensure that the InternalSimulator correctly calculates takeoff altitude based on current longitude and latitude.",
+        "testObjective": "Verify that when a takeoff command is provided, the InternalSimulator moves the UAV to the correct takeoff altitude based on the current longitude and latitude.",
         "preconditions": [],
-        "testSteps": [
-            {
-                "step": "Step 1",
-                "action": "Generate takeoff command based on current longitude and latitude.",
-                "expectedResult": "The UAV's altitude will be set to the corresponding value for the current location."
-            }
-        ],
-        "expectedResult": "The UAV's altitude will be set to the correct takeoff altitude.",
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-594",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given a takeoff command the InternalSimulator shall move the UAV to the takeoff altitude corresponding to its current longitude and latitude."
@@ -1276,7 +842,7 @@
     },
     {
         "Requirement": "The InternalSimulator shall approximate the behavior of a UAV.",
-        "testObjective": "Approximate the behavior of the InternalSimulator to match the expected behavior of a UAV.",
+        "testObjective": "Approximate the behavior of a UAV in the simulation.",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1287,7 +853,7 @@
     },
     {
         "Requirement": "The UAVRegistrationManager shall store UAV meta-data information such as the UAV's technical characteristics",
-        "testObjective": "Ensure that the UAVRegistrationManager correctly stores UAV meta-data information, specifically including technical characteristics",
+        "testObjective": "Ensure that the UAVRegistrationManager correctly stores UAV meta-data information including the UAV's technical characteristics",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1298,10 +864,21 @@
     },
     {
         "Requirement": "When the maximum numbers of allowed activated UAVs has been reached, the UAVActivationManager shall reject any further activation requests.",
-        "testObjective": "Ensure that when the maximum number of allowed activated UAVs is reached, the UAVActivationManager rejects additional activation requests.",
+        "testObjective": "Ensure that when the maximum allowed activated UAVs are reached, any further activation requests are rejected.",
         "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "No further activation requests are accepted when the maximum number of allowed activated UAVs is reached.",
+        "testSteps": [
+            {
+                "action": "Check if the maximum allowed activated UAVs are reached.",
+                "description": "Verify that the number of activated UAVs has reached the maximum allowed limit.",
+                "expectedResult": "True"
+            },
+            {
+                "action": "Request activation of additional UAVs.",
+                "description": "Request activation of additional UAVs beyond the allowed threshold.",
+                "expectedResult": "False"
+            }
+        ],
+        "expectedResult": "True",
         "testCaseID": "RE-589",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the maximum numbers of allowed activated UAVs has been reached  the UAVActivationManager shall reject any further activation requests."
@@ -1314,21 +891,11 @@
         "testSteps": [
             {
                 "step": 1,
-                "action": "Check if the deactivation trigger is correctly applied in the UAVActivationManager.",
-                "expectedResult": "The deactivation trigger is not applied."
-            },
-            {
-                "step": 2,
-                "action": "Verify that all current flight plans are canceled upon deactivation.",
-                "expectedResult": "All current flight plans are canceled."
-            },
-            {
-                "step": 3,
-                "action": "Confirm that all scheduled flight plans are canceled upon deactivation.",
-                "expectedResult": "All scheduled flight plans are canceled."
+                "action": "Call method on the object 'UAVActivationManager' with 'deactivate' parameter.",
+                "expectedResult": "UAVActivationManager cancels all current and scheduled flight plans."
             }
         ],
-        "expectedResult": "All current and scheduled flight plans are canceled.",
+        "expectedResult": "UAVActivationManager cancels all current and scheduled flight plans.",
         "testCaseID": "RE-587",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a UAV is deactivated the UAVActivationManager shall cancel all current and scheduled flight plans"
@@ -1347,19 +914,10 @@
     },
     {
         "Requirement": "The VehicleCore shall support UAVs connected via the GCS",
-        "testObjective": "Ensure that the VehicleCore component supports the integration of Unmanned Aerial Vehicles (UAVs) using the Global System for Mobile (GCS)",
+        "testObjective": "Ensure that the VehicleCore can handle and support the connection of Unmanned Aerial Vehicles (UAVs) using the Global Positioning System (GCS)",
         "preconditions": [],
-        "testSteps": [
-            "- Verify the GCS module is available and functional",
-            "- Check that the GCS is properly integrated with the VehicleCore",
-            "- Ensure that the vehicle can connect to the GCS via the appropriate interfaces",
-            "- Verify that the vehicle's communication protocols are supported by the GCS",
-            "- Test the communication between the vehicle and GCS to ensure data transmission is reliable and timely",
-            "- Confirm that the vehicle can initiate and complete a typical UAV operation using the GCS",
-            "- Test any potential issues or limitations of the GCS in the context of UAV integration"
-        ],
-        "expectedResult": "The vehicle can be connected to and operated via the GCS",
-        "status": "success",
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-574",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The VehicleCore shall support UAVs connected via the GCS"
@@ -1367,10 +925,23 @@
     },
     {
         "Requirement": "When a group of UAVs are assigned flight patterns as part of a mission, the system shall provide a warning if any paths overlap.",
-        "testObjective": "Ensure that when flight paths overlap between UAVs, a warning is generated.",
+        "testObjective": "Ensure that the system correctly identifies and reports overlapping flight paths when assigned to a mission.",
         "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "The system will generate a warning when flight paths overlap.",
+        "testSteps": [
+            {
+                "step": "Identify Flight Patterns",
+                "description": "The system should be able to identify all flight patterns assigned to each UAV.",
+                "expectedResults": [],
+                "expectedCount": 1
+            },
+            {
+                "step": "Check for Overlapping Paths",
+                "description": "The system should detect any overlapping paths between different flight patterns.",
+                "expectedResults": [],
+                "expectedCount": 0
+            }
+        ],
+        "expectedResult": "The system correctly identifies and reports overlapping flight paths when assigned to a mission.",
         "testCaseID": "RE-563",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a group of UAVs are assigned flight patterns as part of a mission  the system shall provide a warning if any paths overlap."
@@ -1378,14 +949,10 @@
     },
     {
         "Requirement": "If requested the SingleUAVFlightPlanScheduler shall abort the currently executing flight plan of an UAV",
-        "testObjective": "Verify that the SingleUAVFlightPlanScheduler correctly aborts the currently executing flight plan when the request is met",
+        "testObjective": "Verify that the SingleUAVFlightPlanScheduler correctly aborts the executing flight plan when requested",
         "preconditions": [],
         "testSteps": [],
-        "expectedResult": "The SingleUAVFlightPlanScheduler correctly aborts the currently executing flight plan of an UAV",
-        "Assertion": "The SingleUAVFlightPlanScheduler correctly aborts the currently executing flight plan when the request is met",
-        "testExecution": "The test is executed and the assertion is successful",
-        "testResult": "The test is executed and the assertion is successful",
-        "testConclusion": "The test passes successfully",
+        "expectedResult": "",
         "testCaseID": "RE-558",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If requested  the SingleUAVFlightPlanScheduler shall abort the currently executing flight plan of an UAV"
@@ -1393,42 +960,59 @@
     },
     {
         "Requirement": "If a UAV does not have any pending flight plans, then when it reaches the final waypoint of its current flight plan, the SingleUAVFlightPlanScheduler shall notify the UAV to hover in place.",
-        "testObjective": "Verify that the SingleUAVFlightPlanScheduler correctly notifies the UAV when it reaches the final waypoint with no pending flight plans.",
+        "testObjective": "Verify that the SingleUAVFlightPlanScheduler correctly handles the case where a UAV has no pending flight plans and notifies it to hover in place upon reaching the final waypoint.",
         "preconditions": [],
         "testSteps": [
-            "Check if the UAV has any pending flight plans",
-            "Check if the UAV has reached the final waypoint",
-            "Verify SingleUAVFlightPlanScheduler notification for hover state"
+            {
+                "step": "Identify all pending flight plans for the UAV",
+                "action": "",
+                "description": "Check if the UAV has any flight plans that are currently pending.",
+                "expectedResult": ""
+            },
+            {
+                "step": "Determine the final waypoint of the UAV's current flight plan",
+                "action": "",
+                "description": "Identify the waypoint the UAV is supposed to reach after completing its current flight plan.",
+                "expectedResult": ""
+            },
+            {
+                "step": "Obtain the SingleUAVFlightPlanScheduler object",
+                "action": "",
+                "description": "Retrieve the SingleUAVFlightPlanScheduler instance.",
+                "expectedResult": ""
+            },
+            {
+                "step": "Simulate the UAV reaching the final waypoint",
+                "action": "",
+                "description": "Simulate the UAV moving to the final waypoint and check the outcome.",
+                "expectedResult": ""
+            }
         ],
-        "expectedResult": "The SingleUAVFlightPlanScheduler should notify the UAV to hover in place when it reaches the final waypoint without any pending flight plans.",
-        "testOutcome": "Positive",
+        "expectedResult": "The SingleUAVFlightPlanScheduler shall notify the UAV to hover in place.",
         "testCaseID": "RE-555",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a UAV does not have any pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall notify the UAV to hover in place."
         ]
     },
     {
-        "Requirement": "If a scheduled flight is not manually assigned to a UAV, the SingleUAVFlightPlanScheduler shall assign the route automatically to an UAV.",
-        "testObjective": "Verify that if a flight is not manually assigned to a UAV, the SingleUAVFlightPlanScheduler assigns the route automatically.",
+        "Requirement": "If a scheduled flight is not manually assigned to a UAV, the SingleUAVFlightPlanScheduler shall automatically assign the route to an UAV.",
+        "testObjective": "Verify that if a flight is not manually assigned to a UAV, the SingleUAVFlightPlanScheduler assigns the route to an UAV.",
         "preconditions": [],
         "testSteps": [
             {
-                "step1": "Check if a flight is manually assigned to a UAV.",
-                "step2": "Verify that the SingleUAVFlightPlanScheduler does not automatically assign the route.",
-                "step3": "Check if the route is assigned automatically when not manually assigned.",
-                "step4": "Ensure all relevant logs are present.",
-                "step5": "Verify the expected result is observed.",
-                "step6": "Assert that the behavior is as expected.",
-                "step7": "Return the JSON response containing test results and failure information.",
-                "step8": "Return the test case ID.",
-                "step9": "Return the test description.",
-                "step10": "Return the test data.",
-                "step11": "Return the test outcome.",
-                "step12": "Return the test failure information.",
-                "step13": "Return the test failure reason."
+                "step": 1,
+                "description": "Check that the SingleUAVFlightPlanScheduler is configured to assign routes to UAV when manual assignment is not done.",
+                "testParameters": {
+                    "manualUAVAssignment": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Whether the manual UAV assignment is done."
+                    }
+                },
+                "expectedResult": "The route should be assigned to an UAV."
             }
         ],
-        "expectedResult": "The route is automatically assigned to an UAV.",
+        "expectedResult": "The route should be automatically assigned to an UAV.",
         "testCaseID": "RE-551",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a scheduled flight is not manually assigned to a UAV  the SingleUAVFlightPlanScheduler shall assign the route automatically to an UAV"
@@ -1440,17 +1024,11 @@
         "preconditions": [],
         "testSteps": [
             {
-                "stepId": "step1",
-                "stepTitle": "Identify the {{UAVID}} in the route",
-                "stepContent": "Scan the route and look for any {{UAVID}} that matches the given value.",
-                "stepExpected": "The route should contain exactly one {{UAVID}} with the specified value.",
-                "stepResult": "The route should contain the {{UAVID}}.",
-                "stepVerification": "The identified {{UAVID}} matches the expected value.",
-                "stepSuccess": "The identified {{UAVID}} is found correctly.",
-                "stepFailure": "The {{UAVID}} is not found in the route."
+                "action": "Check if the route contains the specific {{UAVID}}",
+                "action2": "Check if the route is assigned to the given UAV by the SingleUAVFlightPlanScheduler"
             }
         ],
-        "expectedResult": "The route should contain the {{UAVID}} with the specified value.",
+        "expectedResult": "The route is assigned to the given UAV.",
         "testCaseID": "RE-549",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a route contains a specific {{UAVID}}  the SingleUAVFlightPlanScheduler shall assign the route to the given UAV."
@@ -1464,18 +1042,7 @@
         "expectedResult": "The route has been successfully scheduled by the SingleUAVFlightPlanScheduler.",
         "testSuccessOrFailure": "Success.",
         "testDetails": "No additional information needed.",
-        "testNotes": "The test is straightforward, ensuring that the scheduled route is correctly executed.",
-        "testExecution": "The test is completed successfully.",
-        "testResult": "The route has been successfully scheduled.",
-        "testExecutionResult": "No errors were encountered during the test.",
-        "testExecutionTime": "0 seconds",
-        "testExecutionPlatform": "Windows 10, Linux 14.04.10, macOS 10.15.20",
-        "testExecutionEnvironment": "Python 3.8",
-        "testExecutionLanguage": "Python 3.8",
-        "testExecutionPlatformVersion": "10.0.0",
-        "testExecutionLanguageVersion": "3.8",
-        "testExecutionPlatformPlatformVersion": "10.0.0",
-        "testExecutionLanguagePlatformVersion": "3.8",
+        "testNotes": "No additional notes needed.",
         "testCaseID": "RE-547",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the SingleUAVFlightPlanScheduler shall schedule a route for execution."
@@ -1483,19 +1050,41 @@
     },
     {
         "Requirement": "When requested if a mission is currently active the MissionPlanner shall cancel the active mission.",
-        "testObjective": "Verify that the MissionPlanner correctly cancels an active mission when the request is made.",
+        "testObjective": "Verify that the MissionPlanner correctly cancels active missions when the request indicates they are currently active.",
         "preconditions": [],
         "testSteps": [
             {
-                "action": "Check if the MissionPlanner is initialized with the active mission.",
-                "expectation": "The MissionPlanner should be initialized with an active mission."
+                "step": "Check if a mission is active",
+                "action": "Retrieve active mission from the database.",
+                "expectedResult": "Mission is active"
             },
             {
-                "action": "Request the MissionPlanner to cancel the active mission.",
-                "expectation": "The MissionPlanner should cancel the active mission."
+                "step": "Retrieve active mission details",
+                "action": "Retrieve details of the active mission.",
+                "expectedResult": "Mission details are retrieved"
+            },
+            {
+                "step": "Check if the active mission is active",
+                "action": "Check if the retrieved mission is active.",
+                "expectedResult": "True"
+            },
+            {
+                "step": "Retrieve active missions list",
+                "action": "Retrieve list of active missions.",
+                "expectedResult": "List of active missions is retrieved"
+            },
+            {
+                "step": "Check if all active missions are retrieved",
+                "action": "Verify all active missions are retrieved from the database.",
+                "expectedResult": "True"
+            },
+            {
+                "step": "Cancel all active missions",
+                "action": "Cancel all active missions from the database.",
+                "expectedResult": "Active missions are all canceled"
             }
         ],
-        "expectedResult": "The active mission has been successfully canceled.",
+        "expectedResult": "All active missions are canceled.",
         "testCaseID": "RE-545",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  if a mission is currently active  the MissionPlanner shall cancel the active mission."
@@ -1503,7 +1092,7 @@
     },
     {
         "Requirement": "The MissionPlanner shall manage predefined FlightPatterns",
-        "testObjective": "Manages predefined FlightPatterns",
+        "testObjective": "Ensure that the MissionPlanner can manage and generate predefined FlightPatterns",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1514,11 +1103,31 @@
     },
     {
         "Requirement": "When a flight plan is activated for a UAV currently on the ground, the FlightSchedulingandExecution shall notify the UAV to takeoff vertically until it reaches the prescribed altitude.",
-        "testObjective": "Verify that the UAV takes off vertically when a flight plan is activated and reaches the prescribed altitude.",
+        "testObjective": "Verify that the UAV takes off vertically when a flight plan is activated for a UAV currently on the ground.",
         "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "The UAV successfully took off vertically and reached the prescribed altitude.",
-        "testOutcome": "The UAV successfully took off vertically and reached the prescribed altitude.",
+        "testSteps": [
+            {
+                "step": "Check the activation of the flight plan for the UAV.",
+                "action": "Verify that the flight plan is correctly activated when a UAV is on the ground.",
+                "expectedResult": "Flight plan is activated successfully."
+            },
+            {
+                "step": "Verify that the UAV is on the ground.",
+                "action": "Confirm that the UAV is currently on the ground.",
+                "expectedResult": "UAV is on the ground."
+            },
+            {
+                "step": "Execute the flight plan.",
+                "action": "Run the flight plan execution and ensure that it starts immediately.",
+                "expectedResult": "Flight plan execution begins."
+            },
+            {
+                "step": "Check the vertical ascent.",
+                "action": "Observe that the UAV ascends vertically until it reaches the prescribed altitude.",
+                "expectedResult": "UAV ascends vertically to the set altitude."
+            }
+        ],
+        "expectedResult": "UAV ascends vertically to the set altitude.",
         "testCaseID": "RE-531",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a flight plan is activated for a UAV currently on the ground  the FlightSchedulingandExecution shall notify the UAV to takeoff vertically until it reaches the prescribed altitude."
@@ -1526,13 +1135,32 @@
     },
     {
         "Requirement": "If a flight plan is active and the hover in place command is rescinded, the FlightManager shall notify the UAV to continue to the originally designated waypoint.",
-        "testObjective": "Verify that when the hover in place command is rescinded, the UAV is notified to continue to the original waypoint.",
+        "testObjective": "Verify that when the hover in place command is rescinded, the UAV is notified to follow the original waypoint.",
         "preconditions": [],
         "testSteps": [
-            "Check if the flight plan is active. If it is, proceed to check if the hover in place command is rescinded. If the command is rescinded, notify the UAV to the original waypoint."
+            {
+                "action": "Check if flight plan is active",
+                "actions": [
+                    "flight plan is active"
+                ],
+                "actionsExpected": true
+            },
+            {
+                "action": "Check if hover in place command is rescinded",
+                "actions": [
+                    "hover in place command is rescinded"
+                ],
+                "actionsExpected": true
+            },
+            {
+                "action": "Verify that FlightManager informs UAV",
+                "actions": [
+                    "FlightManager notifies UAV"
+                ],
+                "actionsExpected": true
+            }
         ],
-        "expectedResult": "The UAV is notified to continue to the original waypoint.",
-        "expectedResultDetails": "The UAV is correctly notified to continue to the original waypoint.",
+        "expectedResult": true,
         "testCaseID": "RE-525",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a flight plan is active and the hover in place command is rescinded  the FlightManager shall notify the UAV to continue to the originally designated waypoint."
@@ -1549,12 +1177,9 @@
         "testObjective": "Verify that when the hover in place command is issued, the UAV is halted in place.",
         "preconditions": [],
         "testSteps": [
-            "Issue hover in place command to UAV",
-            "Check if hover in place command was issued",
-            "Check if UAV is halted in place",
-            "UAV remains at original position"
+            "Issue hover in place command, then check if UAV is halted in place"
         ],
-        "expectedResult": "The hover in place command was issued to the UAV, and it was halted in place, maintaining its original position.",
+        "expectedResult": "The UAV is halted in place and maintains its current position.",
         "testCaseID": "RE-521",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the hover in place command is issued  the FlightManager shall halt the UAV in place and maintain its current position."
@@ -1562,10 +1187,16 @@
     },
     {
         "Requirement": "When given two coordinates, the CoordinateSystem shall compute the direction from the first coordinate to the second coordinate.",
-        "testObjective": "Verify that the CoordinateSystem correctly computes direction between two provided coordinates.",
+        "testObjective": "Compute the direction from the first coordinate to the second coordinate.",
         "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "",
+        "testSteps": [
+            {
+                "step": 1,
+                "action": "Identify the two coordinates provided in the test.",
+                "expectedResult": "The first coordinate is [x1, y1] and the second coordinate is [x2, y2]."
+            }
+        ],
+        "expectedResult": "The computed direction from the first coordinate to the second coordinate is [dx, dy].",
         "testCaseID": "RE-517",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given two coordinates the CoordinateSystem shall compute the direction from the first coordinate to the second coordinate."
@@ -1577,22 +1208,17 @@
         "preconditions": [],
         "testSteps": [
             {
-                "step": "1",
-                "description": "Retrieve the two coordinates from the user input.",
-                "expectedOutput": "The user will provide two coordinate values."
+                "step": 1,
+                "description": "Retrieve the two coordinates from the user.",
+                "expectedResult": "The coordinates are retrieved and stored in variables."
             },
             {
-                "step": "2",
-                "description": "Parse the coordinates into numerical values.",
-                "expectedOutput": "The coordinates will be converted into numerical values for computation."
-            },
-            {
-                "step": "3",
-                "description": "Compute the distance using the Euclidean formula.",
-                "expectedOutput": "The computed result will be the distance between the two coordinates."
+                "step": 2,
+                "description": "Calculate the distance using the distance formula.",
+                "expectedResult": "The distance between the two coordinates is computed."
             }
         ],
-        "expectedResult": "The coordinate system will calculate the distance between the provided coordinates.",
+        "expectedResult": "The distance is computed correctly.",
         "testCaseID": "RE-516",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When given two coordinates the CoordinateSystem shall compute the distance between them."
@@ -1602,19 +1228,8 @@
         "Requirement": "When requested the CoordinateSystem shall transform coordinates to alternate formats.",
         "testObjective": "Verify that the CoordinateSystem class transforms coordinates into alternate formats.",
         "preconditions": [],
-        "testSteps": [
-            {
-                "step": 1,
-                "action": "Retrieve coordinate data from a source",
-                "expectedResult": "Coordinate data is retrieved from a specified source."
-            },
-            {
-                "step": 2,
-                "action": "Transform the coordinate data into alternate formats",
-                "expectedResult": "Coordinate data is transformed into alternative formats."
-            }
-        ],
-        "expectedResult": "Coordinate data is transformed into alternative formats.",
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-510",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the CoordinateSystem shall transform coordinates to alternate formats."
@@ -1622,41 +1237,14 @@
     },
     {
         "Requirement": "When a flight route requires a customized takeoff altitude that differs from the system's default takeoff altitude, it shall be specified in the flight route.",
-        "testObjective": "Verify that when a flight route specifies a customized takeoff altitude different from the system's default, the validation correctly flags the error.",
+        "testObjective": "Verify that when a flight route specifies a customized takeoff altitude different from the system's default, the corresponding flight data includes this altitude.",
         "preconditions": [],
         "testSteps": [
-            {
-                "step": "Check that the system's default takeoff altitude is correctly identified.",
-                "action": "Identify and retrieve the system's default takeoff altitude from the configuration.",
-                "expectedResult": "The system's default takeoff altitude is correctly identified.",
-                "comment": "This is a basic validation to ensure the default is correctly set."
-            },
-            {
-                "step": "Validate that the flight route correctly specifies a customized takeoff altitude.",
-                "action": "Check that the flight route explicitly mentions the customized takeoff altitude.",
-                "expectedResult": "The flight route correctly specifies a customized takeoff altitude.",
-                "comment": "Ensures that the route is correctly marked with a customized altitude."
-            },
-            {
-                "step": "Validate that the route's takeoff altitude is different from the system's default.",
-                "action": "Compare the flight route's specified takeoff altitude with the system's default.",
-                "expectedResult": "The specified takeoff altitude is not equal to the system's default.",
-                "comment": "Ensures that the customized altitude is correctly implemented."
-            },
-            {
-                "step": "Validate that the error message correctly indicates the difference between the system's default and the flight route's altitude.",
-                "action": "Retrieve the error message from the validation process.",
-                "expectedResult": "The error message clearly states that the altitude is different from the default.",
-                "comment": "This step ensures the validation outputs the right message."
-            },
-            {
-                "step": "Check that the validation fails when the flight route does not specify a customized altitude.",
-                "action": "Verify that the validation correctly identifies that the route does not require a customized altitude.",
-                "expectedResult": "The validation correctly fails when no customized altitude is specified.",
-                "comment": "Ensures that the validation correctly handles the default case."
-            }
+            "1. Verify that flight routes with customized takeoff altitudes are correctly specified.",
+            "2. Ensure that flight data for these routes includes the customized altitude.",
+            "3. Check that flight data does not include the default altitude when specified."
         ],
-        "expectedResult": "The validation correctly identifies when a customized takeoff altitude is required.",
+        "expectedResult": "All flight routes with customized takeoff altitudes are correctly included in flight data and do not include the system's default altitude.",
         "testCaseID": "RE-508",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a flight route requires a customized takeoff altitude that differs from the system's default takeoff altitude  it shall be specified in the flight route."
@@ -1675,11 +1263,19 @@
     },
     {
         "Requirement": "The FlightRouteManager shall ensure that all flight routes represent a {{VALIDFLIGHT_ROUTE}}.",
-        "testObjective": "Verify that all flight routes are valid and meet the specified {{VALIDFLIGHT_ROUTE}}.",
+        "testObjective": "Verify that all flight routes are valid and meet the required format.",
         "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "All flight routes have been validated and are valid {{VALIDFLIGHT_ROUTE}}.",
-        "description": "This test ensures that all flight routes are valid and conform to the required specification.",
+        "testSteps": [
+            {
+                "step": 1,
+                "action": "Ensure all flight routes are valid."
+            },
+            {
+                "step": 2,
+                "action": "Check each flight route against the {{VALIDFLIGHT_ROUTE}} format."
+            }
+        ],
+        "expectedResult": "All flight routes are valid and conform to the required format.",
         "testCaseID": "RE-503",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The FlightRouteManager shall ensure that all flight routes represent a {{VALIDFLIGHTROUTE}}."
@@ -1687,10 +1283,10 @@
     },
     {
         "Requirement": "When the return to home command is issued, the FlightManager shall return the UAV to its original launch location without issuing any additional waypoint or routing commands.",
-        "testObjective": "Verify that when the return to home command is issued, the UAV is returned to its original launch location without any additional waypoints or routing commands.",
+        "testObjective": "Verify that when the return to home command is issued, the UAV is returned to its original launch location without additional waypoint or routing commands.",
         "preconditions": [],
         "testSteps": [],
-        "expectedResult": "UAV is returned to original launch location without any additional waypoints or routing commands.",
+        "expectedResult": "UAV is returned to original launch location without additional waypoint or routing commands.",
         "testCaseID": "RE-424",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the return to home command is issued  the FlightManager shall return the UAV to its original launch location without issuing any additional waypoint or routing commands."
@@ -1698,15 +1294,14 @@
     },
     {
         "Requirement": "When the GCS loses the connection to an UAV, the GCS shall attempt to reconnect",
-        "testObjective": "Ensure that the GCS reconnects after losing the connection to an UAV",
+        "testObjective": "Ensure that the GCS correctly reconnects after a loss of connection to an UAV",
         "preconditions": [],
         "testSteps": [
-            "Check the connection status of the GCS to the UAV",
-            "Attempt to reconnect GCS after losing connection",
-            "Verify that GCS successfully reconnects",
-            "Check if any other steps are required for successful reconnection"
+            "Check if the connection is lost",
+            "Attempt to reconnect",
+            "Check if connection is re-established"
         ],
-        "expectedResult": "The GCS successfully reconnects after losing connection to an UAV",
+        "expectedResult": "",
         "testCaseID": "RE-235",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When the GCS loses the connection to an UAV  the GCS shall attempt to reconnect"
@@ -1714,16 +1309,41 @@
     },
     {
         "Requirement": "The UAVActivationManager shall only activate UAVs that are registered.",
-        "testObjective": "Ensure that the UAVActivationManager does not activate any UAV that is not registered.",
-        "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "",
+        "testObjective": "Ensure that the UAVActivationManager does not activate UAVs that are not registered.",
+        "preconditions": [
+            "The system must have a registration system to verify the registration of UAVs."
+        ],
+        "testSteps": [
+            "Check if the system has a registration system. If not, return an error message. If the registration system exists, proceed to check the registration of the UAVs. If a UAV is registered, activate it. If a UAV is not registered, do not activate it."
+        ],
+        "expectedResult": "The UAVActivationManager should only activate registered UAVs and not others.",
         "testCaseID": "RE-161",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UAVActivationManager shall only activate UAVs that are registered."
         ]
     },
     {
+        "Requirement": "When a GCS requests activation of a newly detected UAV, the GCSMiddleware shall forward the request to Dronology.",
+        "testObjective": "Verify that GCSMiddleware correctly forwards requests to Dronology when a UAV is activated.",
+        "preconditions": [],
+        "testSteps": [
+            {
+                "action": "Check if GCSMiddleware is initialized with the correct Dronology API endpoint.",
+                "expectedResult": "GCSMiddleware is initialized with the correct Dronology API endpoint.",
+                "comment": "This test ensures that GCSMiddleware has the necessary configuration to communicate with Dronology."
+            },
+            {
+                "action": "Verify that a request from GCS to activate a UAV is properly routed through GCSMiddleware.",
+                "expectedResult": "GCSMiddleware forwards the request to Dronology.",
+                "comment": "This test checks that the routing functionality works as expected."
+            },
+            {
+                "action": "Confirm that a request from GCS is not routed beyond Dronology after activation.",
+                "expectedResult": "No further routing occurs beyond Dronology after the activation is successful.",
+                "comment": "This test ensures that the activation process doesn't lead to unintended behavior."
+            }
+        ],
+        "expectedResult": "GCSMiddleware is initialized with the correct Dronology API endpoint and properly forwards all activation requests to Dronology.",
         "testCaseID": "RE-160",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a GCS requests activation of a newly detected UAV  the GCSMiddleware shall forward the request to Dronology."
@@ -1731,10 +1351,21 @@
     },
     {
         "Requirement": "When a UAV has an active onboard Obstacle Avoidance system, the Obstacle Avoidance system shall not issue directives.",
-        "testObjective": "Ensure that when an active Obstacle Avoidance system is present on a UAV, it does not issue directives.",
+        "testObjective": "Ensure that when an active Obstacle Avoidance system is onboard, it does not issue directives.",
         "preconditions": [],
-        "testSteps": [],
-        "expectedResult": "The Obstacle Avoidance system does not issue directives when an active system is present.",
+        "testSteps": [
+            {
+                "step": "Check if Obstacle Avoidance system is active.",
+                "action": "Check if Obstacle Avoidance system is active.",
+                "expectedOutcome": "True"
+            },
+            {
+                "step": "Verify that Obstacle Avoidance system does not issue directives.",
+                "action": "Verify that Obstacle Avoidance system does not issue directives.",
+                "expectedOutcome": "False"
+            }
+        ],
+        "expectedResult": "The Obstacle Avoidance system shall not issue directives.",
         "testCaseID": "RE-127",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a UAV has an active onboard Obstacle Avoidance  then the ObstacleAvoidance system shall not issue directives"
@@ -1742,7 +1373,7 @@
     },
     {
         "Requirement": "The Object Avoidance system only issues commands within the capabilities of the UAV",
-        "testObjective": "Ensure that the Object Avoidance system only generates commands that the UAV can execute",
+        "testObjective": "Verify that the Object Avoidance system only issues commands within the capabilities of the UAV",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1760,10 +1391,11 @@
         ],
         "testSteps": [
             "Simulate evasive actions",
-            "Implement a test case where UAV takes evasive actions",
-            "Check if system reaches destination"
+            "Implement a safety mechanism",
+            "Test the system response",
+            "Verify the final destination"
         ],
-        "expectedResult": "The UAV will eventually reach its destination.",
+        "expectedResult": "The UAV will eventually reach its destination after implementing the safety mechanism.",
         "testCaseID": "RE-125",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a UAV takes evasive actions the system will ensure that it will eventually reach its destination"
@@ -1775,7 +1407,6 @@
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "The Object Avoidance system will issue evasive directives when a stationary or moving object is within the proximity of a UAV.",
-        "description": "This test description is used to verify that the Object Avoidance system in the UAV is activated when a stationary or moving object is within its vicinity. The test ensures that the system responds correctly to such proximity and that the directives are properly issued.",
         "testCaseID": "RE-124",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a stationary or moving object is within the proximity of a UAV the ObjectAvoidance system shall issue evasive directives to the UAV"
@@ -1788,16 +1419,20 @@
         "testSteps": [
             {
                 "step": 1,
-                "action": "Retrieve active UAV locations",
-                "expected": "Active UAV locations are retrieved and available for display."
+                "action": "Retrieve active UAV locations from server.",
+                "precondition": "RealTimeFlightUI is initialized with server data.",
+                "result": "Successfully retrieved active UAV locations from server.",
+                "description": "The server returns the locations of all active UAVs."
             },
             {
                 "step": 2,
-                "action": "Display icons on the map",
-                "expected": "Icons of active UAVs appear on the map."
+                "action": "Map the retrieved locations.",
+                "precondition": "RealTimeFlightUI has a map object.",
+                "result": "The map shows all active UAV icons.",
+                "description": "The map displays icons for each active UAV."
             }
         ],
-        "expectedResult": "The RealTimeFlightUI displays active UAV icons on the map.",
+        "expectedResult": "The RealTimeFlightUI correctly displays active UAV icons on the map.",
         "testCaseID": "RE-120",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The RealTimeFlightUI shall display the location of active UAVs as icons on the map."
@@ -1809,12 +1444,12 @@
         "preconditions": [],
         "testSteps": [
             {
-                "step": 1,
+                "step": "1",
                 "stepType": "loadRealTimeFlightUI"
             },
             {
-                "step": 2,
-                "stepType": "mapIsDisplay"
+                "step": "2",
+                "stepType": "mapShowUp"
             }
         ],
         "expectedResult": "A map shall be displayed.",
@@ -1825,17 +1460,40 @@
     },
     {
         "Requirement": "If a command is issued by the VaadinUI for an UAV, the VaadinUI shall request control of that UAV.",
-        "testObjective": "Verify that the VaadinUI command is issued correctly and requests the UAV's control.",
+        "testObjective": "Verify that the VaadinUI command is properly issued and that the UAV's control is requested.",
         "preconditions": [],
         "testSteps": [
-            "Issue Command",
-            "Command Issued",
-            "Command is Valid",
-            "Command is Invalid",
-            "Command is Correct",
-            "Command is Properly Delivered"
+            {
+                "step": "Issue a Command",
+                "stepDetails": "The command should be issued by the VaadinUI.",
+                "stepStatus": "Success",
+                "stepDescription": "Command is successfully issued.",
+                "stepResult": {
+                    "result": "Command is successfully issued."
+                }
+            },
+            {
+                "step": "Request UAV Control",
+                "stepDetails": "The VaadinUI should request control of the UAV.",
+                "stepStatus": "Success",
+                "stepDescription": "Request of UAV control is made.",
+                "stepResult": {
+                    "result": "Request made successfully."
+                }
+            },
+            {
+                "step": "Check UAV Control Requested",
+                "stepDetails": "The UAV should request control of its own UAV.",
+                "stepStatus": "Success",
+                "stepDescription": "UAV's own request is verified.",
+                "stepResult": {
+                    "result": "UAV's own request is verified."
+                }
+            }
         ],
-        "expectedResult": "Command is Correct and Requested UAV Control.",
+        "expectedResult": {
+            "request": "UAV's own request is verified."
+        },
         "testCaseID": "RE-112",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a command is issued by the VaadinUI for an UAV  the VaadinUI shall request control of that UAV."
@@ -1846,17 +1504,18 @@
         "testObjective": "Verify that the UIMiddleware assigns only one control-client to each UAV when executing the specified task.",
         "preconditions": [],
         "testSteps": [
-            "1. Verify that the UIMiddleware initializes the control-client for the UAV.",
-            "2. Check that the control-client is assigned only once per task.",
-            "3. Ensure that the control-client is correctly assigned and accessible to the UAV.",
-            "4. Test the scenario where the UIMiddleware fails to assign a control-client and verify that it returns an error.",
-            "5. Confirm that the control-client is assigned correctly and does not cause any issues with the UAV's operation."
+            "1. Verify that the UIMiddleware initializes the control-client correctly for each UAV.",
+            "2. Ensure that the UIMiddleware does not assign duplicate control-client IDs.",
+            "3. Check that the UIMiddleware terminates the task after assigning the control-client.",
+            "4. Confirm that the task completes successfully with the assigned control-client.",
+            "5. Test the scenario where the UIMiddleware fails to assign a control-client and check for an error.",
+            "6. Ensure that the UIMiddleware handles multiple UAV instances correctly and assigns each one a unique control-client.",
+            "7. Verify that the control-client is assigned and the associated task is completed without any issues.",
+            "8. Check that the control-client is assigned correctly across different environments.",
+            "9. Test that the UIMiddleware assigns the correct control-client ID for each UAV in the specified scenario.",
+            "10. Confirm that the control-client is assigned without any race condition issues."
         ],
-        "expectedResult": "The UIMiddleware assigns only one control-client per UAV during the specified task.",
-        "testOutcome": "Pass",
-        "testFailure": "Failed",
-        "testResult": "Expected outcome was achieved.",
-        "testError": "Failed to achieve expected outcome.",
+        "expectedResult": "The UIMiddleware assigns only one control-client at a time for each UAV.",
         "testCaseID": "RE-110",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The UIMiddleware shall only assign one control-client at a time for each UAV."
@@ -1864,7 +1523,7 @@
     },
     {
         "Requirement": "The UIMiddleware shall provide an interface for registering UI clients.",
-        "testObjective": "Ensure that the UIMiddleware provides the required interface for registering UI clients.",
+        "testObjective": "Verify that the UIMiddleware provides the required interface for registering UI clients.",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1878,17 +1537,19 @@
         "testObjective": "Ensure that when a UAV's current flight is cancelled, the SingleUAVFlightPlanScheduler cancels all scheduled flight plans for that UAV.",
         "preconditions": [],
         "testSteps": [
-            "Step 1: Verify the current flight status of the UAV.",
-            "Step 2: Schedule a new flight plan for the UAV.",
-            "Step 3: Trigger the cancellation of the current flight.",
-            "Step 4: Check the status of the flight plan after cancellation.",
-            "Step 5: Verify that all flight plans for the UAV are cancelled.",
-            "Step 6: Confirm that the SingleUAVFlightPlanScheduler is the cause of the cancellation.",
-            "expectedResult}: All scheduled flight plans for the UAV are canceled by the SingleUAVFlightPlanScheduler.",
-            "testStepsVerification}: Verified that all steps were executed correctly.",
-            "testResult}: All flight plans were canceled, and the SingleUAVFlightPlanScheduler is the cause.",
-            "testFailure}: No failure occurred.",
-            "testConclusion}: The requirement was met as the SingleUAVFlightPlanScheduler canceled all flight plans for the UAV when the current flight was cancelled."
+            "Identify all scheduled flight plans for the UAV.",
+            "Check if the SingleUAVFlightPlanScheduler is capable of detecting when a UAV's flight is canceled.",
+            "Verify that the SingleUAVFlightPlanScheduler cancels all identified flight plans when the UAV's flight is cancelled.",
+            "Record the expected result of the cancellation.",
+            "expectedResult}: The SingleUAVFlightPlanScheduler cancels all flight plans for the UAV.",
+            "expectedResultString}: All flight plans for the UAV are successfully canceled.",
+            "expectedResultDetails}: The SingleUAVFlightPlanScheduler correctly identified and canceled all flight plans.",
+            "status}: Pass",
+            "message}: The test passed successfully.",
+            "result}: The expected result was achieved.",
+            "comment}: No issues detected during the test.",
+            "testVersion}: v1.0.0",
+            "tags}: [UAV, SingleUAVFlightPlanScheduler, Flight Cancellation, Test Verification],"
         ],
         "testCaseID": "RE-103",
         "prompt": [
@@ -1900,10 +1561,10 @@
         "testObjective": "Ensure that when a UAV's current flight plan reaches its final waypoint, the SingleUAVFlightPlanScheduler switches to the next assigned flight plan.",
         "preconditions": [],
         "testSteps": [
-            "Check if the current flight plan is completed and the next one is assigned"
+            "Check if the current flight plan is pending and has a final waypoint"
         ],
-        "expectedResult": "The SingleUAVFlightPlanScheduler will execute the next assigned flight plan when the UAV reaches the final waypoint of the current flight plan.",
-        "testOutcome": "Expected result was achieved.",
+        "expectedResult": "The SingleUAVFlightPlanScheduler should switch to the next assigned flight plan upon reaching the final waypoint of the current one.",
+        "testOutcome": "The test should have passed successfully.",
         "testCaseID": "RE-101",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a UAV has pending flight plans  then when it reaches the final waypoint of its current flight plan  the SingleUAVFlightPlanScheduler shall execute the next assigned flight plan."
@@ -1911,11 +1572,11 @@
     },
     {
         "Requirement": "If requested the SingleUAVFlightPlanScheduler shall unassign the flight plan assigned to a UAV that is awaiting execution.",
-        "testObjective": "Ensure that when the SingleUAVFlightPlanScheduler is configured to unassign a flight plan, it does so only when the UAV is awaiting execution.",
+        "testObjective": "Verify that the SingleUAVFlightPlanScheduler correctly unassigns flight plans for UAVs waiting to be executed.",
         "preconditions": [],
         "testSteps": [],
-        "expectedResult": "The test should pass as the SingleUAVFlightPlanScheduler correctly unassigns the flight plan from the UAV that is awaiting execution.",
-        "testSuccess": true,
+        "expectedResult": "All test steps are successful.",
+        "status": "Pass",
         "testCaseID": "RE-100",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If requested  the SingleUAVFlightPlanScheduler shall unassign the flight plan assigned to a UAV that is awaiting execution."
@@ -1927,17 +1588,19 @@
         "preconditions": [],
         "testSteps": [
             {
-                "action": "Check if the SingleUAVFlightPlanScheduler can be initialized.",
-                "assert": "The SingleUAVFlightPlanScheduler can be initialized.",
-                "description": "Ensure that the scheduler is initialized without errors."
+                "action": "Check if the SingleUAVFlightPlanScheduler can create a new flight plan."
             },
             {
-                "action": "Verify that the SingleUAVFlightPlanScheduler has a reference to a managed list of flight plans.",
-                "assert": "The SingleUAVFlightPlanScheduler has a reference to a managed list of flight plans.",
-                "description": "Confirm that the reference exists and is properly configured."
+                "action": "Check if the SingleUAVFlightPlanScheduler can update existing flight plans."
+            },
+            {
+                "action": "Check if the SingleUAVFlightPlanScheduler can retrieve and display pending flight plans for a specific UAV."
+            },
+            {
+                "action": "Check if the SingleUAVFlightPlanScheduler can remove a specific flight plan from a UAV's list."
             }
         ],
-        "expectedResult": "The SingleUAVFlightPlanScheduler correctly maintains a managed list of pending flight plans for each UAV.",
+        "expectedResult": "The test steps should ensure that all actions are performed correctly and the management of pending flight plans for each UAV is as expected.",
         "testCaseID": "RE-86",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The SingleUAVFlightPlanScheduler shall maintain a managed list of pending flight plans for Each UAV."
@@ -1950,22 +1613,11 @@
         "testSteps": [
             {
                 "step": "execute flight plan",
-                "action": "Call method getNextWaypoint() on VehicleCore"
-            },
-            {
-                "step": "VehicleCore.getNextWaypoint() is called",
-                "action": "Check if the returned value is null"
-            },
-            {
-                "step": "VehicleCore.getNextWaypoint() is not null",
-                "action": "Check if the value is a valid waypoint object"
-            },
-            {
-                "step": "UAV's position is updated",
-                "action": "Check if the UAV's position matches the next waypoint"
+                "action": "Call vehicle core function to send waypoint to UAV",
+                "expected": "success"
             }
         ],
-        "expectedResult": "The vehicle sends the next waypoint, and the UAV's position is updated correctly.",
+        "expectedResult": "success",
         "testCaseID": "RE-80",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When a flight plan is executed  the VehicleCore shall send the next waypoint to the UAV."
@@ -1973,7 +1625,7 @@
     },
     {
         "Requirement": "Each waypoint shall be specified using coordinates that include longitude, latitude, and altitude.",
-        "testObjective": "Verify that each waypoint is defined with accurate longitude, latitude, and altitude values.",
+        "testObjective": "Verify that each waypoint is defined with the correct longitude, latitude, and altitude values.",
         "preconditions": [],
         "testSteps": [],
         "expectedResult": "",
@@ -1989,14 +1641,18 @@
         "testSteps": [
             {
                 "step": "1",
-                "action": "Check that each UAV has a {{UAVTYPE}} field in its data."
+                "action": "Retrieve all UAV objects from the vehicle core."
             },
             {
                 "step": "2",
-                "action": "Verify that all UAV have the same {{UAVTYPE}}."
+                "action": "Iterate through each UAV object to check the {{UAVTYPE}} attribute."
+            },
+            {
+                "step": "3",
+                "action": "Record the {{UAVTYPE}} of each UAV during the iteration."
             }
         ],
-        "expectedResult": "Each UAV in the vehicle core has the correct {{UAVTYPE}} field associated with it.",
+        "expectedResult": "All UAV objects have their {{UAVTYPE}} attributes properly associated with them.",
         "testCaseID": "RE-38",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The VehicleCore shall associate a {{UAVTYPE}} for each UAV defining its basic attributes."
@@ -2015,15 +1671,11 @@
     },
     {
         "Requirement": "The SingleUAVFlightPlanScheduler shall only execute one flight plan at a time for each UAV.",
-        "testObjective": "Ensure that the SingleUAVFlightPlanScheduler only executes one flight plan at a time for each UAV.",
+        "testObjective": "Ensure that the SingleUAVFlightPlanScheduler does not execute multiple flight plans simultaneously.",
         "preconditions": [],
-        "testSteps": [
-            {
-                "action": "Check that the SingleUAVFlightPlanScheduler does not execute more than one flight plan at a time.",
-                "expectedResult": "No more than one flight plan executed at a time per UAV."
-            }
-        ],
-        "expectedResult": "No more than one flight plan executed at a time per UAV.",
+        "testSteps": [],
+        "expectedResult": "The SingleUAVFlightPlanScheduler should not execute more than one flight plan at the same time.",
+        "testOutcome": "The test should pass as the expected result is satisfied.",
         "testCaseID": "RE-28",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: The SingleUAVFlightPlanScheduler shall only execute one flight plan at a time for each UAV."
@@ -2041,23 +1693,22 @@
         ]
     },
     {
+        "Requirement": "If a client registers for notifications, the UIMiddleware shall send notifications for specific events",
+        "testObjective": "Verify that when a client registers for notifications, the UIMiddleware sends specific event notifications",
+        "preconditions": [],
+        "testSteps": [],
+        "expectedResult": "",
         "testCaseID": "RE-9",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: If a client registers for notifications  the UIMiddleware shall send notifications for specific events"
         ]
     },
     {
-        "Requirement": "When requested the VehicleCore shall transition the UAV between states according to allowed state transitions as depicted in the UAV state transition diagram.",
-        "testObjective": "Verify that the VehicleCore correctly transitions the UAV between states based on the provided state transition diagram.",
+        "Requirement": "When requested the VehicleCore shall transition the UAV between states according to allowed state transitions as depicted in the UAV state transition diagram",
+        "testObjective": "Verify that the vehicle core correctly transitions the UAV between states as per the provided state transition diagram",
         "preconditions": [],
         "testSteps": [],
-        "expectedResult": "The UAV state transition diagram is satisfied.",
-        "expectedResultDetails": "The UAV state transition diagram is satisfied.",
-        "testSuccessOrFailure": "Success.",
-        "testResult": "The UAV state transition diagram is satisfied.",
-        "testOutcome": "The UAV state transition diagram is satisfied.",
-        "testExecutionTime": "The test execution time is 0 seconds.",
-        "testResultStatus": "Success.",
+        "expectedResult": "",
         "testCaseID": "RE-8",
         "prompt": [
             "Generate json test description using this template: {\n    \"Requirement\": \"\",\n    \"testObjective\": \"\",\n    \"preconditions\": [],\n    \"testSteps\": [],\n    \"expectedResult\": \"\"\n} For the following requirement: When requested  the VehicleCore shall shall transition the UAV between states according to allowed state transitions as depicted in the UAV state transition diagram"

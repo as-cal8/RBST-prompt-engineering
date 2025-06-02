@@ -19,8 +19,9 @@ Evaluation Criteria TODO
         Assess how technically accurate and aligned with domain-specific language (UAS, UAV systems, etc.) the generated content is.
         Metrics: Manual inspection for domain relevance or automatic keyword extraction and matching.
 '''
-
-
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
 import json
 import os
 from sentence_transformers import SentenceTransformer, util
@@ -410,6 +411,7 @@ if __name__ == "__main__":
         "results_chat_prompt1_persona7b.json",
         "results_chat_prompt1_persona8b.json",
         "results_chat_prompt1_persona14b.json",
+        "results_chat_prompt2_tot1_5b.json",
         "results_chat_prompt2_tot7b.json",
         "results_chat_prompt2_tot8b.json",
         "results_chat_prompt2_tot14b.json",
@@ -419,11 +421,32 @@ if __name__ == "__main__":
         "results_chat_prompt4_preparsing_and_tot_reqfirst7b.json",
         "results_chat_prompt4_preparsing_and_tot_reqfirst8b.json",
         "results_chat_prompt4_preparsing_and_tot_reqfirst14b.json",
-        "results_chat_prompt4_preparsing_and_tot7b.json"
-
     ]
     
-    for json_name in json_names:
+    json_names_plotting = [
+        "zero 1.5b",
+        "zero 8b",
+        "zero 14b",
+        "zero 7b",
+        "persona 7b",
+        "persona 8b",
+        "persona 14b",
+        "tot 1.5b",
+        "tot 7b",
+        "tot 8b",
+        "tot 14b",
+        "cntxt tot 7b",
+        "cntxt tot 8b",
+        "cntxt tot 14b",
+        "preparsing tot 7b",
+        "preparsing tot 8b",
+        "preparsing tot 14b",
+    ]
+    
+    summary_data_invalid = []
+    summary_data_fieldcheck_fails = []
+    
+    for json_name, json_name_plt in zip(json_names, json_names_plotting):
         print("\n\n")
         print("-> Evaluating: " + json_name)
         print("\n")
@@ -453,3 +476,159 @@ if __name__ == "__main__":
         #print(combine_and_deduplicate(id_invalid_entries, id_field_check_fails))
         print("\n\n")
         
+        """
+        Gather summary data for plots
+        """
+        summary_data_invalid.append((json_name_plt, result_valid_entries['total_entries'], result_valid_entries['valid_entries'], len(result_valid_entries['invalid_entries_id'])))
+        summary_data_fieldcheck_fails.append((json_name_plt, 100, (len(ds_zero_without_invalid_entries) - len(id_field_check_fails))/len(ds_zero_without_invalid_entries), len(id_field_check_fails)/len(ds_zero_without_invalid_entries)))
+    
+    
+    # Create DataFrame
+    df_summary_fieldchek_fails = pd.DataFrame(summary_data_fieldcheck_fails, columns=["Model", "Total", "Valid", "Invalid"])
+    df_summary_invalid = pd.DataFrame(summary_data_invalid, columns=["Model", "Total", "Valid", "Invalid"])
+
+
+
+    # Set index and select columns
+    df_plot = df_summary_fieldchek_fails.set_index("Model")[["Valid", "Invalid"]]
+    df_plot = df_plot.sort_values(by=["Valid", "Invalid"], ascending=True)
+    template_model_order = df_plot.index  # Save this ordering
+
+    ax = df_plot.plot(kind='bar', stacked=True, figsize=(14, 4), colormap='tab20c', width=0.6)
+    plt.title("Valid vs Invalid Entries per Model (Field checks)")
+    plt.ylabel("Percent of Entries")
+    plt.xlabel("Model")
+    plt.xticks(rotation=45, ha='right')
+    plt.grid(True, axis='y')
+    plt.tight_layout()
+    plt.savefig(script_dir / "results/visualization/comparison_chart_fieldcheck_invalid.png", dpi=300, bbox_inches='tight')
+    plt.show()
+    
+    # Plotting: Stacked bar chart
+    # Set index and select columns
+    df_plot_json = df_summary_invalid.set_index("Model")[["Valid", "Invalid"]]
+    df_plot_json = df_plot_json.loc[template_model_order]
+    ax = df_plot_json.plot(kind='bar', stacked=True, figsize=(14, 4), colormap='tab20c', width=0.6)
+    plt.title("Valid vs Invalid Entries per Model (JSON Template Check)")
+    plt.ylabel("Number of Entries")
+    plt.xlabel("Model")
+    plt.xticks(rotation=45, ha='right')
+    plt.grid(True, axis='y')
+    plt.ylim(0, 97)  # Set Y-axis limit
+    plt.tight_layout()
+    plt.savefig(script_dir / "results/visualization/comparison_chart_invalid.png", dpi=300, bbox_inches='tight')
+    plt.show()
+
+
+    # Add model size for grouping (extract from model name)
+    def extract_size(model_name):
+        for size in ['1.5b', '7b', '8b', '14b']:
+            if size in model_name:
+                return size
+        raise NameError("???")
+
+    # Helper to extract prompt type
+    def extract_prompt_type(model_name):
+        for prompt in ['zero', 'persona', 'tot', 'cntxt tot', 'preparsing tot']:
+            if model_name.startswith(prompt):
+                return prompt
+        raise NameError(f"Unknown prompt type in: {model_name}")
+    
+    df_summary_invalid['Size'] = df_summary_invalid['Model'].apply(extract_size)
+    df_summary_invalid['PromptType'] = df_summary_invalid['Model'].apply(extract_prompt_type)
+    
+    df_summary_fieldchek_fails['Size'] = df_summary_fieldchek_fails['Model'].apply(extract_size)
+    df_summary_fieldchek_fails['PromptType'] = df_summary_fieldchek_fails['Model'].apply(extract_prompt_type)
+
+    prompt_order = ['zero', 'persona', 'tot', 'cntxt tot', 'preparsing tot']
+    size_order = ['1.5b', '7b', '8b', '14b']
+
+
+    df_summary_invalid['PromptType'] = pd.Categorical(df_summary_invalid['PromptType'], categories=prompt_order, ordered=True)
+    df_summary_invalid['Size'] = pd.Categorical(df_summary_invalid['Size'], categories=size_order, ordered=True)
+
+    df_summary_fieldchek_fails['PromptType'] = pd.Categorical(df_summary_fieldchek_fails['PromptType'], categories=prompt_order, ordered=True)
+    df_summary_fieldchek_fails['Size'] = pd.Categorical(df_summary_fieldchek_fails['Size'], categories=size_order, ordered=True)
+
+
+    # --- PLOT 1: Stacked bar chart (Valid vs Invalid by size) ---
+    df_counts_sorted = df_summary_invalid.sort_values(by=['Size', 'PromptType'])
+    df_plot1 = df_counts_sorted.set_index('Model')[['Valid', 'Invalid']]
+    df_plot1.plot(kind='bar', stacked=True, colormap='tab20c', figsize=(14, 6), width=0.6)
+    plt.title('Valid vs Invalid Entries per Model (by Size)')
+    plt.ylabel('Number of Entries')
+    plt.xticks(rotation=45, ha='right')
+    plt.grid(axis='y')
+    plt.savefig(script_dir / "results/visualization/comparison_chart_invalid_models.png", dpi=300, bbox_inches='tight')
+    plt.tight_layout()
+    plt.show()
+
+    # --- PLOT 2: Percentage bar plot (Valid %) grouped by Size ---
+    df2_sorted = df_summary_fieldchek_fails.sort_values(by=['Size', 'PromptType'])
+    df_plot2 = df2_sorted.set_index('Model')[['Valid', 'Invalid']]
+    df_plot2.plot(kind='bar', stacked=True, colormap='tab20c', figsize=(14, 6), width=0.6)
+    plt.title('Valid Percentage per Model (Grouped by Size)')
+    plt.ylabel('Valid %')
+    plt.xticks(rotation=45, ha='right')
+    plt.savefig(script_dir / "results/visualization/comparison_chart_fieldcheck_invalid_model.png", dpi=300, bbox_inches='tight')
+    plt.tight_layout()
+    plt.show()
+    
+    # Map model sizes to colors
+    size_colors = {
+        '1.5b': '#1f77b4',  # blue
+        '7b': '#ff7f0e',    # orange
+        '8b': '#2ca02c',    # green
+        '14b': '#d62728',   # red
+    }
+
+    # Ensure 'Size' column exists
+    df_summary_invalid['Size'] = df_summary_invalid['Model'].apply(extract_size)
+
+    # Sort by Size, then Model name (prompt type implicitly sorted)
+    df_sorted = df_summary_invalid.sort_values(by=['Size', 'Model'])
+
+    # Plot manually with grouped bar colors
+    fig, ax = plt.subplots(figsize=(14, 6))
+
+    bottoms = [0] * len(df_sorted)
+    x = range(len(df_sorted))
+
+    # Bar for Valid
+    bars_valid = ax.bar(
+        x,
+        df_sorted['Valid'],
+        color=[size_colors[size] for size in df_sorted['Size']],
+        label='Valid'
+    )
+
+    # Bar for Invalid stacked on top
+    bars_invalid = ax.bar(
+        x,
+        df_sorted['Invalid'],
+        bottom=df_sorted['Valid'],
+        color=[size_colors[size] for size in df_sorted['Size']],
+        alpha=0.4,
+        label='Invalid'
+    )
+
+    # X-axis setup
+    ax.set_xticks(x)
+    ax.set_xticklabels(df_sorted['Model'], rotation=45, ha='right')
+    ax.set_ylabel('Number of Entries')
+    ax.set_title('Valid vs Invalid Entries per Model (by Size)')
+    ax.grid(axis='y')
+
+    # Legend
+    from matplotlib.patches import Patch
+    legend_patches = [
+        Patch(facecolor=color, label=size) for size, color in size_colors.items()
+    ]
+    ax.legend(handles=legend_patches + [
+        Patch(facecolor='gray', alpha=1.0, label='Valid'),
+        Patch(facecolor='gray', alpha=0.4, label='Invalid')
+    ])
+
+    plt.tight_layout()
+    plt.savefig(script_dir / "results/visualization/comparison_chart_invalid_models_colored.png", dpi=300, bbox_inches='tight')
+    plt.show()
